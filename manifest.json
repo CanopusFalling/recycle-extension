@@ -1,0 +1,24 @@
+{
+    "name": "Can I Recycle This?",
+    "version": "0.1",
+    "description": "Chrome web extension to check if a product from an online retail store is recyclable, informing the user to make better choices.",
+    "icons": {
+        "128": "webcycle.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "declarativeContent",
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": "webcycle.png",
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "manifest_version": 2
+}
