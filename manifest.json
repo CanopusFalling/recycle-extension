@@ -3,7 +3,7 @@
     "version": "0.1",
     "description": "Chrome web extension to check if a product from an online retail store is recyclable, informing the user to make better choices.",
     "icons": {
-        "128": "webcycle.png"
+        "128": "images/webcycle.png"
     },
     "background": {
         "scripts": [
@@ -13,12 +13,23 @@
     },
     "permissions": [
         "declarativeContent",
-        "storage"
+        "storage",
+        "tabs"
     ],
     "browser_action": {
-        "default_icon": "webcycle.png",
-        "default_popup": "popup.html"
+        "default_icon": "images/webcycle.png",
+        "default_popup": "popup/popup.html"
     },
-    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.amazon.co.uk/*"
+            ],
+            "js": [
+                "popup/popup.js"
+            ]
+        }
+    ],
+    "options_page": "options/options.html",
     "manifest_version": 2
 }
