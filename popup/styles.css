@@ -1,0 +1,87 @@
+div#background-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../images/background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+}
+
+header {
+    margin: 0px;
+    padding: 5px 10px;
+    font-size: 2.2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+nav {
+    margin: 0px;
+    padding: 5px;
+    font-size: 1.6em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+}
+
+nav div.navigation-item {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 0px 4px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 1s ease-in-out;
+}
+
+nav div.navigation-item:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.5s ease-in-out;
+}
+
+
+/* Noselect for text */
+
+.no-select {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+/* Scrollbar Styles */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
