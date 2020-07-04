@@ -12,6 +12,8 @@ function setup() {
     exploreButton.addEventListener("click", function() {
         openPage("explore.html");
     });
+
+    openPage("home.html");
 }
 
 function openPage(page) {

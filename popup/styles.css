@@ -46,6 +46,11 @@ nav div.navigation-item:hover {
     transition: 0.5s ease-in-out;
 }
 
+#location-display {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
 
 /* Noselect for text */
 
@@ -84,4 +89,65 @@ nav div.navigation-item:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Percentage Card Styles. */
+
+.percentage-card {
+    color: white;
+    margin: 10px auto;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.percentage-card .card-header {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.percentage-card .card-percentage {
+    text-align: center;
+    font-size: 3em;
+}
+
+.percentage-card .card-footer {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+
+/* Product Card Styles */
+
+.product-card {
+    color: white;
+    margin: 10px auto;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.product-card .product-title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.product-card .product-image {
+    width: 50%;
+    border-radius: 20%;
+}
+
+.product-card .product-description {
+    font-size: 1.2em;
+}
+
+.product-card .product-link {
+    margin: 2px auto;
+    padding: 4px;
+    font-size: 1.6em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.product-card .product-link:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }

@@ -14,22 +14,21 @@
     "permissions": [
         "declarativeContent",
         "storage",
-        "tabs"
+        "tabs",
+        "geolocation"
     ],
     "browser_action": {
         "default_icon": "images/webcycle.png",
         "default_popup": "popup/popup.html"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*.amazon.co.uk/*"
-            ],
-            "js": [
-                "popup/popup.js"
-            ]
-        }
-    ],
+    "content_scripts": [{
+        "matches": [
+            "*://*.amazon.co.uk/*"
+        ],
+        "js": [
+            "popup/popup.js"
+        ]
+    }],
     "options_page": "options/options.html",
     "manifest_version": 2
 }
