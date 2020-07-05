@@ -2,6 +2,8 @@
 
 "use strict";
 
+const BACK_END_URL = "http://recyclabilitydiscriminator.eu-gb.mybluemix.net/querythis"
+
 // Checks for the ASIN on the Amazon page.
 function getASIN() {
     let tableRows = document.getElementsByTagName("td");
@@ -28,9 +30,25 @@ function getASIN() {
     return ASIN;
 }
 
-function queryBackEnd(){
+async function postData(url, data) {
+    let response = await fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify(data)
+    });
+    return response;
+  }
 
+function queryBackEnd(data){
+    let productInfo = postData(BACK_END_URL, {ASIN : data});
+    console.log(productInfo);
 }
 
 let ASIN = getASIN();
-
+queryBackEnd(ASIN);
