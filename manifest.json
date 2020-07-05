@@ -15,7 +15,8 @@
         "declarativeContent",
         "storage",
         "tabs",
-        "geolocation"
+        "geolocation",
+        "alarms"
     ],
     "browser_action": {
         "default_icon": "images/webcycle.png",
@@ -26,7 +27,7 @@
             "*://*.amazon.co.uk/*"
         ],
         "js": [
-            "popup/popup.js"
+            "product-scan.js"
         ]
     }],
     "options_page": "options/options.html",
