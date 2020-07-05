@@ -42,14 +42,15 @@ async function postData(url, data) {
         referrerPolicy: 'no-referrer',
         body: JSON.stringify(data)
     });
-    return response;
+
+    return response.json();
 }
 
 function queryBackEnd(data) {
     postData(BACK_END_URL, { ASIN: data })
         .then(
             data => {
-                console.log(data.text());
+                console.log(data);
             }
         );
 }
