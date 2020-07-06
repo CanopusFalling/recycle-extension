@@ -27,6 +27,18 @@ function getASIN() {
         //console.log(node + " : " + node.innerHTML);
     }
 
+    let labels = document.getElementsByTagName("bdi");
+    //console.log(labels);
+    for (let i = 0; i < labels.length; i++) {
+        let label = labels[i];
+        //console.log(label);
+        if(label.innerHTML == "ASIN"){
+            let ASINarea = label.parentElement.parentElement.innerHTML;
+
+            ASIN = ASINarea.substr(ASINarea.length - 10, ASINarea.length - 1);
+        }
+    }
+
     return ASIN;
 }
 
@@ -43,7 +55,7 @@ async function postData(url, data) {
         body: JSON.stringify(data)
     });
 
-    return response.json();
+    return response.text();
 }
 
 function queryBackEnd(data) {
@@ -56,4 +68,5 @@ function queryBackEnd(data) {
 }
 
 let ASIN = getASIN();
+console.log("Product Identification Number: " + ASIN);
 queryBackEnd(ASIN);
