@@ -16,7 +16,8 @@
         "storage",
         "tabs",
         "geolocation",
-        "alarms"
+        "alarms",
+        "https://*/*"
     ],
     "browser_action": {
         "default_icon": "images/webcycle.png",
