@@ -20,14 +20,17 @@ async function postData(url, data) {
         body: JSON.stringify(data)
     });
 
-    return response;
+    return response.json();
 }
 
 function queryBackEnd(data) {
-    postData(BACK_END_URL, { ASIN: data })
+    postData(BACK_END_URL, data)
         .then(
             data => {
-                console.log(data.json());
+                console.log(data);
+                chrome.storage.sync.set({'ASINresponse': data }, function () {
+                    console.log('Response saved to memory.');
+                });
             }
         );
 }
@@ -43,7 +46,11 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             storageChange.newValue);
 
         if(key == "ASIN"){
-            queryBackEnd(changes[key].newValue);
+            //queryBackEnd({ASIN: changes[key].newValue});
+        }
+
+        if(key == "product-title"){
+            queryBackEnd({productTitle: changes[key].newValue});
         }
     }
 });

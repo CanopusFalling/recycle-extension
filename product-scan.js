@@ -43,6 +43,10 @@ function getASIN() {
     return ASIN;
 }
 
+function getProductTitle(){
+    return document.getElementById("productTitle").innerHTML;
+}
+
 async function postData(url, data) {
     let response = await fetch(url, {
         method: 'POST',
@@ -70,7 +74,9 @@ function queryBackEnd(data) {
 
 let ASIN = getASIN();
 //console.log("Product Identification Number: " + ASIN);
+let title = getProductTitle();
 
-chrome.storage.sync.set({'ASIN': ASIN }, function () {
+
+chrome.storage.sync.set({'ASIN': ASIN, 'product-title': title}, function () {
     message('ASIN saved to memory.');
 });
