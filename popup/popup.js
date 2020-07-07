@@ -4,4 +4,7 @@
 
 let url = window.location.toString();
 
-console.log(url);
+// Reads the product information and materials results.
+chrome.storage.sync.get(['product-information', 'product-materials'], function(items){
+    console.log(items);
+})
