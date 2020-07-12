@@ -28,7 +28,7 @@
             "*://*.amazon.co.uk/*"
         ],
         "js": [
-            "product-scan.js"
+            "page-event-scripts/product-scan.js"
         ]
     }],
     "options_page": "options/options.html",

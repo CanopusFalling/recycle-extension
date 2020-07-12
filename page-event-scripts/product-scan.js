@@ -77,6 +77,6 @@ let ASIN = getASIN();
 let title = getProductTitle();
 
 
-chrome.storage.sync.set({'ASIN': ASIN, 'product-title': title}, function () {
-    message('ASIN saved to memory.');
+chrome.storage.sync.set({'product-information': {'ASIN': ASIN, 'productTitle': title}}, function () {
+    message('product info saved to memory.');
 });
