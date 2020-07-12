@@ -2,78 +2,91 @@
 
 "use strict";
 
-const BACK_END_URL = "https://recyclabilitydiscriminator.eu-gb.mybluemix.net/amazonproduct"
-//const BACK_END_URL = "https://riviera-amadeus-8000.codio.io/amazonproduct"
+// ===== Constants =====
 
-const DISTRICT_INFO = "data/district-recycle-info.json";
-const MATERIAL_INFO = "data/material-info.json"
+const JSON_FILES = ["data/district-recycle-info.json", "data/material-info.json"];
 
-// Code for querying back end server.
-async function postData(url, data) {
-    let response = await fetch(url, {
-        method: 'POST',
-        cors: 'cors',
-        cache: 'no-cache',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer',
-        body: JSON.stringify(data)
-    });
+// ===== File Reading Function =====
 
-    return response.json();
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
 }
 
-function queryBackEnd(data) {
-    postData(BACK_END_URL, data)
-        .then(
-            data => {
-                console.log(data);
-                chrome.storage.sync.set({'ASINresponse': data }, function () {
-                    console.log('Response saved to memory.');
-                });
+// ===== Get JSON Files Into Variables =====
+
+var JSON_OBJECTS = [];
+
+JSON_FILES.forEach(element => {
+    readTextFile(element, function (stringResponse) {
+        JSON_OBJECTS.push(JSON.parse(stringResponse));
+    })
+});
+
+// ===== Update Local Area Information =====
+
+// Basic local info for testing purposes while there is no 
+// method to switch location in the popup.
+var LOCAL_INFO = {"Adur": {
+    "Type": "Unitary authority",
+    "bin-recyclable": ["metal","wood","cardboard","paper"],
+    "non-bin-recyclable": ["chipboard","MDF","plywood"]
+}};
+
+function updateLocationInformation() {
+    chrome.storage.sync.get(['user-location'], function(location){
+        try{
+            LOCAL_INFO = JSON_OBJECTS[0][key];
+        }catch(e){
+            console.log(e);
+        }
+    })
+}
+
+// ===== Update Product Information =====
+
+function updateProductInformation(){
+    let materialInfo = JSON_OBJECTS[1];
+    chrome.storage.sync.get(['product-information'], function(productInformation){
+        let title = productInformation['product-information']['product-title'];
+        console.log(wordMatching(title.toLowerCase(), materialInfo));
+    })
+}
+
+function wordMatching(title, materialInfo){
+    let materials = {};
+
+    // Go through all the known materials.
+    for(var material in materialInfo){
+        //console.log(materialInfo[material]);
+
+        // Check all the products in each material against the title.
+        for(var product in materialInfo[material]){
+            if(title.includes(material) 
+            || title.includes(materialInfo[material][product])){
+                //console.log(material + " : " + materialInfo[material][product]);
+                if(materials[material] != null){
+                    materials[material] = 1;
+                }else{
+                    materials[material] += 1;
+                }
             }
-        );
-}
-
-// Product material identification.
-async function identifyMaterials(title, recycleInfo, materials){
-    console.log(recycleInfo);
-
-
-}
-
-// Get the local authority information.
-function getDistrictInfo(districtName){
-    var fileRead = new XMLHttpRequest();
-    fileRead.open("GET", DISTRICT_INFO, true);
-    fileRead.onreadystatechange = function() {
-        if (fileRead.readyState === 4) {
-            let json = JSON.stringify(fileRead.responseText);
-            return json;
         }
     }
-    fileRead.send();
+    return materials;
 }
 
-// Get the materials object.
-function getMaterialsObject(){
-    var fileRead = new XMLHttpRequest();
-    fileRead.open("GET", MATERIAL_INFO, true);
-    fileRead.onreadystatechange = function() {
-        if (fileRead.readyState === 4) {
-            let json = JSON.stringify(fileRead.responseText);
-            return json;
-        }
-    }
-    fileRead.send();
-}
-
-// Listener for when the data updates.
+// ===== Data Update Listener =====
 chrome.storage.onChanged.addListener(function (changes, namespace) {
     for (var key in changes) {
+        // Readout for debugging.
         var storageChange = changes[key];
         console.log('Storage key "%s" in namespace "%s" changed. ' +
             'Old value was "%s", new value is "%s".',
@@ -82,18 +95,13 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             storageChange.oldValue,
             storageChange.newValue);
 
-            /*
-        if(key == "ASIN"){
-            //queryBackEnd({ASIN: changes[key].newValue});
+        if (key == "product-information") {
+            updateProductInformation();
         }
 
-        if(key == "product-title"){
-            //queryBackEnd({productTitle: changes[key].newValue});
-        }*/
-
-        if(key == "product-information"){
-            let title = changes[key].newValue.productTitle;
-            identifyMaterials(title, getDistrictInfo("Adur"), getMaterialsObject());
+        // When the user changes their location.
+        if (key == "user-location") {
+            updateLocationInformation();
         }
     }
 });
