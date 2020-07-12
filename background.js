@@ -72,7 +72,7 @@ function wordMatching(title, materialInfo){
             if(title.includes(material) 
             || title.includes(materialInfo[material][product])){
                 //console.log(material + " : " + materialInfo[material][product]);
-                if(materials[material] != null){
+                if(materials[material] == null){
                     materials[material] = 1;
                 }else{
                     materials[material] += 1;
@@ -105,3 +105,11 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
         }
     }
 });
+
+// ===== Testing Function =====
+function update(){
+    updateProductInformation();
+    setTimeout(update, 5000);
+}
+
+update();
