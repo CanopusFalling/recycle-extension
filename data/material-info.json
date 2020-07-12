@@ -1,0 +1,5 @@
+{
+    "wood": ["rolling pin", "wooden vase", "balsa wood"],
+    "balsa wood": ["wooden model airplane", "wooden surfboard", "wooden crankbait"],
+    "metal": ["tin can", "metal can"]
+}

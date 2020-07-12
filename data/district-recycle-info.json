@@ -1,0 +1,23 @@
+{
+    "district-councils": {
+        "Adur": {
+            "Type": "Unitary authority",
+            "bin-recyclable": [
+                "metal",
+                "wood"
+            ],
+            "non-bin-recyclable": []
+        },
+        "Sheffield": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [],
+            "non-bin-recyclable": []
+        },
+        "Cornwall": {
+            "Type": "Unitary authority",
+            "bin-recyclable": [],
+            "non-bin-recyclable": []
+        }
+    }
+}
