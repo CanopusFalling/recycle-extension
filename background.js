@@ -112,4 +112,4 @@ function update(){
     setTimeout(update, 5000);
 }
 
-update();
+//update();
