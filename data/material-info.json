@@ -8,7 +8,5 @@
     "plywood": ["desk","kitchen cabinet","shelf","wardrobe","bench"],
     "cardboard": [],
     "glass":["whisky","wine","port","beer bottle","glass drinks bottle","glass bottle","jar","jam jar","glass jar","pickled onions","chutney","pickled cucumber","pickled gerkin","mayonaise jar","perfume bottle","nail polish","preserving jar","glass ornament"],
-    "paper": ["book","hard-back book","printer paper","notepad","origami paper","writing pad","paper pad","flipchart","paper sheet"]
-    
-
+    "paper": ["book","dictionary","theasaurus","hard-back book","printer paper","notepad","origami paper","writing pad","paper pad","flipchart","paper sheet"]
 }
