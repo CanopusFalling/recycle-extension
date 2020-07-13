@@ -36,15 +36,15 @@ JSON_FILES.forEach(element => {
 // method to switch location in the popup.
 var LOCAL_INFO = {
     "Type": "Unitary authority",
-    "bin-recyclable": ["metal","wood","cardboard","paper"],
-    "non-bin-recyclable": ["chipboard","MDF","plywood"]
+    "bin-recyclable": ["metal", "wood", "cardboard", "paper", "glass"],
+    "non-bin-recyclable": ["chipboard", "MDF", "plywood"]
 };
 
 function updateLocationInformation() {
-    chrome.storage.sync.get(['user-location'], function(location){
-        try{
+    chrome.storage.sync.get(['user-location'], function (location) {
+        try {
             LOCAL_INFO = JSON_OBJECTS[0][key];
-        }catch(e){
+        } catch (e) {
             console.log(e);
         }
     })
@@ -52,59 +52,78 @@ function updateLocationInformation() {
 
 // ===== Update Product Information =====
 
-function updateProductInformation(){
+function updateProductInformation() {
+    let districtInfo = LOCAL_INFO;
     let materialInfo = JSON_OBJECTS[1];
-    chrome.storage.sync.get(['product-information'], function(productInformation){
+    chrome.storage.sync.get(['product-information'], function (productInformation) {
         let title = productInformation['product-information']['product-title'];
-        let materials = wordMatching(title.toLowerCase(), materialInfo);
-        chrome.storage.sync.set({materials: materials});
+        let materials = wordMatching(title.toLowerCase(), materialInfo, districtInfo);
+        chrome.storage.sync.set({ materials: materials });
+        console.log(materials);
     })
 }
 
-function wordMatching(title, materialInfo){
-    let materials = [];
+function wordMatching(title, materialInfo, districtInfo) {
+    //let materials = [];
+    let separation = { 'recyclable': {}, 'non-recyclable': {}, 'uncertain': {} };
 
     // Go through all the known materials.
-    for(var material in materialInfo){
+    for (var material in materialInfo) {
         //console.log(materialInfo[material]);
 
         // Check all the products in each material against the title.
-        for(var product in materialInfo[material]){
-            if(title.includes(material) 
-            || title.includes(materialInfo[material][product])){
+        for (var product in materialInfo[material]) {
+            if (title.includes(material)
+                || title.includes(materialInfo[material][product])) {
                 //console.log(material + " : " + materialInfo[material][product]);
-                materials.push(material);
+                //materials.push(material);
+
+                let recyclability = isMaterialRecyclable(material, product, districtInfo).split('/');
+
+                if (recyclability[0] == "material") {
+                    if (separation[recyclability[1]].hasOwnProperty(material)) {
+                        separation[recyclability[1]][material] += 1;
+                    } else {
+                        separation[recyclability[1]][material] = 1;
+                    }
+                } else {
+                    if (separation[recyclability[1]].hasOwnProperty(materialInfo[material][product])) {
+                        separation[recyclability[1]][materialInfo[material][product]] += 1;
+                    } else {
+                        console.log("Hi");
+                        separation[recyclability[1]][materialInfo[material][product]] = 1;
+                    }
+                }
             }
         }
     }
 
-    return materials;
+    return separation;
 }
 
 // ===== Determine Recyclability =====
 
-function updateRecyclability(){
-    let recyclable = LOCAL_INFO['bin-recyclable'];
-    let nonRecyclable = LOCAL_INFO['non-bin-recyclable'];
-    chrome.storage.sync.get(['materials'], function(materials){
-        console.log(materialSeparation(recyclable, nonRecyclable, materials));
-    })
-}
+function isMaterialRecyclable(material, product, districtInfo) {
+    let result = "material/uncertain";
 
-function materialSeparation(recyclable, nonRecyclable, materials){
-    let separation = {'recyclable':{}, 'non-recyclable':{}, 'uncertain':{}};
-    
-    for(let material in materials){
-        if(recyclable.indexOf(material) != -1){
-            separation['recyclable'][material] += 1;
-        }else if(nonRecyclable.indexOf(material) != -1){
-            separation['non-recyclable'][material] += 1;
-        }else{
-            separation['uncertain'][material] += 1;
-        }
+    for (var recyclable in districtInfo['bin-recyclable']) {
+        result = productMaterialSeparation("recyclable", result, recyclable, material, product);
+    }
+    for (var nonRecyclable in districtInfo['non-bin-recyclable']) {
+        result = productMaterialSeparation("non-recyclable", result, nonRecyclable, material, product);
     }
 
-    return separation;
+    return result;
+}
+
+function productMaterialSeparation(postfix, result, comparison, material, product) {
+    if (comparison == product) {
+        result = "product/" + postfix;
+    } else if (comparison == material) {
+        result = "material/" + postfix;
+    }
+
+    return result;
 }
 
 // ===== Data Update Listener =====
@@ -128,14 +147,14 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             updateLocationInformation();
         }
 
-        if(key == 'materials'){
+        /*if (key == 'materials') {
             updateRecyclability();
-        }
+        }*/
     }
 });
 
 // ===== Testing Function =====
-function update(){
+function update() {
     updateProductInformation();
     setTimeout(update, 10000);
 }
