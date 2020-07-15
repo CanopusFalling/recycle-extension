@@ -2,13 +2,35 @@
 
 "use strict";
 
-const BACK_END_URL = "https://recyclabilitydiscriminator.eu-gb.mybluemix.net/amazonproduct"
-//const BACK_END_URL = "https://riviera-amadeus-8000.codio.io/amazonproduct"
+// ===== Scraping Functions =====
+// Gets all the product information and returns it as an object.
+function getProductInfo() {
+    // Get all the product information.
+    let ASIN = getASIN();
+    let title = getTitle();
+    let description = getDesc();
+
+    // Return empty object if all the information is empty.
+    if(ASIN == "" && title == "" && description == ""){
+        console.log("No Product found.");
+        return {};
+    }else{
+        // Return all the data as a JSON object.
+    return {
+        "product-information":
+        {
+            "ASIN": ASIN,
+            "title": title,
+            "description": description
+        }
+    };
+    }
+}
 
 // Checks for the ASIN on the Amazon page.
 function getASIN() {
     let tableRows = document.getElementsByTagName("td");
-    let ASIN;
+    let ASIN = "";
 
     for (let i = 0; i < tableRows.length; i++) {
         let node = tableRows[i];
@@ -19,20 +41,14 @@ function getASIN() {
                 let tableItem = tableRow[j];
                 if (node != tableItem) {
                     ASIN = tableItem.innerHTML;
-                    //console.log(ASIN);
                 }
-                //console.log(node);
             }
-            //console.log(tableRow);
         }
-        //console.log(node + " : " + node.innerHTML);
     }
 
     let labels = document.getElementsByTagName("bdi");
-    //console.log(labels);
     for (let i = 0; i < labels.length; i++) {
         let label = labels[i];
-        //console.log(label);
         if (label.innerHTML == "ASIN") {
             let ASINarea = label.parentElement.parentElement.innerHTML;
 
@@ -43,40 +59,49 @@ function getASIN() {
     return ASIN;
 }
 
-function getProductTitle(){
-    return document.getElementById("productTitle").innerHTML;
+function getTitle() {
+    let title = document.getElementById("productTitle");
+    return getCleanText(title);
 }
 
-async function postData(url, data) {
-    let response = await fetch(url, {
-        method: 'POST',
-        cache: 'no-cache',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer',
-        body: JSON.stringify(data)
+function getDesc() {
+    let description = document.getElementById("productDescription");
+    return getCleanText(description);
+}
+
+// ===== Text Manipulation Functions =====
+
+function getCleanText(object) {
+    let rawText = getHTMLObjectText(object);
+    return stripNewlines(rawText);
+}
+
+function stripNewlines(text) {
+    return text.replace(/(\r\n|\n|\r)/gm, "");
+}
+
+function getHTMLObjectText(object) {
+    try {
+        return object.textContent || object.innerText || "";
+    } catch (e) {
+        console.log(e);
+        return "";
+    }
+}
+
+
+// ===== Store Product Information ====
+let productInfo = getProductInfo();
+
+// Check if the product information can actually be found.
+if (productInfo != {}) {
+    // Store the products information in the extension storage.
+    chrome.storage.sync.set(productInfo, function () {
+        console.log('Product information saved');
+
+        // Testing to see if the information is saved.
+        chrome.storage.sync.get(["product-information"], function(data){
+            console.log(data);
+        })
     });
-
-    return response;
 }
-
-function queryBackEnd(data) {
-    postData(BACK_END_URL, { ASIN: data })
-        .then(
-            data => {
-                console.log(data.text());
-            }
-        );
-}
-
-let ASIN = getASIN();
-//console.log("Product Identification Number: " + ASIN);
-let title = getProductTitle();
-
-
-chrome.storage.sync.set({'product-information': {"ASIN": ASIN, "product-title": title}}, function () {
-    message('product info saved to memory.');
-});

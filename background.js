@@ -51,7 +51,7 @@ function updateLocationInformation() {
 }
 
 // ===== Update Product Information =====
-
+/*
 function updateProductInformation() {
     let districtInfo = LOCAL_INFO;
     let materialInfo = JSON_OBJECTS[1];
@@ -124,6 +124,12 @@ function productMaterialSeparation(postfix, result, comparison, material, produc
     }
 
     return result;
+}*/
+
+// ===== Update Product Recyclability Information =====
+
+function determineProduct(title, body, ){
+
 }
 
 // ===== Data Update Listener =====
@@ -159,4 +165,4 @@ function update() {
     setTimeout(update, 10000);
 }
 
-update();
+//update();
