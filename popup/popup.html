@@ -7,26 +7,44 @@
     <script src="geolocation.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="circle-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 
-<div id="background-image">
-    <!-- Background image div -->
-</div>
+
 
 <body>
     <header>
-        Can I Recycle This?
+        <center>
+            Eco-Guard
+            <p>Your Personal Eco-Advisor</p>
+        </center>
+        
     </header>
-    <nav>
-        <div id="home-navigation" class="navigation-item no-select">Home</div>
-        <div id="explore-navigation" class="navigation-item no-select">Explore</div>
-    </nav>
+    
     <main id="main-area">
-
-    </main>
+        
+        <section>
+            <center> <p>Eco-Rating</p></center>
+            <div class="circle-wrap">
+              <div class="circle">
+                <div class="mask full">
+                  <div class="fill"></div>
+                </div>
+                <div class="mask half">
+                  <div class="fill"></div>
+                </div>
+                <div class="inside-circle"> 72% </div>
+              </div>
+            </div>
+            <center><button class="rcorners" type="button"><p>Explore</p></button></center>
+          </section>
+    
     <div id="location-display">
-
+    
     </div>
+    </main>
 </body>
 
 </html>
