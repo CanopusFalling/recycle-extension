@@ -1,41 +1,41 @@
-section.rating{
+section.rating {
     /* Shape the rating container. */
-    padding: 10px;
+    padding: 0px;
+    padding-bottom: 1px;
     margin: 20px auto;
-
     width: 75%;
-
     /* Lighten the background slightly. */
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-section.rating h1, section.rating h2{
+section.rating h1, section.rating h2 {
     /* Shape the title box. */
     margin: 0px;
     padding: 8px 0px;
-
     /* Font setting. */
     font-size: 2em;
     line-height: 0.9em;
     text-align: center;
+    /* Lighten the background slightly. */
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
-section.rating h2{
+section.rating h2 {
     /* Font ajust. */
     font-size: 1.4em;
     text-align: center;
+    /* Lighten the background slightly. */
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 section.rating button {
-    background-color: #1b643d;
+    background-color: #227c4c;
     color: white;
     font-size: 1.6em;
-
     border-radius: 50px;
     border-color: #00000063;
-    padding: 1px 30px;
-
-    margin: auto;
+    padding: 4px 30px;
+    margin: 10px auto;
     display: block;
-
+    align-items: center;
 }

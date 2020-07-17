@@ -4,24 +4,20 @@ header {
     /* Shape header */
     margin: 0px;
     padding: 0px;
-
     /* Lighten the background slightly. */
     background-color: rgba(255, 255, 255, 0.2);
-
     /**/
     font-size: 3em;
     color: white;
-    
     /*No idea what this did as the contrast filter 
     works on images. 
     filter: contrast(90%);*/
 }
 
-header h1{
-    /* Shape section. */ 
+header h1 {
+    /* Shape section. */
     margin: 0px;
     padding: 5px 10px;
-
     /* Set font styles. */
     font-size: 1.2em;
     text-align: center;
@@ -31,11 +27,9 @@ header h2 {
     /* Shape section. */
     margin: 0px;
     padding: 8px 10px;
-
     /* Set font styles. */
     font-size: 0.5em;
     text-align: center;
-
     /* Lighten the background a little further. */
     background-color: rgba(255, 255, 255, 0.1);
 }

@@ -1,8 +1,9 @@
 /* Styles to handle the percentage wheel. */
 
 /* wraps the full circle and sets the border radius. */
+
 .circle-wrap {
-    margin: 30px auto;
+    margin: 20px auto;
     width: 150px;
     height: 150px;
     background: #78e5dc3f;
@@ -30,25 +31,21 @@
     transform: rotate(126deg);
 }
 
-
 /* Image within circle. */
-.circle-wrap img{
+
+.circle-wrap img {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     filter: brightness(50%);
-    line-height: 130px;
-    text-align: center;
     margin-top: 10px;
     margin-left: 10px;
     position: absolute;
-    z-index: 99;
-    font-weight: 700;
-    font-size: 3.5em;
     background-image: url("../images/webcycle1.png");
 }
 
 /* Set up the inside of the circle with the percentage. */
+
 .circle-wrap .inside-circle {
     width: 130px;
     height: 130px;
@@ -64,6 +61,7 @@
 }
 
 /* Animate wheel. */
+
 @keyframes fill {
     0% {
         transform: rotate(0deg);
