@@ -11,19 +11,19 @@ function getProductInfo() {
     let description = getDesc();
 
     // Return empty object if all the information is empty.
-    if(ASIN == "" && title == "" && description == ""){
-        console.log("No Product found.");
+    if (ASIN == "" && title == "" && description == "") {
+        // Return a blank object if there is no product.
         return {};
-    }else{
+    } else {
         // Return all the data as a JSON object.
-    return {
-        "product-information":
-        {
-            "ASIN": ASIN,
-            "title": title,
-            "description": description
-        }
-    };
+        return {
+            "product-information":
+            {
+                "ASIN": ASIN,
+                "title": title,
+                "description": description
+            }
+        };
     }
 }
 
@@ -84,7 +84,10 @@ function getHTMLObjectText(object) {
     try {
         return object.textContent || object.innerText || "";
     } catch (e) {
-        console.log(e);
+        //Checks if the error is not a type error.
+        if (!e instanceof TypeError) {
+            throw e;
+        }
         return "";
     }
 }
@@ -97,11 +100,11 @@ let productInfo = getProductInfo();
 if (productInfo != {}) {
     // Store the products information in the extension storage.
     chrome.storage.sync.set(productInfo, function () {
-        console.log('Product information saved');
+        //console.log('Product information saved');
 
         // Testing to see if the information is saved.
-        chrome.storage.sync.get(["product-information"], function(data){
+        /*chrome.storage.sync.get(["product-information"], function (data) {
             console.log(data);
-        })
+        })*/
     });
 }

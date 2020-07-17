@@ -34,102 +34,77 @@ JSON_FILES.forEach(element => {
 
 // Basic local info for testing purposes while there is no 
 // method to switch location in the popup.
-var LOCAL_INFO = {
-    "Type": "Unitary authority",
-    "bin-recyclable": ["metal", "wood", "cardboard", "paper", "glass"],
-    "non-bin-recyclable": ["chipboard", "MDF", "plywood"]
-};
+var LOCAL_INFO;
 
 function updateLocationInformation() {
-    chrome.storage.sync.get(['user-location'], function (location) {
+    chrome.storage.sync.get(['user-location'], function (locationObj) {
+        let location = locationObj['user-location'];
         try {
-            LOCAL_INFO = JSON_OBJECTS[0][key];
+            LOCAL_INFO = JSON_OBJECTS[0]['district-councils'][location];
         } catch (e) {
             console.log(e);
         }
     })
 }
 
+// Set the location to Adur if it isn't defined.
+chrome.storage.sync.get(['user-location'], function (location) {
+    if (typeof location['user-location'] == "undefined") {
+        chrome.storage.sync.set({ 'user-location': 'Adur' });
+    }
+});
+
 // ===== Update Product Information =====
-/*
-function updateProductInformation() {
-    let districtInfo = LOCAL_INFO;
-    let materialInfo = JSON_OBJECTS[1];
-    chrome.storage.sync.get(['product-information'], function (productInformation) {
-        let title = productInformation['product-information']['product-title'];
-        let materials = wordMatching(title.toLowerCase(), materialInfo, districtInfo);
-        chrome.storage.sync.set({ materials: materials });
-        console.log(materials);
-    })
+
+function determineProductList(productInformation) {
+    // Get the materials object.
+    let materials = JSON_OBJECTS[1];
+
+    // Get the product information.
+    let title = productInformation['title'];
+    let description = productInformation['description'];
+    let ASIN = productInformation['ASIN']
+
+    // Work out the probable current product.
+    // The factor element is to weight the title more than the description.
+    let likelyProducts = itterateOverJSONChildren({}, materials, productMatch, title, 5);
+    likelyProducts = itterateOverJSONChildren(likelyProducts, materials, productMatch, description, 1);
+
+    console.log(likelyProducts);
+
+    
 }
 
-function wordMatching(title, materialInfo, districtInfo) {
-    //let materials = [];
-    let separation = { 'recyclable': {}, 'non-recyclable': {}, 'uncertain': {} };
-
-    // Go through all the known materials.
-    for (var material in materialInfo) {
-        //console.log(materialInfo[material]);
-
-        // Check all the products in each material against the title.
-        for (var product in materialInfo[material]) {
-            if (title.includes(material)
-                || title.includes(materialInfo[material][product])) {
-                //console.log(material + " : " + materialInfo[material][product]);
-                //materials.push(material);
-
-                let recyclability = isMaterialRecyclable(material, product, districtInfo).split('/');
-
-                if (recyclability[0] == "material") {
-                    if (separation[recyclability[1]].hasOwnProperty(material)) {
-                        separation[recyclability[1]][material] += 1;
-                    } else {
-                        separation[recyclability[1]][material] = 1;
-                    }
-                } else {
-                    if (separation[recyclability[1]].hasOwnProperty(materialInfo[material][product])) {
-                        separation[recyclability[1]][materialInfo[material][product]] += 1;
-                    } else {
-                        console.log("Hi");
-                        separation[recyclability[1]][materialInfo[material][product]] = 1;
-                    }
-                }
-            }
+function itterateOverJSONChildren(result, object, callback, callbackString, factor) {
+    for (let categoryName in object) {
+        let category = object[categoryName];
+        for (let itemPosition in category) {
+            let item = category[itemPosition];
+            result = callback(callbackString, item, result, factor, categoryName);
         }
     }
 
-    return separation;
-}
-
-// ===== Determine Recyclability =====
-
-function isMaterialRecyclable(material, product, districtInfo) {
-    let result = "material/uncertain";
-
-    for (var recyclable in districtInfo['bin-recyclable']) {
-        result = productMaterialSeparation("recyclable", result, recyclable, material, product);
-    }
-    for (var nonRecyclable in districtInfo['non-bin-recyclable']) {
-        result = productMaterialSeparation("non-recyclable", result, nonRecyclable, material, product);
-    }
-
     return result;
 }
 
-function productMaterialSeparation(postfix, result, comparison, material, product) {
-    if (comparison == product) {
-        result = "product/" + postfix;
-    } else if (comparison == material) {
-        result = "material/" + postfix;
+function productMatch(text, product, object, factor) {
+    if (text.toLowerCase().includes(product)) {
+        return incrementObjectCount(object, product, factor);
+    }else{
+        return object;
+    }
+}
+
+function incrementObjectCount(object, name, factor) {
+    // Add the factor ammount to the count for a spesific item.
+    if (object.hasOwnProperty(name)) {
+        object[name] += factor;
+    } else {
+        object[name] = factor;
     }
 
-    return result;
-}*/
-
-// ===== Update Product Recyclability Information =====
-
-function determineProduct(title, body, ){
-
+    // Return incrimented object.
+    return object;
 }
 
 // ===== Data Update Listener =====
@@ -145,7 +120,7 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             storageChange.newValue);
 
         if (key == "product-information") {
-            updateProductInformation();
+            determineProductList(storageChange.newValue);
         }
 
         // When the user changes their location.
@@ -166,3 +141,6 @@ function update() {
 }
 
 //update();
+
+// Update the local info about the user's location.
+updateLocationInformation();
