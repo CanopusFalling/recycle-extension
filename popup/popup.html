@@ -2,49 +2,52 @@
 <html>
 
 <head>
-    <script src="popup.js"></script>
-    <script src="navigation.js"></script>
-    <script src="geolocation.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="circle-styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Javascript files -->
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/rating.css">
+  <link rel="stylesheet" href="../styles/percentage-wheel.css">
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+
+  <!-- Meta Information. -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
 
 <body>
-    <header>
-        <center>
-            Eco-Guard
-            <p>Your Personal Eco-Advisor</p>
-        </center>
-        
-    </header>
-    
-    <main id="main-area">
-        
-        <section>
-            <center> <p>Eco-Rating</p></center>
-            <div class="circle-wrap">
-              <div class="circle">
-                <div class="mask full">
-                  <div class="fill"></div>
-                </div>
-                <div class="mask half">
-                  <div class="fill"></div>
-                </div>
-                <div class="inside-circle"> 72% </div>
-              </div>
-            </div>
-            <center><button class="rcorners" type="button"><p>Explore</p></button></center>
-          </section>
-    
+  <header>
+    <h1>Eco-Guard</h1>
+    <h2>Your Personal Eco-Advisor</h2>
+  </header>
+
+  <main>
+
+    <section class="rating" id="current-product-rating">
+      <h1>Eco-Rating</h1>
+      <h2>Product title: [title-here]</h2>
+      <div class="circle-wrap">
+        <div class="circle">
+          <div class="mask full">
+            <div class="fill"></div>
+          </div>
+          <div class="mask half">
+            <div class="fill"></div>
+          </div>
+          <img href="../images/webcycle.png">
+          <div class="inside-circle"> 72% </div>
+        </div>
+      </div>
+      <button type="button">Explore</button>
+    </section>
+
     <div id="location-display">
-    
+
     </div>
-    </main>
+  </main>
 </body>
 
 </html>

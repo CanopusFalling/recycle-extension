@@ -1,109 +1,19 @@
 body {
+    /* Shape the extension. */
     margin: 0px;
     padding: 0px;
     width: 300px;
-}
 
-header {
-    margin: 0px;
-    padding: 0px 0px;
-    font-size: 3em;
+    /* Set background to black. */
+    background-color: rgb(0, 0, 0);
+
+    /* Set the colour of all the text to white. */
     color: white;
-    background-color:  rgba(0, 0, 0, 0.8);
-    filter: contrast(90%);
-}
-header p {
-    margin: 0px;
-    padding: 5px 0px;
-    font-size: 0.5em;
-    color: white;
-    background-color: rgba(99, 98, 98, 0.281);
+
+    /* Set all font to ubuntu. */
+    font-family: "Ubuntu", sans-serif;
 }
 
-
-main div.EcoRating{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    margin: 0px;
-    padding: 5px 0px;
-}
-
-section {
-    float: left;
-    width: 100%;
-	 margin-top:2em;
-	 margin-bottom:2em;
-}
-section p {
-    color:white;
-    font-size: 2.5em;
-    margin: 0px;
-    padding: 0px 0px;
-}
-section button {
-    background-color: #37c979;
-    color: #78e5dc;
-    font-size: 0.5em;
-}
-.rcorners {
-    border-radius: 50px;
-    border-color: #00000063;
-    padding: 1px 30px;
-    
-}
-.circle-wrap {
-    margin: 30px auto;
-    width: 150px;
-    height: 150px;
-    background: #78e5dc;
-    border-radius: 50%;
-  }
-  .circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  border-radius: 50%;
-}
-.circle-wrap .circle .mask {
-    clip: rect(0px, 150px, 150px, 75px);
-  }
-  .circle-wrap .circle .mask .fill {
-    clip: rect(0px, 75px, 150px, 0px);
-    background-color: #11e26f;
-  }
-  
-  .circle-wrap .circle .mask.full,
-  .circle-wrap .circle .fill {
-    animation: fill ease-in-out 3s;
-    transform: rotate(126deg);
-  }
-  .circle-wrap .inside-circle {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    filter: brightness(70%);
-    background-image: url("../images/webcycle1.png");
-    line-height: 130px;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    position: absolute;
-    z-index: 100;
-    font-weight: 700;
-    font-size: 3.5em;    
-    color: #000000;
-  }
-
-@keyframes fill {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(126deg);
-    }
-  }
 
 
 
