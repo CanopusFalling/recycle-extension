@@ -54,8 +54,52 @@ chrome.storage.sync.get(['user-location'], function (location) {
     }
 });
 
-// ===== Update Product Information =====
+// ===== Determine Product Information =====
 
+// Work out the different keywords associated with a product.
+function determineKeywords(products) {
+    let result = products;
+    let lastResult = result;
+
+    // Get the materials information.
+    let materials = JSON_OBJECTS[1];
+
+    // Loop round until there are no more layers.
+    while (true) {
+        for (let product in result) {
+            let keywords = result[product]['keywords'];
+            for (let keywordID in keywords) {
+                let keyword = keywords[keywordID];
+                keywords = getJSONParents(keyword, keywords, materials);
+            }
+        }
+
+        if (result == lastResult) {
+            break;
+        } else {
+            lastResult = result;
+        }
+    }
+
+    return result;
+}
+
+// Get the parents of the products associated.
+function getJSONParents(keyword, keywords, materials) {
+    for(let material in materials){
+        for(let productID in materials[material]){
+            let product = materials[material][productID];
+            if(keyword == product){
+                keywords.push(material);
+            }
+        }
+    }
+
+    return keywords;
+}
+
+
+// Get a range of products with confidence values.
 function determineProductList(productInformation) {
     // Get the materials object.
     let materials = JSON_OBJECTS[1];
@@ -63,24 +107,22 @@ function determineProductList(productInformation) {
     // Get the product information.
     let title = productInformation['title'];
     let description = productInformation['description'];
-    let ASIN = productInformation['ASIN']
+    let ASIN = productInformation['ASIN'];
 
     // Work out the probable current product.
     // The factor element is to weight the title more than the description.
     let likelyProducts = itterateOverJSONChildren({}, materials, productMatch, title, 5);
     likelyProducts = itterateOverJSONChildren(likelyProducts, materials, productMatch, description, 1);
 
-    console.log(likelyProducts);
-
-    
+    return likelyProducts;
 }
 
-function itterateOverJSONChildren(result, object, callback, callbackString, factor) {
+function itterateOverJSONChildren(result, object, callback, callbackObject, factor) {
     for (let categoryName in object) {
         let category = object[categoryName];
         for (let itemPosition in category) {
             let item = category[itemPosition];
-            result = callback(callbackString, item, result, factor, categoryName);
+            result = callback(callbackObject, item, result, factor, categoryName);
         }
     }
 
@@ -90,7 +132,7 @@ function itterateOverJSONChildren(result, object, callback, callbackString, fact
 function productMatch(text, product, object, factor) {
     if (text.toLowerCase().includes(product)) {
         return incrementObjectCount(object, product, factor);
-    }else{
+    } else {
         return object;
     }
 }
@@ -98,9 +140,9 @@ function productMatch(text, product, object, factor) {
 function incrementObjectCount(object, name, factor) {
     // Add the factor ammount to the count for a spesific item.
     if (object.hasOwnProperty(name)) {
-        object[name] += factor;
+        object[name]['hits'] += factor;
     } else {
-        object[name] = factor;
+        object[name] = { 'keywords': [name], 'hits': factor };
     }
 
     // Return incrimented object.
@@ -120,17 +162,14 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             storageChange.newValue);
 
         if (key == "product-information") {
-            determineProductList(storageChange.newValue);
+            let products = determineProductList(storageChange.newValue);
+            console.log(determineKeywords(products));
         }
 
         // When the user changes their location.
         if (key == "user-location") {
             updateLocationInformation();
         }
-
-        /*if (key == 'materials') {
-            updateRecyclability();
-        }*/
     }
 });
 
