@@ -45,6 +45,17 @@
             "js": [
                 "page-event-scripts/ebay.js"
             ]
+        },
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.tesco.*/*"
+            ],
+            "js": [
+                "page-event-scripts/tesco.js"
+            ]
         }
     ],
     "options_page": "options/options.html",
