@@ -56,6 +56,17 @@ chrome.storage.sync.get(['user-location'], function (location) {
 
 // ===== Determine Product Information =====
 
+function setProductInformation(productInfo) {
+    let products = determineProductList(productInfo);
+    let productBreakdown = determineKeywords(products);
+    productBreakdown = keywordAjust(productBreakdown, productInfo);
+    console.log(productBreakdown);
+}
+
+function keywordAjust(productBreakdown, productInfo){
+    return productBreakdown;
+}
+
 // Work out the different keywords associated with a product.
 function determineKeywords(products) {
     let result = products;
@@ -68,8 +79,7 @@ function determineKeywords(products) {
     while (true) {
         for (let product in result) {
             let keywords = result[product]['keywords'];
-            for (let keywordID in keywords) {
-                let keyword = keywords[keywordID];
+            for (let keyword in keywords) {
                 keywords = getJSONParents(keyword, keywords, materials);
             }
         }
@@ -86,16 +96,30 @@ function determineKeywords(products) {
 
 // Get the parents of the products associated.
 function getJSONParents(keyword, keywords, materials) {
-    for(let material in materials){
-        for(let productID in materials[material]){
+    for (let material in materials) {
+        for (let productID in materials[material]) {
             let product = materials[material][productID];
-            if(keyword == product){
-                keywords.push(material);
+            console.log(product + " : " + keyword);
+            if (keyword == product) {
+                console.log(keyword);
+                incrementKeywordCount(keywords, material, 1);
             }
         }
     }
 
     return keywords;
+}
+
+function incrementKeywordCount(object, name, factor) {
+    // Add the factor ammount to the count for a spesific item.
+    if (object.hasOwnProperty(name)) {
+        object[name] += factor;
+    } else {
+        object[name] = { [name]: factor };
+    }
+
+    // Return incrimented object.
+    return object;
 }
 
 
@@ -107,7 +131,6 @@ function determineProductList(productInformation) {
     // Get the product information.
     let title = productInformation['title'];
     let description = productInformation['description'];
-    let ASIN = productInformation['ASIN'];
 
     // Work out the probable current product.
     // The factor element is to weight the title more than the description.
@@ -142,7 +165,7 @@ function incrementObjectCount(object, name, factor) {
     if (object.hasOwnProperty(name)) {
         object[name]['hits'] += factor;
     } else {
-        object[name] = { 'keywords': [name], 'hits': factor };
+        object[name] = { 'keywords': { [name]: 100 }, 'hits': factor };
     }
 
     // Return incrimented object.
@@ -162,8 +185,7 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             storageChange.newValue);
 
         if (key == "product-information") {
-            let products = determineProductList(storageChange.newValue);
-            console.log(determineKeywords(products));
+            setProductInformation(storageChange.newValue);
         }
 
         // When the user changes their location.
