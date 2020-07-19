@@ -32,7 +32,18 @@
                 "*://*.amazon.*/*"
             ],
             "js": [
-                "page-event-scripts/product-scan.js"
+                "page-event-scripts/amazon.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.ebay.*/*"
+            ],
+            "js": [
+                "page-event-scripts/ebay.js"
             ]
         }
     ],
