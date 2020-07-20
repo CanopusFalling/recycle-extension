@@ -64,7 +64,38 @@ function setProductInformation(productInfo) {
 }
 
 function keywordAjust(productBreakdown, productInfo){
+
+    // Get the product information.
+    let title = productInfo['title'];
+    let description = productInfo['description'];
+
+    for(let productName in productBreakdown){
+        let product = productBreakdown[productName];
+        let keywords = product['keywords'];
+
+        for(let keywordName in keywords){
+            let keywordCount = keywords[keywordName];
+
+            // Add to the count for the title and decription.
+            keywordCount = keywordAdd(title, keywordCount, keywordName, 5);
+            keywordCount = keywordAdd(description, keywordCount, keywordName, 1);
+
+            // Set the object to the new count.
+            keywords[keywordName] = keywordCount;
+        }
+        productBreakdown[productName]['keywords'] = keywords;
+    }
+
     return productBreakdown;
+}
+
+function keywordAdd(text, keywordCount, keywordName, factor){
+    console.log(keywordName);
+    if(text.toLowerCase().includes(keywordName)){
+        keywordCount += factor;
+    }
+
+    return keywordCount;
 }
 
 // Work out the different keywords associated with a product.
@@ -99,9 +130,7 @@ function getJSONParents(keyword, keywords, materials) {
     for (let material in materials) {
         for (let productID in materials[material]) {
             let product = materials[material][productID];
-            console.log(product + " : " + keyword);
             if (keyword == product) {
-                console.log(keyword);
                 incrementKeywordCount(keywords, material, 1);
             }
         }
@@ -115,7 +144,7 @@ function incrementKeywordCount(object, name, factor) {
     if (object.hasOwnProperty(name)) {
         object[name] += factor;
     } else {
-        object[name] = { [name]: factor };
+        object[name] = factor;
     }
 
     // Return incrimented object.
