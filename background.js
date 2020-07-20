@@ -32,15 +32,15 @@ JSON_FILES.forEach(element => {
 
 // ===== Update Local Area Information =====
 
-// Basic local info for testing purposes while there is no 
-// method to switch location in the popup.
-var LOCAL_INFO;
-
 function updateLocationInformation() {
     chrome.storage.sync.get(['user-location'], function (locationObj) {
         let location = locationObj['user-location'];
         try {
-            LOCAL_INFO = JSON_OBJECTS[0]['district-councils'][location];
+            let localInfo = JSON_OBJECTS[0]['district-councils'][location];
+
+            chrome.storage.sync.set({'local-info': localInfo}, function(){
+                console.log("Set local information data.");
+            })
         } catch (e) {
             console.log(e);
         }
@@ -61,19 +61,30 @@ function setProductInformation(productInfo) {
     let productBreakdown = determineKeywords(products);
     productBreakdown = keywordAjust(productBreakdown, productInfo);
     console.log(productBreakdown);
+
+    let productAnalysis = {
+        'product-analysis': {
+            'product-information': productInfo,
+            'product-breakdown': productBreakdown
+        }
+    };
+
+    chrome.storage.sync.set(productAnalysis, function(){
+        console.log("Saved analysis of product.");
+    })
 }
 
-function keywordAjust(productBreakdown, productInfo){
+function keywordAjust(productBreakdown, productInfo) {
 
     // Get the product information.
     let title = productInfo['title'];
     let description = productInfo['description'];
 
-    for(let productName in productBreakdown){
+    for (let productName in productBreakdown) {
         let product = productBreakdown[productName];
         let keywords = product['keywords'];
 
-        for(let keywordName in keywords){
+        for (let keywordName in keywords) {
             let keywordCount = keywords[keywordName];
 
             // Add to the count for the title and decription.
@@ -89,9 +100,8 @@ function keywordAjust(productBreakdown, productInfo){
     return productBreakdown;
 }
 
-function keywordAdd(text, keywordCount, keywordName, factor){
-    console.log(keywordName);
-    if(text.toLowerCase().includes(keywordName)){
+function keywordAdd(text, keywordCount, keywordName, factor) {
+    if (text.toLowerCase().includes(keywordName)) {
         keywordCount += factor;
     }
 
