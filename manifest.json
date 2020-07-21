@@ -23,14 +23,41 @@
         "default_icon": "images/webcycle.png",
         "default_popup": "popup/popup.html"
     },
-    "content_scripts": [{
-        "matches": [
-            "*://*.amazon.co.uk/*"
-        ],
-        "js": [
-            "product-scan.js"
-        ]
-    }],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.amazon.*/*"
+            ],
+            "js": [
+                "page-event-scripts/amazon.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.ebay.*/*"
+            ],
+            "js": [
+                "page-event-scripts/ebay.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.tesco.*/*"
+            ],
+            "js": [
+                "page-event-scripts/tesco.js"
+            ]
+        }
+    ],
     "options_page": "options/options.html",
     "manifest_version": 2
 }
