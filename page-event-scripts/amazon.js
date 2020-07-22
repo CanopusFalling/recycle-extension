@@ -5,35 +5,33 @@
 // ===== Scraping Functions =====
 // Gets all the product information and returns it as an object.
 function getProductInfo() {
-    // Get hostname
-    let url = window.location.href;
-    //console.log(url);
 
     let ASIN = "";
     let title = "";
     let description = "";
+    let price = "";
 
-    if (url.includes("amazon")){
-        // Get all the product information.
-        ASIN = getASINAmazon();
-        title = getTitleAmazon();
-        description = getDescAmazon();
+    // Get all the product information.
+    ASIN = getASINAmazon();
+    title = getTitleAmazon();
+    description = getDescAmazon();
+    price = getPriceAmazon();
 
-        // Return empty object if all the information is empty.
-        if (ASIN == "" && title == "" && description == "") {
-            // Return a blank object if there is no product.
-            return {};
-        } else {
-            // Return all the data as a JSON object.
-            return {
-                "product-information":
-                {
-                    "ASIN": ASIN,
-                    "title": title,
-                    "description": description
-                }
-            };
-        }
+    // Return empty object if all the information is empty.
+    if (ASIN == "" && title == "" && description == "" && price == "") {
+        // Return a blank object if there is no product.
+        return {};
+    } else {
+        // Return all the data as a JSON object.
+        return {
+            "product-information":
+            {
+                "ASIN": ASIN,
+                "title": title,
+                "description": description,
+                "price": price
+            }
+        };
     }
 }
 
@@ -66,7 +64,10 @@ function getASINAmazon() {
         }
     }
 
-    return ASIN;
+    let salt = "amazon-";
+    let salted_identity = salt.concat(ASIN);
+
+    return salted_identity;
 }
 
 function getTitleAmazon() {
@@ -77,6 +78,11 @@ function getTitleAmazon() {
 function getDescAmazon() {
     let description = document.getElementById("productDescription");
     return getCleanText(description);
+}
+
+function getPriceAmazon(){
+    let price = document.getElementById("priceblock_ourprice");
+    return getCleanText(price).substring(1);
 }
 
 // ===== Text Manipulation Functions =====

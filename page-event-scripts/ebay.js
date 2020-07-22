@@ -5,47 +5,46 @@
 // ===== Scraping Functions =====
 // Gets all the product information and returns it as an object.
 function getProductInfo() {
-    // Get hostname
-    let url = window.location.href;
-    //console.log(url);
 
     let ASIN = "";
     let title = "";
     let description = "";
+    let price = "";
 
-    if (url.includes("ebay")){
-        // Get all the product information.
-        ASIN = getASINEbay();
-        title = getTitleEbay();
-        description = getDescEbay();
+    // Get all the product information.
+    ASIN = getASINEbay();
+    title = getTitleEbay();
+    description = getDescEbay();
+    price = getPriceEbay();
 
-        // Return empty object if all the information is empty.
-        if (ASIN == "" && title == "" && description == "") {
-            // Return a blank object if there is no product.
-            return {};
-        } else {
-            // Return all the data as a JSON object.
-            return {
-                "product-information":
-                {
-                    "ASIN": ASIN,
-                    "title": title,
-                    "description": description
-                }
-            };
-        }
+    // Return empty object if all the information is empty.
+    if (ASIN == "" && title == "" && description == "" && price == "") {
+        // Return a blank object if there is no product.
+        return {};
+    } else {
+        // Return all the data as a JSON object.
+        return {
+            "product-information":
+            {
+                "ASIN": ASIN,
+                "title": title,
+                "description": description,
+                "price": price
+            }
+        };
     }
 }
 
 function getASINEbay() {
-    let title = document.getElementById("descItemNumber");
-    return getCleanText(title);
+    let identity = getCleanText(document.getElementById("descItemNumber"));
+    let salt = "ebay-";
+    let salted_identity = salt.concat(identity);
+    return salted_identity;
 }
 
 function getTitleEbay() {
-    let selector = document.querySelectorAll('[itemprop="name"]');
-    //console.log(selector[selector.length - 1]);
-    return getCleanText(selector[selector.length - 1]);
+    let title = document.querySelectorAll('[itemprop="name"]');
+    return getCleanText(title[title.length - 1]);
 }
 
 function getDescEbay() {
@@ -60,6 +59,13 @@ function getDescEbay() {
     }
 
     return material;
+}
+
+function getPriceEbay() {
+    let price = document.querySelectorAll('[itemprop="price"]');
+    console.log(price);
+    price = getCleanText(price[price.length - 1]).substring(1);
+    return price;
 }
 
 // ===== Text Manipulation Functions =====
