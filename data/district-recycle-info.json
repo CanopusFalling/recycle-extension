@@ -17,11 +17,23 @@
         "Sheffield": {
             "Title": "City",
             "Type": "Metropolitan borough",
-            "bin-recyclable": [],
+            "bin-recyclable": [
+                "aerosol",
+                "foil",
+                "can",
+                "cardboard",
+                "paper",
+                "magazine"
+            ],
             "non-bin-recyclable": [
                 "chipboard",
                 "MDF",
-                "plywood"
+                "plywood",
+                "yoghurt pot",
+                "carrier bag",
+                "bulb",
+                "napkin",
+                "paint"
             ]
         },
         "Cornwall": {
@@ -34,6 +46,43 @@
 
             ]
             
+        },
+        "Rotherham": {
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "leaflet",
+                "magazine"
+            ],
+            "non-bin-recyclable": [
+                "crockery",
+                "bulb",
+                "pyrex",
+                "tin"
+            ]
+        },
+        "Manchester": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "aerosol",
+                "bottle",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "plastic film",
+                "bubble wrap",
+                "cloth",
+                "shoe",
+                "polystyrene",
+                "plant pot",
+                "battery",
+                "soil",
+                "bin bag"
+            ]
         }
     }
 }
