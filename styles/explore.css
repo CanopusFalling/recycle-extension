@@ -38,11 +38,12 @@ p
 
 .image-overlay
 {
-    
-   
-    opacity: 1;
-  padding:1em 2em;
+  
+  
   position: relative;
+  height:100%;
+  width: 100%;
+  display: flex;
   top:0px;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -54,7 +55,7 @@ p
 
 .card:hover .product-description
 {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(0, 0, 0);
   height:70%;
   width:100%;
   position:absolute;
@@ -64,15 +65,12 @@ p
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0.5em 1em;
   text-align:center;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 
 /* Hovering */
-.card .property-image
-{
-  opacity: 1;
-}
+
 .card .product-description
 {
   height:0%;

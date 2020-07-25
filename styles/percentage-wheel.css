@@ -9,7 +9,12 @@
     background: #78e5dc3f;
     border-radius: 50%;
 }
+.circle-container{
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
 
+}
 .circle-wrap .circle .mask, .circle-wrap .circle .fill {
     width: 150px;
     height: 150px;
