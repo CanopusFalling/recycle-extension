@@ -18,22 +18,35 @@
             "Title": "City",
             "Type": "Metropolitan borough",
             "bin-recyclable": [
-                "aerosol",
-                "foil",
+                "glass",
                 "can",
-                "cardboard",
+                "tin",
+                "plastic bottle",
                 "paper",
-                "magazine"
+                "cardboard",
             ],
             "non-bin-recyclable": [
                 "chipboard",
                 "MDF",
                 "plywood",
-                "yoghurt pot",
-                "carrier bag",
-                "bulb",
+                "tetrapack",
+                "textile",
+                "batterie",
+                "bubble wrap",
+                "CD and DVD",
+                "electrical eqipment",
+                "lightbulb",
                 "napkin",
-                "paint"
+                "paper towel",
+                "electrical cabels",
+                "video tapes",
+                "audio tapes",
+                "tea bags",
+                
+                
+
+
+
             ]
         },
         "Cornwall": {
@@ -46,43 +59,6 @@
 
             ]
             
-        },
-        "Rotherham": {
-            "Type": "Metropolitan borough",
-            "bin-recyclable": [
-                "paper",
-                "cardboard",
-                "leaflet",
-                "magazine"
-            ],
-            "non-bin-recyclable": [
-                "crockery",
-                "bulb",
-                "pyrex",
-                "tin"
-            ]
-        },
-        "Manchester": {
-            "Title": "City",
-            "Type": "Metropolitan borough",
-            "bin-recyclable": [
-                "paper",
-                "cardboard",
-                "aerosol",
-                "bottle",
-                "foil"
-            ],
-            "non-bin-recyclable": [
-                "plastic film",
-                "bubble wrap",
-                "cloth",
-                "shoe",
-                "polystyrene",
-                "plant pot",
-                "battery",
-                "soil",
-                "bin bag"
-            ]
         }
     }
 }
