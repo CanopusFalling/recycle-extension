@@ -1,0 +1,84 @@
+
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p
+{
+  font-size:12px;
+}
+
+
+
+.card
+{
+  height:250px;
+  width:100%;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:8px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px rgba(255, 255, 255, 0.2), -15px -15px 27px rgba(255, 255, 255, 0.2);
+  box-shadow:  15px 15px 27px rgba(255, 255, 255, 0.2), -15px -15px 27px rgba(255, 255, 255, 0.2);
+}
+
+
+.image-overlay
+{
+    
+   
+    opacity: 1;
+  padding:1em 2em;
+  position: relative;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('../images/product1.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.card:hover .product-description
+{
+  background-color: rgba(255, 255, 255, 0.2);
+  height:70%;
+  width:100%;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+  opacity: 0.5;
+}
+
+
+/* Hovering */
+.card .property-image
+{
+  opacity: 1;
+}
+.card .product-description
+{
+  height:0%;
+  opacity: 0;
+}
+
+
+
+
