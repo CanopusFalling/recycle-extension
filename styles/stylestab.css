@@ -2,7 +2,7 @@ body {
     /* Shape the extension. */
     margin: 0px;
     padding: 0px;
-    width: auto;
+    width:100%;
     /* Set background to black. */
     background-color: rgb(0, 0, 0);
     /* Set the colour of all the text to white. */
