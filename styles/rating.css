@@ -7,8 +7,29 @@ section.rating {
     /* Lighten the background slightly. */
     background-color: rgb(0, 0, 0);
 }
+.Eco-rating{
+    display: flex;
+    flex-direction: row;
+}
+.Eco-rating h1{
+    font-size: 2.5rem;
+    position: relative;
+    
+}
+.Eco-rating .infobutton{
+    position: relative;
+    right: 0px;
+    border: 0;
+    height: 20px;
+    width: 20px;    
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    color: white;
+}
 
-section.rating h1, section.rating h2 {
+
+.rating h1, .rating h2 {
     /* Shape the title box. */
     margin: 0px;
     padding: 8px 0px;
@@ -20,7 +41,7 @@ section.rating h1, section.rating h2 {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-section.rating h2 {
+.rating h2 {
     /* Font ajust. */
     font-size: 1.4em;
     text-align: center;
@@ -28,7 +49,7 @@ section.rating h2 {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-section.rating button {
+.rating button {
     background-color: #227c4c;
     color: white;
     font-size: 1.6em;
