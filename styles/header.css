@@ -2,7 +2,7 @@
 
 header {
     /* Shape header */
-    margin: 0px;
+    margin: 0px 0px 10px 0px;
     padding: 0px;
    
     /* Lighten the background slightly. */
@@ -23,4 +23,15 @@ header h1 {
     /* Set font styles. */
     font-size: 1.2em;
     text-align: center;
+}
+
+header h2 {
+    /* Shape section. */
+    margin: 0px;
+    padding: 8px 10px;
+    /* Set font styles. */
+    font-size: 0.5em;
+    text-align: center;
+    /* Lighten the background a little further. */
+    background-color: rgba(255, 255, 255, 0.1);
 }

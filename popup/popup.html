@@ -3,6 +3,7 @@
 
 <head>
   <!-- Javascript files -->
+  <script src="navigation.js"></script>
 
   <!-- CSS files -->
   <link rel="stylesheet" href="../styles/styles.css">
@@ -12,7 +13,6 @@
   <link rel="stylesheet" href="../styles/explore.css">
   <link rel="stylesheet" href="../styles/infopage.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <script src="popup.js"></script>
   <!-- Meta Information. -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +22,16 @@
 
 <body>
   <header>
-    
+
     <h1>Eco-Guard</h1>
   </header>
 
   <main>
 
     <section class="rating" id="current-product-rating">
-      <div class="Eco-rating"><h1>Eco-Rating</h1><button class="infobutton" id="info"><i class="material-icons">info</i></button></div>
+      <div class="Eco-rating">
+        <h1>Eco-Rating</h1><button class="infobutton" id="info"><i class="material-icons">info</i></button>
+      </div>
       <h2>Product title: [title-here]</h2>
       <div class="circle-wrap">
         <div class="circle">
@@ -43,26 +45,32 @@
           <div class="inside-circle"> 72% </div>
         </div>
       </div>
-      <button id="explorealts">Explore</button>
+      <button id="explore-alts">Explore</button>
     </section>
 
 
 
-    <div id="infosection" class="navi"><button class="backbutton" id="back"><i class="material-icons">arrow_back</i></button><section class="infopage">
-      <h1>Who are we?</h1>
-      <p>Here at Eco-Guard, we wanted to help people to be more eco-friendly.</p>
-      <p>We realised how difficult it is to be eco-friendly, especially when shopping online.</p>
-      <p>So we thought, what if we could make it simple for people to choose better products, at similar prices, with less environmental impact</p>
-      <p>And, what if, we helped people change their habits, before recycling it, even becomes an issue.</p>
-      <p>So, Eco-Guard, your personal Eco-Advisor was born.</p>
-      <h1>What is the Eco-Rating?</h1>
-      <p>Our Eco-Rating is our algorithm for calculating the environmental impact of a product.</p>
-      <p>As our product develops, so does our algorithm.</p>
-      <p>We believe that to be effective, this needs to be as transparent as possible.</p>
-      <p>Head over to our <a href="">website</a> to find out more!</p>
-      <p>If you have any queries, suggestions or ideas, we would love to hear them, to help us improve.</p>
-    </section></div>
-    
+    <div id="info-section" class="navi">
+      <button class="backbutton" id="back">
+        <i class="material-icons">arrow_back</i>
+      </button>
+      <section class="infopage">
+        <h1>Who are we?</h1>
+        <p>Here at Eco-Guard, we wanted to help people to be more eco-friendly.</p>
+        <p>We realized how difficult it is to be eco-friendly, especially when shopping online.</p>
+        <p>So we thought, what if we could make it simple for people to choose better products, at similar prices, with
+          less environmental impact</p>
+        <p>And, what if, we helped people change their habits, before recycling it, even becomes an issue.</p>
+        <p>So, Eco-Guard, your personal Eco-Advisor was born.</p>
+        <h1>What is the Eco-Rating?</h1>
+        <p>Our Eco-Rating is our algorithm for calculating the environmental impact of a product.</p>
+        <p>As our product develops, so does our algorithm.</p>
+        <p>We believe that to be effective, this needs to be as transparent as possible.</p>
+        <p>Head over to our <a href="">website</a> to find out more!</p>
+        <p>If you have any queries, suggestions or ideas, we would love to hear them, to help us improve.</p>
+      </section>
+    </div>
+
 
 
   </main>
