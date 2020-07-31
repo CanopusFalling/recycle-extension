@@ -1,4 +1,10 @@
-
+main{
+  
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
 
 h5
 {
@@ -27,6 +33,7 @@ p
 {
   height:250px;
   width:400px;
+  margin: 40px;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
