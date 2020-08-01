@@ -18,35 +18,37 @@
             "Title": "City",
             "Type": "Metropolitan borough",
             "bin-recyclable": [
-                "glass",
+                "aerosol",
+                "foil",
                 "can",
+                "cardboard",
+                "paper",
+                "magazine",
+                "glass",
                 "tin",
                 "plastic bottle",
-                "paper",
-                "cardboard",
             ],
             "non-bin-recyclable": [
                 "chipboard",
                 "MDF",
                 "plywood",
+                "yoghurt pot",
+                "carrier bag",
+                "napkin",
+                "paint",
                 "tetrapack",
                 "textile",
-                "batterie",
+                "battery",
                 "bubble wrap",
-                "CD and DVD",
+                "CD",
+                "DVD",
                 "electrical eqipment",
                 "lightbulb",
-                "napkin",
                 "paper towel",
-                "electrical cabels",
-                "video tapes",
-                "audio tapes",
-                "tea bags",
-                
-                
-
-
-
+                "electrical cable",
+                "video tape",
+                "audio tape",
+                "tea bag",
             ]
         },
         "Cornwall": {
@@ -56,9 +58,77 @@
                 "chipboard",
                 "MDF",
                 "plywood"
-
             ]
             
+        },
+        "Rotherham": {
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "leaflet",
+                "magazine"
+            ],
+            "non-bin-recyclable": [
+                "crockery",
+                "bulb",
+                "pyrex",
+                "tin"
+            ]
+        },
+        "Manchester": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "aerosol",
+                "bottle",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "plastic film",
+                "bubble wrap",
+                "cloth",
+                "shoe",
+                "polystyrene",
+                "plant pot",
+                "battery",
+                "soil",
+                "bin bag"
+            ]
+        },
+        "Leeds": {
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "newspaper",
+                "magazine",
+                "book",
+                "egg box",
+                "toilet roll",
+                "cereal box",
+                "metal can",
+                "aluminium aerosol",
+                "cooking foil",
+                "PET/PETE",
+                "HDPE",
+                "PE-HD",
+                "LDPE",
+                "PE-LD",
+                "margarine tub",
+                "tetrapack",
+                "yogurt pot",
+                "milk container"
+            ],
+            "non-bin-recyclable": [
+                "glass",
+                "garden waste",
+                "food",
+                "polystyrene",
+                "shredded paper"
+            ]
         }
     }
 }
