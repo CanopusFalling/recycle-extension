@@ -1,7 +1,7 @@
 /* Styles to handle the percentage wheel. */
 :root{
     
-    --percentage-guess: 50deg;
+    --percentage-guess: 0deg;
     /*We want to make sure that this takes a value between 0 and 180*/
 }
 /* wraps the full circle and sets the border radius. */

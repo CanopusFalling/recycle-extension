@@ -68,5 +68,10 @@ function recyclability(){
         let uncertainty = uncertain / total;
 
         productAnalysis['recyclability'] = {'score': recyclability, 'uncertainty': uncertainty};
+        
+        //Update plugin dials to reflect recyclability score
+        document.getElementById("eco-Rating-Percentage").innerHTML = recyclability;
+        document.documentElement.style.setProperty('--percentage-guess', recyclability + 'deg');
+
     }
 }

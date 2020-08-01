@@ -60,7 +60,7 @@ function setProductInformation(productInfo) {
     let products = determineProductList(productInfo);
     let productBreakdown = determineKeywords(products);
     productBreakdown = keywordAjust(productBreakdown, productInfo);
-    alert("Hello I want to break products down");
+    
     console.log(productBreakdown);
    
 
