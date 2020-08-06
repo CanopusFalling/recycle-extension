@@ -246,3 +246,4 @@ function update() {
 
 // Update the local info about the user's location.
 updateLocationInformation();
+

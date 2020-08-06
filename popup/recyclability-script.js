@@ -73,6 +73,7 @@ function recyclability(){
         //Update plugin dials to reflect recyclability score
         console.log(recyclability);
         document.getElementById("eco-Rating-Percentage").innerHTML = recyclability;
+        //window.alert(productAnalysis);
         document.documentElement.style.setProperty('--percentage-guess', recyclability + 'deg');
 
         // Return data.
