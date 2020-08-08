@@ -66,6 +66,9 @@ function recyclability() {
         }
 
         // Calculate recyclability.
+        //alert("Recycle Score:"+ recycleScore + "    nonRecycleScore:"+nonRecycleScore+"     uncertain:"+uncertain);
+        //BUG FOUND-->It seems to be unable to calculate the new recycleScores---because it returns 0 as the initialised value
+        
         let total = recycleScore + nonRecycleScore + uncertain;
         //console.log(recycleScore + " : " + nonRecycleScore + " : " + uncertain);
         console.log(uncertain);
@@ -78,6 +81,14 @@ function recyclability() {
         return productAnalysis;
     }
 }
+
+//Formats the recyclability score such that it can be passed into the css to set the ring rating
+function formatRecyclabilityScore(recyclability){
+    let degreerotation = recyclability * 1.8;
+    degreerotation += 'deg';
+    return degreerotation;
+}
+
 
 // ===== Get recyclability information =====
 function getRecyclability() {
