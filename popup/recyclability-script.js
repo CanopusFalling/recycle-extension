@@ -80,14 +80,19 @@ function recyclability() {
 
 
 
-        //Update Visual Markers on popup
         
         
-        document.getElementById("eco-Rating-Percentage").textContent = recyclability+'%';
-        document.documentElement.style.setProperty('--percentage-guess', document.documentElement.style.setProperty('--percentage-guess', (product['recyclability']['score'] * 180) + 'deg'));
+        
         // Return data.
         return productAnalysis;
     }
+}
+
+//Formats the recyclability score such that it can be passed into the css to set the ring rating
+function formatRecyclabilityScore(recyclability){
+    let degreerotation = recyclability * 1.8;
+    degreerotation += 'deg';
+    return degreerotation;
 }
 
 
@@ -103,6 +108,13 @@ function getRecyclability() {
     //window.alert(productAnalysis);
     console.log((product['recyclability']['score'] * 360));
     document.documentElement.style.setProperty('--percentage-guess', (product['recyclability']['score'] * 180) + 'deg');
+    
+//Update Visual Markers on popup
+    recyclability = 54;
+       
+    document.getElementById("eco-Rating-Percentage").textContent = recyclability+'%';
+    document.documentElement.style.setProperty('--percentage-guess', formatRecyclabilityScore(recyclability));
+
     console.log(productAnalysis);
 }
 

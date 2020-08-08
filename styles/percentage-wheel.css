@@ -31,8 +31,8 @@
 }
 
 .circle-wrap .circle .mask.full, .circle-wrap .circle .fill {
-    /*animation: fill ease-in-out 4s;*/
-    /*Needs the system working on*/
+    animation: fill ease-in-out 1s;/* This is currently redundant*/
+    
     transform: rotate(var(--percentage-guess));
 }
 
