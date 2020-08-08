@@ -94,7 +94,7 @@ function setRecyclability() {
 function setTitle(title){
     let titleObject = document.getElementById("current-product-title");
 
-    titleObject.innerHTML = title;
+    titleObject.textContent = title;
 }
 
 function setPercentage(score) {
@@ -119,7 +119,7 @@ function setPercentage(score) {
 
         // Set the error message for the user.
         let errorDiv = document.getElementById("percentage-card-error");
-        errorDiv.innerHTML = "Unable to determine the recyclability of the product."
+        errorDiv.textContent = "Unable to determine the recyclability of the product."
     }
 }
 
@@ -127,7 +127,7 @@ function setPercentageWheel(score) {
     // Update the wheel percentage.
     let halfDegrees = score * 180;
     let docRoot = document.documentElement;
-    docRoot.style.setProperty('--percentage-guess', halfDegrees);
+    docRoot.style.setProperty('--percentage-guess', halfDegrees+'deg');
 }
 
 // Wait for the product analysis to be set.
