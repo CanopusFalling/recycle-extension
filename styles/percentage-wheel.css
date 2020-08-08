@@ -31,7 +31,8 @@
 }
 
 .circle-wrap .circle .mask.full, .circle-wrap .circle .fill {
-    animation: fill ease-in-out 2s;
+    /*animation: fill ease-in-out 4s;*/
+    /*Needs the system working on*/
     transform: rotate(var(--percentage-guess));
 }
 
@@ -67,10 +68,37 @@
 /* Animate wheel. */
 
 @keyframes fill {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    10% {
+        transform: rotate(var(--percentage-guess)*0.1);
+    }
+    20% {
+        transform: rotate(var(--percentage-guess)*0.2);
+    }
+    30% {
+        transform: rotate(var(--percentage-guess)*0.3);
+    }
+    40% {
+        transform: rotate(var(--percentage-guess)*0.4);
+    }
+    50% {
+        transform: rotate(var(--percentage-guess)*0.5);
+    }
+    60% {
+        transform: rotate(var(--percentage-guess)*0.6);
+    }
+    70% {
+        transform: rotate(var(--percentage-guess)*0.7);
+    }
+    80% {
+        transform: rotate(var(--percentage-guess)*0.8);
+    }
+    90% {
+        transform: rotate(var(--percentage-guess)*0.9);
+    }
+    100% {
         transform: rotate(var(--percentage-guess));
     }
 }
@@ -109,10 +137,7 @@
     background-color: #11e26f;
 }
 
-.circle-wrap-small .circle-small .mask-full-small, .circle-wrap-small .circle-small .fill-small {
-    animation: fill ease-in-out 2s;
-    transform: rotate(126deg);
-}
+
 
 /* Image within circle. */
 
