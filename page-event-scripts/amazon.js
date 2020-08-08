@@ -123,6 +123,7 @@ if (productInfo != {}) {
             console.log(data);
         })
     });
+    document.getElementById('current-product-title').textContent = 'babana';
 } else {
     console.log('Not Saved.');
 }

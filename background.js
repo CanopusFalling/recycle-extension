@@ -83,7 +83,9 @@ function keywordAjust(productBreakdown, productInfo) {
     // Get the product information.
     let title = productInfo['title'];
     let description = productInfo['description'];
+    
 
+    
     for (let productName in productBreakdown) {
         let product = productBreakdown[productName];
         let keywords = product['keywords'];
@@ -166,6 +168,8 @@ function incrementKeywordCount(object, name, factor) {
 }
 
 
+
+
 // Get a range of products with confidence values.
 function determineProductList(productInformation) {
     // Get the materials object.
@@ -175,6 +179,7 @@ function determineProductList(productInformation) {
     let title = productInformation['title'];
     let description = productInformation['description'];
 
+    
     // Work out the probable current product.
     // The factor element is to weight the title more than the description.
     let likelyProducts = itterateOverJSONChildren({}, materials, productMatch, title, 5);
