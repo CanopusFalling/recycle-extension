@@ -71,6 +71,8 @@ function setProductInformation(productInfo) {
         }
     };
 
+    console.log(productAnalysis);
+
     chrome.storage.sync.set(productAnalysis, function(){
         console.log("Saved analysis of product.");
     })
