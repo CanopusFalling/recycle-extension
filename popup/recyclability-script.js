@@ -106,13 +106,13 @@ function setPercentage(score) {
     if (!isNaN(score)) {
         let percentage = Math.round(score * 100);
         // Update the percentage text.
-        percentageObject.innerHTML = percentage + '%';
+        percentageObject.textContent = percentage + '%';
 
         // Update wheel percentage.
         setPercentageWheel(score);
     } else {
         // Update the percentage text.
-        percentageObject.innerHTML = "N/A";
+        percentageObject.textContent = "N/A";
 
         // Set the percentage wheel to 0%.
         setPercentageWheel(0);
