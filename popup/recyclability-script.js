@@ -65,7 +65,6 @@ function recyclability() {
             }
         }
 
-        // Calculate recyclabilityval.
         //alert("Recycle Score:"+ recycleScore + "    nonRecycleScore:"+nonRecycleScore+"     uncertain:"+uncertain);
         //BUG FOUND-->It seems to be unable to calculate the new recycleScores---because it returns 0 as the initialised value
         
