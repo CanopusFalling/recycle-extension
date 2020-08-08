@@ -77,6 +77,14 @@ function recyclability() {
 
         productAnalysis['recyclability'] = { 'score': recyclability, 'uncertainty': uncertainty };
 
+
+
+
+        //Update Visual Markers on popup
+        recyclability = 43;
+        document.getElementById("eco-Rating-Percentage").textContent = recyclability;
+        document.documentElement.style.setProperty('--percentage-guess', formatRecyclabilityScore(recyclability));
+
         // Return data.
         return productAnalysis;
     }
