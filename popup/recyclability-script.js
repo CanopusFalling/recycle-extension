@@ -65,17 +65,17 @@ function recyclability() {
             }
         }
 
-        // Calculate recyclability.
+        // Calculate recyclabilityval.
         //alert("Recycle Score:"+ recycleScore + "    nonRecycleScore:"+nonRecycleScore+"     uncertain:"+uncertain);
         //BUG FOUND-->It seems to be unable to calculate the new recycleScores---because it returns 0 as the initialised value
         
         let total = recycleScore + nonRecycleScore + uncertain;
         //console.log(recycleScore + " : " + nonRecycleScore + " : " + uncertain);
         console.log(uncertain);
-        let recyclability = recycleScore / (recycleScore + nonRecycleScore);
+        let recyclabilityval = recycleScore / (recycleScore + nonRecycleScore);
         let uncertainty = uncertain / total;
 
-        productAnalysis['recyclability'] = { 'score': recyclability, 'uncertainty': uncertainty };
+        productAnalysis['recyclabilityval'] = { 'score': recyclabilityval, 'uncertainty': uncertainty };
 
 
 
@@ -99,21 +99,12 @@ function formatRecyclabilityScore(recyclability){
 // ===== Get recyclability information =====
 function getRecyclability() {
     let product = recyclability();
-
-    let percentage = product['recyclability']['score'] * 100;
+    let percentage = product['recyclabilityval']['score'] * 100;
     percentage = Math.round(percentage);
-
-    //Update plugin dials to reflect recyclability score
-    document.getElementById("eco-Rating-Percentage").innerHTML = percentage + "%";
-    //window.alert(productAnalysis);
-    console.log((product['recyclability']['score'] * 360));
-    document.documentElement.style.setProperty('--percentage-guess', (product['recyclability']['score'] * 180) + 'deg');
     
-//Update Visual Markers on popup
-    recyclability = 54;
-       
-    document.getElementById("eco-Rating-Percentage").textContent = recyclability+'%';
-    document.documentElement.style.setProperty('--percentage-guess', formatRecyclabilityScore(recyclability));
+//Update Visual Markers on popup      
+    document.getElementById("eco-Rating-Percentage").textContent = percentage+'%';
+    document.documentElement.style.setProperty('--percentage-guess', formatRecyclabilityScore(percentage));
 
     console.log(productAnalysis);
 }
