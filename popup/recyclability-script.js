@@ -80,26 +80,21 @@ function recyclability() {
     }
 }
 
-//Formats the recyclability score such that it can be passed into the css to set the ring rating
-function formatRecyclabilityScore(recyclability) {
-    let degreeRotation = recyclability * 1.8;
-    degreeRotation += 'deg';
-    return degreeRotation;
-}
-
-
 // ===== Set recyclability information =====
 function setRecyclability() {
     let product = recyclability();
 
     // Update visual information.
     setPercentage(product['recyclability-value']['score']);
-
-
-
-
+    setTitle(product["product-analysis"]["product-information"].title);
 
     console.log(productAnalysis);
+}
+
+function setTitle(title){
+    let titleObject = document.getElementById("current-product-title");
+
+    titleObject.innerHTML = title;
 }
 
 function setPercentage(score) {
