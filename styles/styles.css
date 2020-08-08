@@ -4,11 +4,12 @@ body {
     padding: 0px;
     width: 300px;
     /* Set background to black. */
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(235, 235, 235);
     /* Set the colour of all the text to white. */
-    color: white;
+    color: rgb(0, 0, 30);
     /* Set all font to ubuntu. */
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
 }
 
 /* Noselect for text */
@@ -27,6 +28,45 @@ body {
     user-select: none;
     /* Non-prefixed version, currently
     supported by Chrome, Edge, Opera and Firefox */
+}
+
+.notbold {
+    font-weight: 100;
+}​
+
+/* supposed to remove styling from 'a' tag */
+
+.infopage a {
+    color: rgb(0, 0, 30);
+    text-decoration: none; 
+} 
+
+/* for nav buttons */
+
+.material-icons {
+    filter: brightness(0);
+    position: relative;
+    top: -8px;
+}
+
+.material-icons:hover {
+    filter: brightness(5);
+}
+
+/* social media icons */
+
+.fa {
+  padding: 22px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  filter: brightness(0);
+  font-weight: 50;
+}
+
+.social-media {
+    font-size: 25px;
 }
 
 /* Scrollbar Styles */

@@ -4,6 +4,13 @@ main{
   align-items: center;
   display: flex;
   flex-direction: row;
+  background-color: rgba(235, 235, 235);
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
 }
 
 h5
@@ -85,6 +92,7 @@ p
   opacity: 0.6;
 }
 
+
 /* Hovering */
 
 .card .product-description
@@ -92,6 +100,10 @@ p
   height:0%;
   opacity: 0;
 }
+
+.notbold {
+    font-weight: 100;
+}​
 
 
 

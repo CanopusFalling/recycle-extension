@@ -5,20 +5,18 @@ section.rating {
     margin: 20px auto;
     width: 75%;
     /* Lighten the background slightly. */
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(235, 235, 235);
 }
 .Eco-rating{
-    display: flex;
-    flex-direction: row;
+    /*display: flex;*/
 }
 .Eco-rating h1{
     font-size: 2.5rem;
-    position: relative;
+    width: 100%;
 }
-
-.Eco-rating .info-button{
+.Eco-rating .infobutton{
     position: relative;
-    right: 0px;
+    left: -10px;
     border: 0;
     height: 20px;
     width: 20px;    
@@ -38,20 +36,20 @@ section.rating {
     line-height: 0.9em;
     text-align: center;
     /* Lighten the background slightly. */
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(235, 235, 235);
 }
 
 .rating h2 {
     /* Font ajust. */
-    font-size: 1em;
+    font-size: 1.4em;
     text-align: center;
     /* Lighten the background slightly. */
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(235, 235, 235);
 }
 
 .rating button {
-    background-color: #227c4c;
-    color: white;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: rgb(0, 0, 30);
     font-size: 1.6em;
     border-radius: 50px;
     border-color: #00000063;
@@ -59,4 +57,9 @@ section.rating {
     margin: 10px auto;
     display: block;
     align-items: center;
+}
+
+#explore-alts:hover {
+    background-color: #00000063;
+    color: white;
 }
