@@ -64,6 +64,9 @@ function recyclability(){
         }
 
         // Calculate recyclability.
+        alert("Recycle Score:"+ recycleScore + "    nonRecycleScore:"+nonRecycleScore+"     uncertain:"+uncertain);
+        //BUG FOUND-->It seems to be unable to calculate the new recycleScores---because it returns 0 as the initialised value
+        
         let total = recycleScore + nonRecycleScore + uncertain;
         let recyclability = recycleScore / total;
         let uncertainty = uncertain / total;
@@ -71,8 +74,8 @@ function recyclability(){
         productAnalysis['recyclability'] = {'score': recyclability, 'uncertainty': uncertainty};
         
         //Update plugin dials to reflect recyclability score
-        console.log(recyclability);
-        document.getElementById("eco-Rating-Percentage").innerHTML = recyclability;
+        
+        document.getElementById("eco-Rating-Percentage").textContent = recyclability;
         //window.alert(productAnalysis);
         document.documentElement.style.setProperty('--percentage-guess', recyclability + 'deg');
 
