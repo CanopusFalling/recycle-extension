@@ -65,48 +65,75 @@ function recyclability() {
             }
         }
 
-        // Calculate recyclabilityval.
-        //alert("Recycle Score:"+ recycleScore + "    nonRecycleScore:"+nonRecycleScore+"     uncertain:"+uncertain);
-        //BUG FOUND-->It seems to be unable to calculate the new recycleScores---because it returns 0 as the initialised value
-        
+        // Calculate recyclability of the product.
+
         let total = recycleScore + nonRecycleScore + uncertain;
-        //console.log(recycleScore + " : " + nonRecycleScore + " : " + uncertain);
-        console.log(uncertain);
-        let recyclabilityval = recycleScore / (recycleScore + nonRecycleScore);
+        console.log(recycleScore + " : " + nonRecycleScore + " : " + uncertain);
+
+        let recyclabilityValue = recycleScore / (recycleScore + nonRecycleScore);
         let uncertainty = uncertain / total;
 
-        productAnalysis['recyclabilityval'] = { 'score': recyclabilityval, 'uncertainty': uncertainty };
+        productAnalysis['recyclability-value'] = { 'score': recyclabilityValue, 'uncertainty': uncertainty };
 
-
-
-
-        
-        
-        
         // Return data.
         return productAnalysis;
     }
 }
 
 //Formats the recyclability score such that it can be passed into the css to set the ring rating
-function formatRecyclabilityScore(recyclability){
-    let degreerotation = recyclability * 1.8;
-    degreerotation += 'deg';
-    return degreerotation;
+function formatRecyclabilityScore(recyclability) {
+    let degreeRotation = recyclability * 1.8;
+    degreeRotation += 'deg';
+    return degreeRotation;
 }
 
 
-// ===== Get recyclability information =====
-function getRecyclability() {
+// ===== Set recyclability information =====
+function setRecyclability() {
     let product = recyclability();
-    let percentage = product['recyclabilityval']['score'] * 100;
-    percentage = Math.round(percentage);
-    
-//Update Visual Markers on popup      
-    document.getElementById("eco-Rating-Percentage").textContent = percentage+'%';
-    document.documentElement.style.setProperty('--percentage-guess', formatRecyclabilityScore(percentage));
+
+    // Update visual information.
+    setPercentage(product['recyclability-value']['score']);
+
+
+
+
 
     console.log(productAnalysis);
 }
 
-setTimeout(getRecyclability, 1000);
+function setPercentage(score) {
+    console.log(score);
+    
+    // Get the percentage object.
+    let percentageObject = document.getElementById("eco-Rating-Percentage");
+
+    if (!isNaN(score)) {
+        let percentage = Math.round(score * 100);
+        // Update the percentage text.
+        percentageObject.innerHTML = percentage + '%';
+
+        // Update wheel percentage.
+        setPercentageWheel(score);
+    } else {
+        // Update the percentage text.
+        percentageObject.innerHTML = "N/A";
+
+        // Set the percentage wheel to 0%.
+        setPercentageWheel(0);
+
+        // Set the error message for the user.
+        let errorDiv = document.getElementById("percentage-card-error");
+        errorDiv.innerHTML = "Unable to determine the recyclability of the product."
+    }
+}
+
+function setPercentageWheel(score) {
+    // Update the wheel percentage.
+    let halfDegrees = score * 180;
+    let docRoot = document.documentElement;
+    docRoot.style.setProperty('--percentage-guess', halfDegrees);
+}
+
+// Wait for the product analysis to be set.
+setTimeout(setRecyclability, 1000);

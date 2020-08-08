@@ -1,9 +1,10 @@
 /* Styles to handle the percentage wheel. */
-:root{
-    
+
+:root {
     --percentage-guess: 0deg;
     /*We want to make sure that this takes a value between 0 and 180*/
 }
+
 /* wraps the full circle and sets the border radius. */
 
 .circle-wrap {
@@ -31,8 +32,8 @@
 }
 
 .circle-wrap .circle .mask.full, .circle-wrap .circle .fill {
-    animation: fill ease-in-out 1s;/* This is currently redundant*/
-    
+    animation: fill ease-in-out 1s;
+    /* This is currently redundant*/
     transform: rotate(var(--percentage-guess));
 }
 
@@ -103,14 +104,7 @@
     }
 }
 
-
-
 /*SMALL VERSION*/
-
-
-
-
-
 
 .circle-wrap-small {
     margin: 10px auto;
@@ -124,7 +118,6 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    
     border-radius: 50%;
 }
 
@@ -136,8 +129,6 @@
     clip: rect(0px, 50px, 100px, 0px);
     background-color: #11e26f;
 }
-
-
 
 /* Image within circle. */
 
