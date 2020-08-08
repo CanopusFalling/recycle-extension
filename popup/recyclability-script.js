@@ -11,6 +11,7 @@ var localInfo;
 function updateProductInfo(){
     chrome.storage.sync.get(['product-analysis'], function(data){
         productAnalysis = data;
+        console.log(data);
     });
 }
 
@@ -38,11 +39,11 @@ updateLocalInfo();
 
 // ===== Determine Recyclability Factor =====
 function recyclability(){
-    let breakdown = productAnalysis['product-breakdown'];
-    let highHits = breakdown[0];
+    let breakdown = productAnalysis["product-analysis"]["product-breakdown"];
+    let highHits = breakdown[Object.keys(breakdown)[0]];
 
     for(let productName in breakdown){
-        product = breakdown[productName];
+        let product = breakdown[productName];
         // Find the most likely product.
         if(product['hits'] > highHits['hits']){
             highHits = product;
@@ -53,9 +54,9 @@ function recyclability(){
         let nonRecycleScore = 0;
         let uncertain = 0;
         for(let keyword in product){
-            if(localInfo['bin-recyclable'].contains(keyword)){
+            if(localInfo['local-info']['bin-recyclable'].includes(keyword)){
                 recycleScore += product[keyword];
-            }else if(localInfo['non-bin-recyclable'].contains(keyword)){
+            }else if(localInfo['local-info']['non-bin-recyclable'].includes(keyword)){
                 nonRecycleScore += product[keyword];
             }else{
                 uncertain += product[keyword];
@@ -70,12 +71,20 @@ function recyclability(){
         productAnalysis['recyclability'] = {'score': recyclability, 'uncertainty': uncertainty};
         
         //Update plugin dials to reflect recyclability score
+        console.log(recyclability);
         document.getElementById("eco-Rating-Percentage").innerHTML = recyclability;
         //window.alert(productAnalysis);
         document.documentElement.style.setProperty('--percentage-guess', recyclability + 'deg');
 
+        // Return data.
+        return productAnalysis;
     }
 }
 
+// ===== Get recyclability information =====
+function getRecyclability(){
+    let product = recyclability();
+    console.log(productAnalysis);
+}
 
-    
+setTimeout(getRecyclability, 1000);
