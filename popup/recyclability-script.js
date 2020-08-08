@@ -64,7 +64,7 @@ function recyclability(){
         }
 
         // Calculate recyclability.
-        alert("Recycle Score:"+ recycleScore + "    nonRecycleScore:"+nonRecycleScore+"     uncertain:"+uncertain);
+        //alert("Recycle Score:"+ recycleScore + "    nonRecycleScore:"+nonRecycleScore+"     uncertain:"+uncertain);
         //BUG FOUND-->It seems to be unable to calculate the new recycleScores---because it returns 0 as the initialised value
         
         let total = recycleScore + nonRecycleScore + uncertain;
@@ -72,17 +72,24 @@ function recyclability(){
         let uncertainty = uncertain / total;
 
         productAnalysis['recyclability'] = {'score': recyclability, 'uncertainty': uncertainty};
-        
+        recyclability = 43;
         //Update plugin dials to reflect recyclability score
-        
+         //Updating visual number representation
         document.getElementById("eco-Rating-Percentage").textContent = recyclability;
-        //window.alert(productAnalysis);
-        document.documentElement.style.setProperty('--percentage-guess', recyclability + 'deg');
-
+        //Updating visual ring representation
+        document.documentElement.style.setProperty('--percentage-guess', formatRecyclabilityScore(recyclability));
         // Return data.
         return productAnalysis;
     }
 }
+
+//Formats the recyclability score such that it can be passed into the css to set the ring rating
+function formatRecyclabilityScore(recyclability){
+    let degreerotation = recyclability * 1.8;
+    degreerotation += 'deg';
+    return degreerotation;
+}
+
 
 // ===== Get recyclability information =====
 function getRecyclability(){
