@@ -16,7 +16,6 @@ function getProductInfo() {
     title = getTitleAmazon();
     description = getDescAmazon();
     price = getPriceAmazon();
-
     // Return empty object if all the information is empty.
     if (ASIN == "" && title == "" && description == "" && price == "") {
         // Return a blank object if there is no product.
@@ -123,6 +122,7 @@ if (productInfo != {}) {
             console.log(data);
         })
     });
+    
 } else {
     console.log('Not Saved.');
 }
