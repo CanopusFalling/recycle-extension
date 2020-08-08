@@ -26,7 +26,7 @@
                 "magazine",
                 "glass",
                 "tin",
-                "plastic bottle",
+                "plastic bottle"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -42,13 +42,13 @@
                 "bubble wrap",
                 "CD",
                 "DVD",
-                "electrical eqipment",
-                "lightbulb",
+                "electrical equipment",
+                "light bulb",
                 "paper towel",
                 "electrical cable",
                 "video tape",
                 "audio tape",
-                "tea bag",
+                "tea bag"
             ]
         },
         "Cornwall": {
@@ -110,7 +110,7 @@
                 "toilet roll",
                 "cereal box",
                 "metal can",
-                "aluminium aerosol",
+                "aluminum aerosol",
                 "cooking foil",
                 "PET/PETE",
                 "HDPE",

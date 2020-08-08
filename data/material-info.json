@@ -58,7 +58,7 @@
         "wooden fork",
         "wooden keyring",
         "wooden nail brush",
-        "woodens egg",
+        "wooden egg",
         "bamboo toaster tong",
         "wooden plant stand",
         "wooden cup",
@@ -78,10 +78,7 @@
         "wooden wine box",
         "wooden lollipop stick",
         "wood sheet"
-
     ],
-        
-
     "balsa wood": [
         "wooden model airplane",
         "wooden surfboard",
@@ -94,8 +91,6 @@
         "wooden wine box",
         "wooden lollipop stick",
         "wooden fork"
-
-
     ],
     "metal": [
         "tin can",
@@ -108,7 +103,7 @@
         "sauce pan",
         "saucepan",
         "pan",
-        "aluminium can",
+        "aluminum can",
         "metal boat",
         "bike",
         "brass",
@@ -167,14 +162,12 @@
         "pickled onions",
         "chutney",
         "pickled cucumber",
-        "pickled gerkin",
-        "mayonaise jar",
+        "pickled gherkin",
+        "mayonnaise jar",
         "perfume bottle",
         "nail polish",
         "preserving jar",
-        "glass ornament",
-        
-    
+        "glass ornament"
     ],
     "whisky": [
         "Jura 10Yo Malt Whisky",
@@ -255,43 +248,38 @@
         "Canadian Club",
         "Teeling Small Batch",
         "Jameson Black Barrel",
-        "Aberfeldy 12 Year Old",
-    
+        "Aberfeldy 12 Year Old"
     ],
-
     "wine": [
-     "Veuve Clicquot Vintage Champagne",
-     "Moet & Chandon Imperial Rose Non Vintage Champagne",
-     "Taittinger Prestige Rose Champagne",
-     "Heidsieck Brut Monopole Imperatrice ",
-     "Moet & Chandon Grand Vintage Champagne",
-     "Veuve Clicquot Brut Rose Champagne",
-     "Lanson Rose Champagne Non Vintage",
-     "Moet & Chandon Brut Imperial Non Vintage Champagne ",
-     "Taittinger Nocturne Champagne ",
-     "Veuve Clicquot Brut Yellow Label Champagne",
-     "Piper Heidsieck Brut",
-     "Lanson Black Label Champagne ",
-     "Hattingley Non Vintage Classic Reserve Sparkling",
-     "Taittinger Brut Reserve Non Vintage Champagne",
-     "Pommery Pop Non Vintage Champagne Brut",
-     "Jacquart Brut Mosaic",
-     "Tesco Finest Vintage Champagne ",
-     "Heidsieck Dry Monopole Non Vintage Champagne ",
-     "Tesco Finest Rose Champagne ",
-     "Tesco Finest Margaux",
-     "Cloudy Bay Sauvignon Blanc ",
-     "Nicolas Feuillatte Brut Champagne",
-     "Tesco Finest English Sparkling Rose Brut",
-     "Ceder's Pink Rose Non Alcohol Gin ",
-
-
-
-    ]
+        "Veuve Clicquot Vintage Champagne",
+        "Moet & Chandon Imperial Rose Non Vintage Champagne",
+        "Taittinger Prestige Rose Champagne",
+        "Heidsieck Brut Monopole Imperatrice ",
+        "Moet & Chandon Grand Vintage Champagne",
+        "Veuve Clicquot Brut Rose Champagne",
+        "Lanson Rose Champagne Non Vintage",
+        "Moet & Chandon Brut Imperial Non Vintage Champagne ",
+        "Taittinger Nocturne Champagne ",
+        "Veuve Clicquot Brut Yellow Label Champagne",
+        "Piper Heidsieck Brut",
+        "Lanson Black Label Champagne ",
+        "Hattingley Non Vintage Classic Reserve Sparkling",
+        "Taittinger Brut Reserve Non Vintage Champagne",
+        "Pommery Pop Non Vintage Champagne Brut",
+        "Jacquart Brut Mosaic",
+        "Tesco Finest Vintage Champagne ",
+        "Heidsieck Dry Monopole Non Vintage Champagne ",
+        "Tesco Finest Rose Champagne ",
+        "Tesco Finest Margaux",
+        "Cloudy Bay Sauvignon Blanc ",
+        "Nicolas Feuillatte Brut Champagne",
+        "Tesco Finest English Sparkling Rose Brut",
+        "Ceder's Pink Rose Non Alcohol Gin"
+    ],
     "paper": [
         "book",
         "dictionary",
-        "theasaurus",
+        "thesaurus",
         "hard-back book",
         "printer paper",
         "notepad",
