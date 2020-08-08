@@ -4,7 +4,7 @@
 <head>
   <!-- Javascript files -->
   <script src="navigation.js"></script>
-  <script src="recyclability-script.js"></script>
+  <script src="recyclability-script.js "></script>
 
   <!-- CSS files -->
   <link rel="stylesheet" href="../styles/styles.css">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../styles/explore.css">
   <link rel="stylesheet" href="../styles/infopage.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Meta Information. -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,16 +25,17 @@
 <body>
   <header>
 
-    <h1>Eco-Guard</h1>
+    <h1>Eco<span class = "notbold">Guard</span></h1>
   </header>
 
   <main>
 
     <section class="rating" id="current-product-rating">
       <div class="Eco-rating">
-        <h1>Eco-Rating</h1><button class="info-button" id="info"><i class="material-icons">info</i></button>
+        <h1>Eco-Rating</h1>
+	    <button class="infobutton" id="info"><i class="material-icons">info</i></button>
       </div>
-      <h2><span class = "current-product-title" id="current-product-title">No Product Found</span></h2>
+      <h2><span class = "notbold">Product title</span> [title-here]</h2>
       <div class="circle-wrap">
         <div class="circle">
           <div class="mask full">
@@ -48,34 +49,35 @@
         </div>
       </div>
       <button id="explore-alts">Explore</button>
-
-      <div id="percentage-card-error" class="error-division"></div>
     </section>
 
 
 
-    <div id="info-section" class="info-section">
-      <button class="back-button" id="back">
+    <div id="info-section" class="navi">
+      <button class="backbutton" id="back">
         <i class="material-icons">arrow_back</i>
       </button>
-      <section class="info-page">
-        <h1>Who are we?</h1>
-        <p>Here at Eco-Guard, we wanted to help people to be more eco-friendly.</p>
-        <p>We realized how difficult it is to be eco-friendly, especially when shopping online.</p>
-        <p>So we thought, what if we could make it simple for people to choose better products, at similar prices, with
-          less environmental impact</p>
-        <p>And, what if, we helped people change their habits, before recycling it, even becomes an issue.</p>
-        <p>So, Eco-Guard, your personal Eco-Advisor was born.</p>
-        <h1>What is the Eco-Rating?</h1>
-        <p>Our Eco-Rating is our algorithm for calculating the environmental impact of a product.</p>
+      <section class="infopage">
+        <h1>About us</h1>
+        <p>Here at Eco-Guard, we wanted to help people be more eco-friendly.</p>
+        <p>But we realized how difficult it is to be eco-friendly, especially when shopping online.</p>
+        <p>We wondered, what if we could make it simple for people to choose better products, at similar prices, and with
+          lesser environmental impact?</p>
+        <p>And what if we helped people protect the environment before recycling a product even becomes an issue?</p>
+        <p>Thus and thus, Eco-Guard, your eco-advisor was born.</p>
+
+        <h1>Our Eco<span class = "notbold">Rating</span></h1>
+        <p>The Eco-Rating is our algorithm for calculating the environmental impact of a product.</p>
         <p>As our product develops, so does our algorithm.</p>
-        <p>We believe that to be effective, this needs to be as transparent as possible.</p>
-        <p>Head over to our <a href="">website</a> to find out more!</p>
-        <p>If you have any queries, suggestions or ideas, we would love to hear them, to help us improve.</p>
+        <p>We believe that to be effective, this needs to be as transparent as possible. Head over to our <a href="mailto:webcyclinguk@gmail.com" target="_blank">website</a> to find out more.</p>
+        <p>If you have any queries, suggestions, or ideas, we would love to hear them!</p>
       </section>
+      <div class = "social-media">
+      	<a href="https://www.instagram.com/webcycling/" class="fa fa-instagram" target="_blank"></a>
+      	<a href="https://www.facebook.com/WebCycling-108520440920369" class="fa fa-facebook" target="_blank"></a>
+		<a href="https://twitter.com/WebCycling" class="fa fa-twitter" target="_blank"></a>
+      </div>
     </div>
-
-
 
   </main>
 </body>
