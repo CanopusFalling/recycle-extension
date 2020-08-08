@@ -1,4 +1,4 @@
-.infopage{
+.info-page{
     padding: 0px;
     padding-bottom: 1px;
     margin: 20px auto;
@@ -7,7 +7,7 @@
     /* Lighten the background slightly. */
     background-color: rgb(0, 0, 0);
 }
-.navi{
+.info-section{
     padding: 0px;
     padding-bottom: 1px;
     margin: 20px auto;
@@ -17,7 +17,7 @@
     /* Lighten the background slightly. */
     background-color: rgb(0, 0, 0);
 }
-.navi button{
+.info-section button{
     position: relative;
     right: 0px;
     border: 0;
@@ -28,7 +28,7 @@
     border-radius: 0px;
     color: white;
 }
-.infopage h1{
+.info-page h1{
      /* Shape the title box. */
      margin: 0px;
      padding: 8px 0px;

@@ -61,7 +61,6 @@ function setProductInformation(productInfo) {
     let productBreakdown = determineKeywords(products);
     productBreakdown = keywordAjust(productBreakdown, productInfo);
     let productTitle = productInfo['title'];
-    alert(productTitle);
     console.log(productBreakdown);
    
 
@@ -73,7 +72,6 @@ function setProductInformation(productInfo) {
     };
 
     console.log(productAnalysis);
-    alert("I did save");
     chrome.storage.sync.set(productAnalysis, function(){
         console.log("Saved analysis of product.");
     })
