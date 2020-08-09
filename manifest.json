@@ -20,7 +20,7 @@
         "https://*/*"
     ],
     "browser_action": {
-        "default_icon": "images/webcycle.png",
+        "default_icon": "images/webcycleLogo.png",
         "default_popup": "popup/popup.html"
     },
     "content_scripts": [
