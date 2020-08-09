@@ -1,3 +1,10 @@
+:root{
+  --product-image1: url('https://images-na.ssl-images-amazon.com/images/I/41r683RvE%2BL._SX425_.jpg');
+  --product-image2: url('https://images-na.ssl-images-amazon.com/images/I/61jUhJ92kML._AC_SL1466_.jpg');  
+  --product-image3: url('https://images-na.ssl-images-amazon.com/images/I/711GnzFkjUL._AC_SL1500_.jpg');
+  
+  /*We want to make sure that this takes a value between 0 and 180*/
+}
 main{
   
   position: relative;
@@ -38,7 +45,7 @@ p
 
 .card
 {
-  height:250px;
+  height:400px;
   width:400px;
   margin: 40px;
   display:-webkit-box;
@@ -62,9 +69,7 @@ p
 
 
 .image-overlay
-{
-  
-  
+{  
   position: relative;
   height:100%;
   width: 100%;
@@ -73,11 +78,24 @@ p
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:url('../images/product1.jpg');
+  
+}
+.p1Image
+{  
+  background: var(--product-image1);
   background-size:cover;
   background-repeat:no-repeat;
 }
-
+.p2Image{
+  background: var(--product-image2);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.p3Image{
+  background: var(--product-image3);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
 .card:hover .product-description
 {
   background-color: rgb(0, 0, 0);

@@ -1,9 +1,9 @@
 {
-    "name": "Can I Recycle This?",
+    "name": "EcoGuard",
     "version": "0.1",
-    "description": "Chrome web extension to check if a product from an online retail store is recyclable, informing the user to make better choices.",
+    "description": "Your Chrome extension informing your online retail purchases of more recyclable products for your local area",
     "icons": {
-        "128": "images/webcycle.png"
+        "128": "images/webcycleLogo.png"
     },
     "background": {
         "scripts": [
