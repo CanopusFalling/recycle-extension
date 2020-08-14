@@ -5,6 +5,7 @@
   <!-- Javascript files -->
   <script src="navigation.js"></script>
   <script src="recyclability-script.js "></script>
+  <script src="location-handler.js"></script>
   <!-- CSS files -->
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/header.css">
@@ -80,6 +81,13 @@
     </div>
 
   </main>
+
+  <footer>
+    location: 
+    <select id="location-dropdown" name="location">
+      <input type="text" placeholder="Search Locations.." id="myInput" onkeyup="filterFunction()">
+    </select>
+  </footer>
 </body>
 
 </html>
