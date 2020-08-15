@@ -41,6 +41,8 @@ function addLocations(){
     for(let council in info){
         addLocation(council);
     }
+
+    addOptionListener();
 }
 
 function addLocation(locationName){
@@ -51,5 +53,25 @@ function addLocation(locationName){
 
     locationSelector.appendChild(newNode);
 }
+
+// ===== Change location =====
+function addOptionListener(){
+    let updateButton = document.getElementById("update-location-button");
+
+    updateButton.addEventListener('click', onSelectionUpdate);
+    console.log("Added.");
+}
+
+function onSelectionUpdate(){
+    let optionBox = document.getElementById("location-dropdown");
+
+    let selection = optionBox.value;
+
+    chrome.storage.sync.set({'user-location': selection}, function(){
+        console.log("location set to: " + selection);
+    });
+}
+
+
 
 // ===== Search Bar =====
