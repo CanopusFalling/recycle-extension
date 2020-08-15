@@ -77,7 +77,8 @@ function onSelectionUpdate(){
 
     messageDiv.innerHTML = "Updated Location to " + selection;
 
-    setRecyclability();
+    setTimeout(updateLocalInfo, 1000);
+    setTimeout(setRecyclability, 2000);
 }
 
 // ===== Search Bar =====

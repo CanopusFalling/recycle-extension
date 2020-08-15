@@ -89,6 +89,7 @@ function setRecyclability() {
     setTitle(product["product-analysis"]["product-information"].title);
 
     console.log(productAnalysis);
+    console.log(product);
 }
 
 function setTitle(title){
@@ -132,3 +133,14 @@ function setPercentageWheel(score) {
 
 // Wait for the product analysis to be set.
 setTimeout(setRecyclability, 1000);
+
+// ===== Listen for product info updates =====
+
+chrome.storage.onChanged.addListener(function (changes, namespace) {
+    for (var key in changes) {
+        if (key == "product-analysis") {
+            updateProductInfo();
+            setTimeout(setRecyclability, 1000);
+        }
+    }
+});
