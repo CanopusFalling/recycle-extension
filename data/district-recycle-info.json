@@ -129,6 +129,71 @@
                 "polystyrene",
                 "shredded paper"
             ]
+        },
+        "Bristol": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "aerosol",
+                "plastic bottle",
+                "foil",
+                "plastic toiletry",
+                "bottle top",
+                "can",
+                "plastic tray",
+                "yogurt pot"
+            ],
+            "non-bin-recyclable": [
+                "black plastic",
+                "plastic film",
+                "bubble wrap",
+                "polystyrene",
+                "battery",
+                "soil",
+                "bin bag",
+                "crisp packet",
+                "cellophane",
+                "bulb",
+                "hard plastic"
+            ]
+        },
+        "Birmingham": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "aerosol",
+                "clear bottle",
+                "foil",
+                "plastic toiletry",
+                "bottle top",
+                "can",
+                "plastic tray",
+                "yogurt pot",
+                "metal lid"
+            ],
+            "non-bin-recyclable": [
+                "food waste",
+                "paint",
+                "tin",
+                "drinking glass",
+                "pyrex",
+                "ceramics",
+                "black food tray",
+                "carrier bag",
+                "black sack",
+                "hard plastic",
+                "light bulb",
+                "mirror",
+                "plastic film",
+                "wrapper",
+                "polystyrene",
+                "batteries",
+                "corks",
+                "metal",
+                "coat hanger"
+            ]
         }
     }
 }
