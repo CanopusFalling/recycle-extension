@@ -22,3 +22,7 @@ footer select{
 
     width: 100px;
 }
+
+footer div.message{
+    color: white;
+}

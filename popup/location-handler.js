@@ -76,6 +76,8 @@ function onSelectionUpdate(){
     let messageDiv = document.getElementById("location-selector-message");
 
     messageDiv.innerHTML = "Updated Location to " + selection;
+
+    setRecyclability();
 }
 
 // ===== Search Bar =====
