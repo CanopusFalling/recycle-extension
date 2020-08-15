@@ -70,6 +70,10 @@ function onSelectionUpdate(){
     chrome.storage.sync.set({'user-location': selection}, function(){
         console.log("location set to: " + selection);
     });
+
+    let messageDiv = document.getElementById("location-selector-message");
+
+    messageDiv.innerHTML = "Updated Location to " + selection;
 }
 
 
