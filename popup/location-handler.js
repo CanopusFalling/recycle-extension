@@ -60,6 +60,8 @@ function addOptionListener(){
 
     updateButton.addEventListener('click', onSelectionUpdate);
     console.log("Added.");
+
+    addSearchListener();
 }
 
 function onSelectionUpdate(){
@@ -76,6 +78,30 @@ function onSelectionUpdate(){
     messageDiv.innerHTML = "Updated Location to " + selection;
 }
 
-
-
 // ===== Search Bar =====
+
+function addSearchListener(){
+    let searchBar = document.getElementById("location-search");
+
+    searchBar.addEventListener("keyup", filterSearch);
+}
+
+function filterSearch(){
+    // Get the search string.
+    let searchBar = document.getElementById("location-search");
+
+    let search = searchBar.value;
+
+    let dropdown = document.getElementById("location-dropdown");
+    let options = dropdown.childNodes;
+
+    options.forEach(element => {
+        if(typeof element.value != "undefined"){
+            if(element.value.includes(search)){
+                element.style.display = "block";
+            }else{
+                element.style.display = "none";
+            }
+        }
+    });
+}
