@@ -71,6 +71,7 @@ function onSelectionUpdate(){
 
     chrome.storage.sync.set({'user-location': selection}, function(){
         console.log("location set to: " + selection);
+        document.getElementById("dot").style.visibility = "visible";
     });
 
     let messageDiv = document.getElementById("location-selector-message");
