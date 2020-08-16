@@ -69,6 +69,11 @@ body {
     font-size: 25px;
 }
 
+/* unvisited link */
+a {
+  color: rgb(0, 0, 30);
+}
+
 /* Scrollbar Styles */
 
 ::-webkit-scrollbar {
