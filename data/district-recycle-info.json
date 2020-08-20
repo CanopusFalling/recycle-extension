@@ -34,6 +34,43 @@
 
             ]
             
+        },
+        "Adur & Worthing": {
+            "Type": "Unitary authority",
+            "bin-recyclable": [
+                "metal",
+                "woods",
+                "cardboard",
+                "paper",
+                "cardboard boxes",
+                "card",
+                "catalogues",
+                "cereal boxes",
+                "egg boxes",
+                "Envelopes",
+                "Food packaging sleeves",
+                "junk mail",
+                "magazines",
+                "newspapers",
+                "paper",
+                "telephone directories",
+                "yellow pages",
+                "wrapping paper"
+
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "padded envelopes",
+                "jiffy bags",
+                "paper towels",
+                "photographs",
+                "foil",
+                "kitchen foil"
+
+            ]
+            
         }
     }
 }
