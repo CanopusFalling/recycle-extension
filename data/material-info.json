@@ -157,6 +157,73 @@
     "foil":[
         "tin foil",
         "aluminium foil"
-    ]
+    ],
+    "unusable plastic":[
+        "crisp packets",
+        "food pouches",
+        "pet food pouches",
+        "soup pouches",
+        "bubble wrap",
+        "polystyrene",
+        "plastic toys",
+        "plastic bottle tops",
+        "bread bags",
+        "food bags",
+        "plastic film",
+        "tetrapacks",
+        "plastic bottle cap",
+        "plant pots",
+        "paint cans",
+        "polystyrene",
+        "cling film",
+        "plastic packaging",
+        "garden plastics",
+        "paint pots",
+        "chemical container"
 
+    ],
+    "kitchen utensil":[
+        "kitchen utensil",
+        "saucepan",
+        "gas canisters",
+        "baking trays",
+        "knives",
+        "saucepans",
+        "pan",
+        "crockery"
+    ],
+    "unusable paper":[
+        "shredded paper",
+        "photographs"
+    ],
+    "ceramic":[
+
+    ],
+    "unusable glass":[
+    
+    "kitchen glassware",
+    "drinking glasses",
+    "pyrex",
+    "glass vases",
+    "microwave proof glass",
+    "milk bottles",
+    "oven proof glass",
+    "paperweight",
+    "window glass",
+    "spectacles",
+    "lightbulbs",
+    "flourescent tubes",
+    "LED Lightbulbs",
+    "low energy lightbulbs"
+    ],
+    "electrical waste":[
+        "batteries",
+        "electrical items",
+        "cables",                                        
+        "printer cartridges"
+    ],
+    "unusable metal":[
+        "paint tin",
+        "oil tin"
+    ]
 }
