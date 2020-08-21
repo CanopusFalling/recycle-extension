@@ -49,13 +49,44 @@
         "THNN Wire",
         "Insulated Wire",
         "Romex Wire",
-        "wood chisel"
+        "wood chisel",
+        "Wire Coat hangers",
+        "Metal coat hangers",
+        "Paint Tins"
     ],
     "chipboard": [
         "kitchen cabinet",
         "shelf",
         "desk",
         "wardrobe"
+    ],
+    "used paper":[
+        "padded envelopes",
+        "jiffy bags",
+        "paper towels",
+        "waxy paper",
+        "laminated paper",
+        "tissues",
+        "kitchen towels",
+        "drink cartons"
+    ],
+    
+   
+    
+    "plastic":[
+        "takeaway food containers",
+        "margarine tubs",
+        "yoghurt pots",
+        "shower gel",
+        "shampoo bottles",
+        "plastic pots",
+        "plastic tubs",
+        "plastic food trays",
+        "plastic jar"  ,
+        "plastic milk bottle",
+        "laundry bottles",
+        "moulded plastic packaging",
+        "washing detergent"
     ],
     "mdf": [
         "kitchen cabinet",
@@ -99,6 +130,33 @@
         "writing pad",
         "paper pad",
         "flipchart",
+        "junk mail",
+        "magazines",
+        "newspaper",
+        "telephone directories",
+        "yellow pages",
+        "wrapping paper",
         "paper sheet"
+    ],
+    "card": [
+        "cardboard boxes",
+        "catalogues",
+        "cereal boxes",
+        "egg boxes",
+        "Envelopes",
+        "Food packaging sleeves"
+    ],
+    "cans":[
+        "aerosol cans",
+        "biscuit tins",
+        "drinks cans",
+        "food cans",
+        "pet food cans",
+        "sweet chocolate tins"
+    ],
+    "foil":[
+        "tin foil",
+        "aluminium foil"
     ]
+
 }
