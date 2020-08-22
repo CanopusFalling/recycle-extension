@@ -4,7 +4,12 @@
         "wooden vase",
         "balsa wood",
         "desk",
-        "wardrobe"
+        "wardrobe",
+        "bamboo skewer",
+        "bamboo",
+        "BBQ Skewer",
+        "wooden spoon"
+
     ],
     "balsa wood": [
         "wooden model airplane",
@@ -16,6 +21,7 @@
         "steel can",
         "drill bit",
         "air conditioner",
+        "tomato puree",
         "deodorant",
         "wok",
         "metal colander",
@@ -152,7 +158,8 @@
         "drinks cans",
         "food cans",
         "pet food cans",
-        "sweet chocolate tins"
+        "sweet chocolate tins",
+        "air freshener cartridges"
     ],
     "foil":[
         "tin foil",
@@ -197,8 +204,45 @@
         "photographs"
     ],
     "ceramic":[
-
+        "bathroom tiles",
+        "bathroom ceramics",
+        "ceramics"
     ],
+    "rubber":[
+        "bicycle",
+        "car",
+        "buggy",
+        "tyre",
+        "scooter",
+        "bike",
+        "skateboard",
+        "tractor",
+        "motorbike",
+        "motorcycle",
+        "tricycle",
+        "unicycle",
+        "segway"
+    ],
+    "fabric":[
+        "carpet",
+        "clothes",
+        "T-Shirt",
+        "Trousers",
+        "Shirt",
+        "shorts",
+        "tracksuit",
+        "shoes",
+        "curtain",
+        "bed sheet",
+        "duvet",
+        "chino",
+        "underwear",
+        "bra",
+        "socks",
+        "slippers",
+        "trainers",
+        "hat"
+    ]
     "unusable glass":[
     
     "kitchen glassware",
