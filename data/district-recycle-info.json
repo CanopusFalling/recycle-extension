@@ -962,8 +962,8 @@
                                                     "Explosives"
                                                 ]
                                             },  
-                                            "": {
-                                                "Type": "",
+                                            "Calderdale": {
+                                                "Type": "Metropolitan District",
                                                 "bin-recyclable": [
                                                     "metal",
                                                     "woods",
