@@ -8,6 +8,7 @@ window.onload = function(){
     var explore = document.getElementById('explore-alts');
     var infoButton = document.getElementById('info');
     var back = document.getElementById('back');
+    document.getElementById('explore-alts').style.display = "none";
     document.getElementById('info-section').style.display = "none";
     explore.addEventListener('click', exploreOptions); 
     back.addEventListener('click',returnHome);
