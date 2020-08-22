@@ -24,6 +24,9 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
         if (key == 'product-analysis') {
             updateProductInfo();
         }
+        else{
+            document.getElementById("current-product-title").textContent = "Cannot Identify Product, Please Refresh";
+        }
     }
 });
 
@@ -87,7 +90,6 @@ function setRecyclability() {
     // Update visual information.
     setPercentage(product['recyclability-value']['score']);
     setTitle(product["product-analysis"]["product-information"].title);
-
     console.log(productAnalysis);
     console.log(product);
 }

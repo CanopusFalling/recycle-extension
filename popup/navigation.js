@@ -13,7 +13,7 @@ window.onload = function(){
     explore.addEventListener('click', exploreOptions); 
     back.addEventListener('click',returnHome);
     infoButton.addEventListener('click', loadInfoPage);
-}
+    }
 
 
 
