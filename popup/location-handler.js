@@ -61,7 +61,7 @@ function addOptionListener(){
     updateButton.addEventListener('click', onSelectionUpdate);
     console.log("Added.");
 
-    addSearchListener();
+    //addSearchListener();
 }
 
 function onSelectionUpdate(){
@@ -82,6 +82,7 @@ function onSelectionUpdate(){
     setTimeout(setRecyclability, 2000);
 }
 
+/*
 // ===== Search Bar =====
 
 function addSearchListener(){
@@ -109,3 +110,4 @@ function filterSearch(){
         }
     });
 }
+*/

@@ -200,7 +200,29 @@ function itterateOverJSONChildren(result, object, callback, callbackObject, fact
 }
 
 function productMatch(text, product, object, factor) {
-    if (text.toLowerCase().includes(product)) {
+    let isContained;
+    let lowerText = text.toLowerCase();
+
+    // Generate all the match strings.
+    /*let matches = [];
+    matches.push(" " + product + " ");
+    matches.push(" " + product + "s ");
+
+    isContained = false;
+    
+    matches.forEach(matchString => {
+        if(lowerText.includes(matchString)){
+            isContained = true;
+        }
+        console.log(matchString + " : " + lowerText.includes(matchString));
+    });*/
+
+    // Regex matching.
+    let regMatch = "[^a-z]" + product + "[^a-z]";
+    let regexMatcher = new RegExp(regMatch);
+    isContained = regexMatcher.test(lowerText);
+
+    if (isContained) {
         return incrementObjectCount(object, product, factor);
     } else {
         return object;

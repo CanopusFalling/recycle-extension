@@ -86,6 +86,7 @@ function recyclability() {
 // ===== Set recyclability information =====
 function setRecyclability() {
     let product = recyclability();
+    console.log(product);
 
     // Update visual information.
     setPercentage(product['recyclability-value']['score']);
