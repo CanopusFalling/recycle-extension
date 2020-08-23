@@ -49,7 +49,7 @@ function addLocation(locationName){
     let locationSelector = document.getElementById("location-dropdown");
     let newNode = document.createElement("option")
     newNode.value = locationName;
-    newNode.textContent = locationName;
+    newNode.innerHTML = locationName;
 
     locationSelector.appendChild(newNode);
 }
@@ -76,7 +76,7 @@ function onSelectionUpdate(){
 
     let messageDiv = document.getElementById("location-selector-message");
 
-    messageDiv.textContent = "Updated Location to " + selection;
+    messageDiv.innerHTML = "Updated Location to " + selection;
 
     setTimeout(updateLocalInfo, 1000);
     setTimeout(setRecyclability, 2000);

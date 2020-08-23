@@ -22,10 +22,16 @@ updateProductInfo();
 chrome.storage.onChanged.addListener(function (changes, namespace) {
     for (var key in changes) {
         if (key == 'product-analysis') {
-            updateProductInfo();
+            try{
+
+                updateProductInfo();
+            }
+            catch(error){
+                console.log("Unable to update product");
+            }
         }
         else{
-            document.getElementById("current-product-title").textContent = "Cannot Identify Product, Please Refresh";
+            document.getElementById("current-product-title").innerHTML = "Cannot Identify Product, Please Refresh";
         }
     }
 });
@@ -47,6 +53,8 @@ function recyclability() {
 
     for (let productName in breakdown) {
         let product = breakdown[productName];
+        console.log("Product Name is:");
+        console.log(product);
         // Find the most likely product.
         if (product['hits'] > highHits['hits']) {
             highHits = product;
@@ -75,7 +83,8 @@ function recyclability() {
 
         let recyclabilityValue = recycleScore / (recycleScore + nonRecycleScore);
         let uncertainty = uncertain / total;
-
+        console.log("Recyclability Value is:");
+        console.log(recyclabilityValue);
         productAnalysis['recyclability-value'] = { 'score': recyclabilityValue, 'uncertainty': uncertainty };
 
         // Return data.
@@ -89,16 +98,28 @@ function setRecyclability() {
     console.log(product);
 
     // Update visual information.
-    setPercentage(product['recyclability-value']['score']);
-    setTitle(product["product-analysis"]["product-information"].title);
-    console.log(productAnalysis);
-    console.log(product);
+    try{
+        setPercentage(product['recyclability-value']['score']);
+    }
+    catch(error){
+        document.getElementById("current-product-rating").textContent = "Experiencing issues with this product, please search for another";
+        console.log(error);
+    }
+    try{
+        setTitle(product["product-analysis"]["product-information"].title);
+        console.log(productAnalysis);
+        console.log(product);
+    }
+    catch(error){
+        console.log(error);
+    }
+    
 }
 
 function setTitle(title){
     let titleObject = document.getElementById("current-product-title");
 
-    titleObject.textContent = title;
+    titleObject.innerHTML = title;
 }
 
 function setPercentage(score) {
