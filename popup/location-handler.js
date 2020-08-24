@@ -76,7 +76,7 @@ function onSelectionUpdate(){
 
     let messageDiv = document.getElementById("location-selector-message");
 
-    messageDiv.innerHTML = "Updated Location to " + selection;
+    //messageDiv.innerHTML = "Updated Location to " + selection;
 
     setTimeout(updateLocalInfo, 1000);
     setTimeout(setRecyclability, 2000);
