@@ -68,6 +68,7 @@ function recyclability() {
         let keywords = product['keywords'];
         for (let keyword in keywords) {
             if (localInfo['local-info']['bin-recyclable'].includes(keyword)) {
+                
                 recycleScore += keywords[keyword];
             } else if (localInfo['local-info']['non-bin-recyclable'].includes(keyword)) {
                 nonRecycleScore += keywords[keyword];
