@@ -3,6 +3,7 @@
         "chipboard",
         "fiberboard",
         "plywood",
+        "balsa",
         "pine",
         "beech",
         "ash",
@@ -12,103 +13,87 @@
         "oak",
         "sycamore",
         "teak",
-        "coffee table",
-        "rolling pin",
-        "wooden vase",
-        "balsa",
-        "desk",
-        "wardrobe",
-        "bamboo skewer",
-        "Bamboo Straws",
-        "bamboo",
-        "BBQ Skewer",
-        "wooden spoon",
-        "wooden cube",
-        "wooden toilet seat",
-        "wooden toy",
-        "wooden tea box",
-        "wooden clothes peg",
-        "wooden watch",
-        "wooden letter",
-        "wooden peg doll",
-        "wooden shoe stretcher",
-        "wooden puzzle",
-        "wooden play food",
-        "bamboo hair comb",
-        "wooden brush",
-        "wooden jewellery box",
-        "wooden musical toy",
-        "wooden bamboo floral hoop",
-        "bamboo serving tray",
-        "wooden coat hanger",
-        "wooden kitchen utensils set",
-        "wooden fence post",
-        "wood ring",
-        "wooden cabinet knob",
-        "bamboo plant label",
-        "wood ipad holder",
-        "wooden chopping board",
-        "wooden serving bowl",
-        "wooden furniture leg",
-        "wooden hanging bird feeder",
-        "wooden music stand",
-        "storage wooden crate",
-        "wooden necklace",
-        "wooden spoon",
-        "wooden soap dish",
-        "wooden mallet",
-        "wood stud earrings",
-        "wood photo clip",
-        "wooden guitar rack",
-        "wooden pepper mill",
-        "bamboo wind chime",
-        "bamboo toothpick",
-        "wooden tray",
-        "wooden step stool",
-        "wooden doorstop",
-        "wooden magnetic knife rack",
-        "wooden button",
-        "bamboo food skewer",
-        "monitor wood stand",
-        "wooden chest",
-        "wooden paint palette",
-        "wooden cutlery",
-        "wooden fork",
-        "wooden keyring",
-        "wooden nail brush",
-        "woodens egg",
-        "bamboo toaster tong",
-        "wooden plant stand",
-        "wooden cup",
-        "wooden memory stick",
-        "wooden handle felt eraser",
-        "wooden curtain ring",
-        "bamboo note holder",
-        "wooden ruler",
-        "wooden hockey stick",
-        "wooden drum stick",
-        "wooden baseball bat",
-        "wooden spatula",
-        "wooden candle holder",
-        "wooden chopstick",
-        "wood slice",
-        "wooden chopping board",
-        "wooden wine box",
-        "wooden lollipop stick",
-        "wood sheet"
+        "bamboo"
     ],
-    "balsa wood": [
-        "wooden model airplane",
+    "chipboard": [
+        "kitchen cabinet",
+        "shelf",
+        "desk",
+        "wardrobe"
+    ],
+    "fiberboard":[
+        "sound proofing",
+        "sound deadening",
+        "structural sheathing",
+        "low-slope roofing"
+    ],
+    "plywood": [
+        "desk",
+        "kitchen cabinet",
+        "shelf",
+        "wardrobe",
+        "bench",
+        "fence",
+        "flooring"
+    ],
+    "balsa": [
+        "model airplane",
         "wooden surfboard",
         "wooden crankbait",
-        "wooden drumstick",
+        "drumstick",
         "wooden puzzle",
         "wooden musical toy",
         "wooden tea box",
         "wooden cutlery",
         "wooden wine box",
         "wooden lollipop stick",
-        "wooden fork"
+        "wooden fork",
+        "table tennis bat",
+        "ping pong bat",
+        "dowel"
+    ],
+    "beech": [
+        "firewood",
+        "chopping board",
+        "chopping-board",
+        "table",
+        "desk",
+        "chair",
+        "easel"
+    ],
+    "ash":[
+        "hammer",
+        "firewood",
+        "baseball bat",
+        "electric guitar",
+        "veneer",
+        "bow"
+    ],
+    "maple":[
+
+    ],
+    "walnut":[
+
+    ],
+    "mahogany":[
+
+    ],
+    "oak":[
+
+    ],
+    "sycamore":[
+
+    ],
+    "teak":[
+
+    ],
+    "bamboo":[
+
+    ],
+    "fence": [
+        "fencing",
+        "screening",
+        "fence post"
     ],
     "metal": [
         "tin can",
@@ -154,12 +139,6 @@
         "Metal coat hangers",
         "Paint Tins"
     ],
-    "chipboard": [
-        "kitchen cabinet",
-        "shelf",
-        "desk",
-        "wardrobe"
-    ],
     "used paper": [
         "padded envelopes",
         "jiffy bags",
@@ -193,13 +172,6 @@
     "mdf": [
         "kitchen cabinet",
         "desk"
-    ],
-    "plywood": [
-        "desk",
-        "kitchen cabinet",
-        "shelf",
-        "wardrobe",
-        "bench"
     ],
     "glass": [
         "whisky",
