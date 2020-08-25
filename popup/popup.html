@@ -2,31 +2,96 @@
 <html>
 
 <head>
-    <script src="popup.js"></script>
-    <script src="navigation.js"></script>
-    <script src="geolocation.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="circle-styles.css">
+  <!-- Javascript files -->
+  <script src="navigation.js"></script>
+  <script src="recyclability-script.js "></script>
+  <script src="location-handler.js"></script>
+  <!-- CSS files -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/rating.css">
+  <link rel="stylesheet" href="../styles/percentage-wheel.css">
+  <link rel="stylesheet" href="../styles/explore.css">
+  <link rel="stylesheet" href="../styles/infopage.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Meta Information. -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<div id="background-image">
-    <!-- Background image div -->
-</div>
+
 
 <body>
-    <header>
-        Can I Recycle This?
-    </header>
-    <nav>
-        <div id="home-navigation" class="navigation-item no-select">Home</div>
-        <div id="explore-navigation" class="navigation-item no-select">Explore</div>
-    </nav>
-    <main id="main-area">
+  <header>
 
-    </main>
-    <div id="location-display">
+    <h1>Eco<span class = "notbold">Guard</span></h1>
+  </header>
 
+  <main>
+
+    <section class="rating" id="current-product-rating">
+      <div class="Eco-rating">
+        <h1>Eco-Rating</h1>
+      <button class="infobutton" id="info"><i class="material-icons">info</i></button>
+      </div>
+      <h2><span id="current-product-title" class = "notbold">Product title</span></h2>
+      <div class="circle-wrap">
+        <div class="circle">
+          <div class="mask full">
+            <div class="fill"></div>
+          </div>
+          <div class="mask half">
+            <div class="fill"></div>
+          </div>
+          <img href="../images/webcycleLogo.png">
+          <div class="inside-circle"> <span id="eco-Rating-Percentage"></span></div>
+        </div>
+      </div>
+      <button id="explore-alts" >Explore</button>
+      <div id="percentage-card-error"></div>
+    </section>
+
+
+
+    <div id="info-section" class="navi">
+      <button class="backbutton" id="back">
+        <i class="material-icons">arrow_back</i>
+      </button>
+      <section class="infopage">
+        <h1>About us</h1>
+        <p>Here at Eco-Guard, we wanted to help people be more eco-friendly.</p>
+        <p>But we realized how difficult it is to be eco-friendly, especially when shopping online.</p>
+        <p>We wondered, what if we could make it simple for people to choose better products, at similar prices, and with
+          lesser environmental impact?</p>
+        <p>And what if we helped people protect the environment before recycling a product even becomes an issue?</p>
+        <p>Thus and thus, Eco-Guard, your eco-advisor was born.</p>
+
+        <h1>Our Eco<span class = "notbold">Rating</span></h1>
+        <p>The Eco-Rating is our algorithm for calculating the environmental impact of a product.</p>
+        <p>As our product develops, so does our algorithm.</p>
+        <p>We believe that to be effective, this needs to be as transparent as possible. Head over to our <a href="mailto:ecoguardcontact@gmail.com" target="_blank">website</a> to find out more.</p>
+        <p>If you have any queries, suggestions, or ideas, we would love to hear them!</p>
+      </section>
+      <div class = "social-media">
+        <a href="https://www.instagram.com/webcycling/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://www.facebook.com/WebCycling-108520440920369" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://twitter.com/WebCycling" class="fa fa-twitter" target="_blank"></a>
+      </div>
     </div>
+
+  </main>
+
+  <footer>
+    <!-- <input type="text" placeholder="Search Locations.." class="search-bar" id="location-search"> -->
+    <button id="update-location-button">Update Location</button>
+    <select id="location-dropdown" name="location">
+    </select>
+    <span id="dot" style="visibility: hidden;"></span>
+    <!-- <div class="message" id="location-selector-message"></div> -->
+    <div class="feedback"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link" target="_blank">Report an issue</a></div>
+  </footer>
 </body>
 
 </html>

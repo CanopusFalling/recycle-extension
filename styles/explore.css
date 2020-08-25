@@ -1,0 +1,123 @@
+:root{
+  --product-image1: url('https://images-na.ssl-images-amazon.com/images/I/41r683RvE%2BL._SX425_.jpg');
+  --product-image2: url('https://images-na.ssl-images-amazon.com/images/I/61jUhJ92kML._AC_SL1466_.jpg');  
+  --product-image3: url('https://images-na.ssl-images-amazon.com/images/I/711GnzFkjUL._AC_SL1500_.jpg');
+  
+  /*We want to make sure that this takes a value between 0 and 180*/
+}
+main{
+  
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(235, 235, 235);
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+}
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p
+{
+  font-size:12px;
+}
+
+.row-wrapper{
+  width: 100%;
+  height:100%;
+  position: relative;
+  align-self: center;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  
+}
+
+.card
+{
+  height:400px;
+  width:400px;
+  margin: 40px;
+  display:-webkit-box;
+  
+  display:flex;
+  display:-webkit-flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  align-self: center;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:8px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px rgba(255, 255, 255, 0.2), -15px -15px 27px rgba(255, 255, 255, 0.2);
+  box-shadow:  15px 15px 27px rgba(255, 255, 255, 0.2), -15px -15px 27px rgba(255, 255, 255, 0.2);
+}
+
+
+.image-overlay
+{  
+  position: relative;
+  height:100%;
+  width: 100%;
+  display: flex;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  
+}
+.p1Image
+{  
+  background: var(--product-image1);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.p2Image{
+  background: var(--product-image2);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.p3Image{
+  background: var(--product-image3);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.card:hover .product-description
+{
+  background-color: rgb(0, 0, 0);
+  height:70%;
+  width:100%;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+  opacity: 0.6;
+}
+
+
+/* Hovering */
+.card .product-description
+{
+  height:0%;
+  opacity: 0;
+}
+.titleguard{
+  font-weight: 100;
+}

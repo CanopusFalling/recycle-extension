@@ -1,10 +1,20 @@
 {
     "wood": [
+        "oak",
+        "sycamore",
+        "pine",
+        "teak",
+        "coffee table",
         "rolling pin",
         "wooden vase",
         "balsa wood",
         "desk",
         "wardrobe",
+        "bamboo skewer",
+        "Bamboo Straws",
+        "bamboo",
+        "BBQ Skewer",
+        "wooden spoon",
         "wooden cube",
         "wooden toilet seat",
         "wooden toy",
@@ -97,6 +107,7 @@
         "steel can",
         "drill bit",
         "air conditioner",
+        "tomato puree",
         "deodorant",
         "wok",
         "metal colander",
@@ -130,7 +141,10 @@
         "THNN Wire",
         "Insulated Wire",
         "Romex Wire",
-        "wood chisel"
+        "wood chisel",
+        "Wire Coat hangers",
+        "Metal coat hangers",
+        "Paint Tins"
     ],
     "chipboard": [
         "kitchen cabinet",
@@ -138,7 +152,40 @@
         "desk",
         "wardrobe"
     ],
-    "MDF": [
+    "used paper":[
+        "padded envelopes",
+        "jiffy bags",
+        "paper towels",
+        "waxy paper",
+        "laminated paper",
+        "tissues",
+        "kitchen towels",
+        "drink cartons"
+    ],
+    
+   
+    
+    "plastic":[
+        "takeaway food containers",
+        "margarine tubs",
+        "yoghurt pots",
+        "shower gel",
+        "shampoo bottles",
+        "plastic pots",
+        "plastic tubs",
+        "plastic food trays",
+        "plastic jar"  ,
+        "plastic milk bottle",
+        "laundry bottles",
+        "moulded plastic packaging",
+        "washing detergent",
+        "bucket",
+        "fan cover",
+        "waste water pipe",
+        "lunch box",
+        "water bottle"
+    ],
+    "mdf": [
         "kitchen cabinet",
         "desk"
     ],
@@ -736,8 +783,7 @@
         "Wairau Cove Pinot Grigio",
         "Dark Horse Chardonnay",
         "I Heart Prosecco",
-        "Bouchard Grand Conseiller Pinot Noir",
-        ""
+        "Bouchard Grand Conseiller Pinot Noir"
     ],
     "glass drinks bottle": [
         "Shloer Crisp Cranberry Raspberry Juice Drink",
@@ -935,6 +981,138 @@
         "writing pad",
         "paper pad",
         "flipchart",
+        "junk mail",
+        "magazines",
+        "newspaper",
+        "telephone directories",
+        "yellow pages",
+        "wrapping paper",
         "paper sheet"
+    ],
+    "card": [
+        "cardboard boxes",
+        "catalogues",
+        "cereal boxes",
+        "egg boxes",
+        "Envelope",
+        "Food packaging sleeves"
+    ],
+    "cans":[
+        "aerosol cans",
+        "biscuit tins",
+        "drinks cans",
+        "food cans",
+        "pet food cans",
+        "sweet chocolate tins",
+        "air freshener cartridges"
+    ],
+    "foil":[
+        "tin foil",
+        "aluminium foil"
+    ],
+    "unusable plastic":[
+        "crisp packets",
+        "food pouches",
+        "pet food pouches",
+        "soup pouches",
+        "bubble wrap",
+        "polystyrene",
+        "plastic toys",
+        "plastic bottle tops",
+        "bread bags",
+        "food bags",
+        "plastic film",
+        "tetrapacks",
+        "plastic bottle cap",
+        "plant pots",
+        "paint cans",
+        "polystyrene",
+        "cling film",
+        "plastic packaging",
+        "garden plastics",
+        "paint pots",
+        "chemical container"
+
+    ],
+    "kitchen utensil":[
+        "kitchen utensil",
+        "Saucepan",
+        "gas canisters",
+        "baking trays",
+        "knives",
+        "saucepans",
+        "pan",
+        "crockery"
+    ],
+    "unusable paper":[
+        "shredded paper",
+        "photographs"
+    ],
+    "ceramic":[
+        "bathroom tiles",
+        "bathroom ceramics",
+        "ceramics"
+    ],
+    "rubber":[
+        "bicycle",
+        "car",
+        "buggy",
+        "tyre",
+        "scooter",
+        "bike",
+        "skateboard",
+        "tractor",
+        "motorbike",
+        "motorcycle",
+        "tricycle",
+        "unicycle",
+        "segway"
+    ],
+    "fabric":[
+        "carpet",
+        "clothes",
+        "T-Shirt",
+        "Trousers",
+        "Shirt",
+        "shorts",
+        "tracksuit",
+        "shoes",
+        "curtain",
+        "bed sheet",
+        "duvet",
+        "chino",
+        "underwear",
+        "bra",
+        "socks",
+        "slippers",
+        "trainers",
+        "hat"
+    ],
+    "unusable glass":[
+    
+    "kitchen glassware",
+    "drinking glasses",
+    "pyrex",
+    "glass vases",
+    "microwave proof glass",
+    "milk bottles",
+    "oven proof glass",
+    "paperweight",
+    "window glass",
+    "spectacles",
+    "lightbulbs",
+    "flourescent tubes",
+    "LED Lightbulbs",
+    "low energy lightbulbs"
+    ],
+    "electrical waste":[
+        "batteries",
+        "electrical items",
+        "cables",                                        
+        "printer cartridges"
+    ],
+    "unusable metal":[
+        "paint tin",
+        "oil tin"
     ]
 }
