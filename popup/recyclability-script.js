@@ -60,6 +60,16 @@ function recyclability() {
     let breakdown = productAnalysis["product-analysis"]["product-breakdown"];
     let highHits = breakdown[Object.keys(breakdown)[0]];
 
+    for(let productName in breakdown){
+        let product = breakdown[productName];
+
+        console.log(product['hits'] + " : " + highHits['hits']);
+
+        if(product['hits'] > highHits['hits']){
+            highHits = product;
+        }
+    }
+
     for (let productName in breakdown) {
         let product = breakdown[productName];
         console.log("Product Name is:");
@@ -76,6 +86,7 @@ function recyclability() {
         console.log(product);
         let keywords = product['keywords'];
         for (let keyword in keywords) {
+            console.log(localInfo['local-info']['bin-recyclable']);
             if (localInfo['local-info']['bin-recyclable'].includes(keyword)) {
                 
                 recycleScore += keywords[keyword];
@@ -95,21 +106,39 @@ function recyclability() {
         let uncertainty = uncertain / total;
         console.log("Recyclability Value is:");
         console.log(recyclabilityValue);
-        productAnalysis['recyclability-value'] = { 'score': recyclabilityValue, 'uncertainty': uncertainty };
-
-        // Return data.
-        return productAnalysis;
+        product['recyclability-value'] = { 'score': recyclabilityValue, 'uncertainty': uncertainty };
     }
+
+    // Return data.
+    return productAnalysis;
 }
 
 // ===== Set recyclability information =====
 function setRecyclability() {
+    console.log(productAnalysis);
     let product = recyclability();
     console.log(product);
 
+    let breakdown = product["product-analysis"]["product-breakdown"];
+    let highHits = breakdown[Object.keys(breakdown)[0]];
+
+    for(let productName in breakdown){
+        let product = breakdown[productName];
+
+        console.log(product['hits'] + " : " + highHits['hits']);
+
+        if(product['hits'] > highHits['hits'] && !isNaN(product["recyclability-value"].score)){
+            highHits = product;
+        }
+    }
+
+    let recycleOutput = highHits;
+
+    console.log(recycleOutput);
+
     // Update visual information.
     try{
-        setPercentage(product['recyclability-value']['score']);
+        setPercentage(recycleOutput['recyclability-value']['score']);
     }
     catch(error){
         document.getElementById("current-product-rating").textContent = "Experiencing issues with this product, please search for another";
