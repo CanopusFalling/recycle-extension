@@ -271,24 +271,66 @@
         "drink cartons"
     ],
     "plastic": [
-        "takeaway food containers",
-        "margarine tubs",
-        "yoghurt pots",
-        "shower gel",
-        "shampoo bottles",
-        "plastic pots",
-        "plastic tubs",
-        "plastic food trays",
-        "plastic jar",
-        "plastic milk bottle",
-        "laundry bottles",
-        "moulded plastic packaging",
-        "washing detergent",
-        "bucket",
-        "fan cover",
-        "waste water pipe",
-        "lunch box",
-        "water bottle"
+        "pet",
+        "ldpe",
+        "hdpe",
+        "pvc",
+        "pp",
+        "ps",
+        "pla",
+        "pc",
+        "pmma",
+        "pom",
+        "pa",
+        "abs"
+    ],
+    "pet": [
+        "polyethylene terephthalate",
+        "pete",
+        "bottled water",
+        "polyester",
+        "polyethylene"
+    ],
+    "ldpe": [
+        "low density polyethylene",
+        "plastic bag"
+    ],
+    "hdpe": [
+        "detergent",
+        "bleach"
+    ],
+    "pvc": [
+        "polyvinyl chloride",
+        "pipe",
+        "fitting"
+    ],
+    "pp": [
+        "polypropylene",
+        "shampoo",
+        "body wash",
+        "soap"
+    ],
+    "ps": [
+        "polystyrene"
+    ],
+    "pla": [
+        "polylactic acid"
+    ],
+    "pc": [
+        "polycarbonate"
+    ],
+    "pmma": [
+        "acrylic"
+    ],
+    "pom": [
+        "acetal",
+        "polyoxymethylene"
+    ],
+    "pa": [
+        "nylon"
+    ],
+    "abs": [
+        "acrylonitrile butadiene styrene"
     ],
     "glass": [
         "whisky",
