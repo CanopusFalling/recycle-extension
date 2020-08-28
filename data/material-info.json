@@ -56,10 +56,7 @@
         "firewood",
         "chopping board",
         "chopping-board",
-        "table",
-        "desk",
-        "chair",
-        "easel"
+        "wooden furniture"
     ],
     "ash":[
         "hammer",
@@ -70,25 +67,45 @@
         "bow"
     ],
     "maple":[
-
+        "baseball bat",
+        "bow"
     ],
     "walnut":[
-
+        "wooden furniture"
     ],
     "mahogany":[
-
+        "wooden furniture"
     ],
     "oak":[
-
+        "wooden furniture",
+        "chopping board"
     ],
     "sycamore":[
-
+        "chess set",
+        "chopping board"
     ],
     "teak":[
-
+        "wooden furniture",
+        "toilet seat"
     ],
     "bamboo":[
-
+        "plant support",
+        "toothbrush",
+        "plate",
+        "hairbrush"
+    ],
+    "wooden furniture": [
+        "desk",
+        "kitchen cabinet",
+        "workbench",
+        "chair",
+        "stool",
+        "easel",
+        "shelf",
+        "cupboard",
+        "bench",
+        "shelf",
+        "bookcase"
     ],
     "fence": [
         "fencing",
