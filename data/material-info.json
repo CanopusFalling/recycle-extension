@@ -125,7 +125,6 @@
         "mild steel",
         "alloy steel",
         "stainless steel",
-        "aluminium",
         "nickel silver",
         "wrought iron",
         "cast iron"
@@ -207,6 +206,38 @@
         "welding rod",
         "paddle"
     ],
+    "pewter": [
+        "tray",
+        "tankard",
+        "hip flask",
+        "bracelet",
+        "casting metal ladle",
+        "figurine",
+        "ornament",
+        "keyring",
+        "handle",
+        "holdback",
+        "badge"
+    ],
+    "stainless steel": [
+        "cookware",
+        "kitchen utensils",
+        "thermos",
+        "bathroom shelf",
+        "barbecue",
+        "grill",
+        "cup",
+        "skewers",
+        "worktop",
+        "microwave",
+        "pen",
+        "screw"
+    ],
+    "cast iron":[
+        "radiator",
+        "cookware",
+        "ornament"
+    ],
     "cookware": [
         "pan",
         "pot",
@@ -214,7 +245,8 @@
         "skillet",
         "frying pan",
         "oven rack",
-        "oven tray"
+        "oven tray",
+        "griddle"
     ],
     "kitchen utensils": [
         "spatula",
