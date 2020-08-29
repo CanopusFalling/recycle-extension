@@ -1055,6 +1055,33 @@
                                                 ]                                          
            
                                             },
+                                            "Cambridge City": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+           
+                                            },
+
                                             "Cornwall": {
                                                 "Type": "Unitary authority",
                                                                         "bin-recyclable": [
