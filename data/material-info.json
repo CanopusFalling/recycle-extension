@@ -117,7 +117,6 @@
         "fence post"
     ],
     "metal": [
-<<<<<<< HEAD
         "tin can",
         "steel can",
         "drill bit",
@@ -133,13 +132,11 @@
         "aluminium can",
         "metal boat",
         "bike",
-=======
         "Lead",
         "copper",
         "zinc",
         "silver",
         "gold",
->>>>>>> bd325d4b3f573ddb3171d44ae3172bc4516dd38a
         "brass",
         "bronze",
         "aluminium",
@@ -1170,7 +1167,9 @@
         "Envelope",
         "Food packaging sleeves"
     ],
-    "cans": [
+    
+    
+    "cans":[
         "aerosol cans",
         "biscuit tins",
         "drinks cans",
