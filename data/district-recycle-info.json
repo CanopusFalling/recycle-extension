@@ -1050,6 +1050,31 @@
                 "Rubber"
             ]
         },
+        "Cambridge City": {
+            "Type": "District Council",
+            "bin-recyclable": [
+                "metal",
+                "woods",
+                "cardboard",
+                "paper",
+                "card",
+                "cans",
+                "plastic",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
         "Cornwall": {
             "Type": "Unitary authority",
             "bin-recyclable": [
@@ -1303,7 +1328,7 @@
                 "plastic bottle",
                 "plastic packaging",
                 "glass",
-                "foil",
+                "foil"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -1326,7 +1351,7 @@
                 "paper",
                 "plastic bottle",
                 "plastic packaging",
-                "glass",
+                "glass"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -1348,7 +1373,7 @@
                 "cardboard",
                 "paper",
                 "plastic bottle",
-                "plastic packaging",
+                "plastic packaging"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -1438,32 +1463,6 @@
                 "Rubber"
             ]
         },
-        "Melton": {
-            "Type": "Borough Council",
-            "bin-recyclable": [
-                "metal",
-                "cardboard",
-                "paper",
-                "plastic bottle",
-                "plastic packaging",
-                "glass",
-                "foil",
-                "electrical",
-                "textile"
-            ],
-            "non-bin-recyclable": [
-                "chipboard",
-                "MDF",
-                "plywood",
-                "used paper",
-                "ceramic",
-                "gas canister",
-                "garden tool",
-                "chemicals",
-                "Explosives",
-                "Rubber"
-            ]
-        },
         "Merthyr Tydfil": {
             "Type": "County Council",
             "bin-recyclable": [
@@ -1473,7 +1472,7 @@
                 "plastic bottle",
                 "plastic packaging",
                 "glass",
-                "foil",
+                "foil"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -1522,7 +1521,7 @@
                 "paper",
                 "plastic bottle",
                 "plastic packaging",
-                "foil",
+                "foil"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -1546,7 +1545,7 @@
                 "plastic bottle",
                 "plastic packaging",
                 "glass",
-                "foil",
+                "foil"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -1569,7 +1568,7 @@
                 "paper",
                 "plastic bottle",
                 "plastic packaging",
-                "glass",
+                "glass"
             ],
             "non-bin-recyclable": [
                 "chipboard",
@@ -1910,7 +1909,7 @@
                 "glass",
                 "cardboard",
                 "paper",
-                "plastic bottle",
+                "plastic bottle"
             ],
             "non-bin-recyclable": [
                 "chipboard",
