@@ -649,6 +649,31 @@
                                                     "fabric"
                                                 ]
                                             },  
+                                            "Bournemouth, Christchurch and Poole": {
+                                                "Type": "Unitary Authority",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
                                             "Bracknell": {
                                                 "Type": "Unitary Authority",
                                                 "bin-recyclable": [
@@ -1279,7 +1304,458 @@
                                                                         ]
                                                 
                                             },
-                                            "Bournemouth, Christchurch and Poole": {
+                                            "Colchester Borough": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Copeland Borough": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Cotswold": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Craven": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Crawley Borough": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Cumbria": {
+                                                "Type": "County Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Dacorum": {
+                                                "Type": "Borough Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Darlington": {
+                                                "Type": "Unitary Authority",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Dartford": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                           
+                                            "Daventry": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Derby": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Derbyshire County": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Derbyshire Dales": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Devon County": {
+                                                "Type": "County Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Doncaster": {
+                                                "Type": "Metropolitan District",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Dorset": {
+                                                "Type": "Unitary Authority",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Dover": {
+                                                "Type": "District Council",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Dudley": {
+                                                "Type": "Metropolitan District",
+                                                "bin-recyclable": [
+                                                    "metal",
+                                                    "woods",
+                                                    "cardboard",
+                                                    "paper",
+                                                    "card",
+                                                    "cans",
+                                                    "plastic",
+                                                    "foil"
+                                                ],
+                                                "non-bin-recyclable": [
+                                                    "chipboard",
+                                                    "MDF",
+                                                    "plywood",
+                                                    "used paper",
+                                                    "ceramic",
+                                                    "gas canister",
+                                                    "garden tool",
+                                                    "chemicals",
+                                                    "Explosives",
+                                                    "Rubber"
+                                                ]                                          
+                                            },
+                                            "Durham": {
                                                 "Type": "Unitary Authority",
                                                 "bin-recyclable": [
                                                     "metal",
