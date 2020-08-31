@@ -2925,6 +2925,33 @@
                 "Rubber"
             ]
         },
+        "Ipswich": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "plastic",
+                "plastic bottle",
+                "plastic packaging",
+                "cardboard",
+                "paper",
+                "metal",
+                "tin can",
+                "can",
+                "metal packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "cartons",
+                "tetrapack",
+                "crisp packet",
+                "food",
+                "nappies",
+                "glass",
+                "garden waste",
+                "food",
+                "polystyrene",
+                "shredded paper"
+            ]
+        },
         "Leeds": {
             "Type": "Metropolitan borough",
             "bin-recyclable": [
