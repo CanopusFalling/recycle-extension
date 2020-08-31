@@ -117,21 +117,6 @@
         "fence post"
     ],
     "metal": [
-        "tin can",
-        "steel can",
-        "drill bit",
-        "air conditioner",
-        "tomato puree",
-        "deodorant",
-        "wok",
-        "jar lid",
-        "metal colander",
-        "sauce pan",
-        "saucepan",
-        "pan",
-        "aluminium can",
-        "metal boat",
-        "bike",
         "Lead",
         "copper",
         "zinc",
@@ -277,11 +262,6 @@
     ],
     "used paper": [
         "padded envelopes",
-        "brown envelopes",
-        "magazines",
-        "shredded paper",
-        "telephone directory",
-        "window envelopes",
         "jiffy bags",
         "paper towels",
         "waxy paper",
@@ -1132,12 +1112,6 @@
         "theasaurus",
         "hard-back book",
         "printer paper",
-        "leaflets",
-        "brochure",
-        "computer printout paper",
-        "paperback book",
-        "paperback",
-        "hardbacked",
         "notepad",
         "origami paper",
         "writing pad",
@@ -1154,22 +1128,12 @@
     "card": [
         "cardboard boxes",
         "catalogues",
-        "cardboard egg boxes",
-        "cardboard sleeves",
-        "corrugated cardboard",
-        "food carton",
-        "drink carton",
-        "greeting card",
-        "birthday card",
-        "condolence card",
         "cereal boxes",
         "egg boxes",
         "Envelope",
         "Food packaging sleeves"
     ],
-    
-    
-    "cans":[
+    "cans": [
         "aerosol cans",
         "biscuit tins",
         "drinks cans",
@@ -1180,17 +1144,20 @@
     ],
     "foil": [
         "tin foil",
-        "aluminium foil",
-        "foil trays"
+        "aluminium foil"
     ],
     "unusable plastic": [
         "crisp packets",
+        "food pouches",
+        "pet food pouches",
+        "soup pouches",
         "bubble wrap",
         "polystyrene",
         "plastic toys",
         "plastic bottle tops",
         "bread bags",
         "food bags",
+        "plastic film",
         "tetrapacks",
         "plastic bottle cap",
         "plant pots",
