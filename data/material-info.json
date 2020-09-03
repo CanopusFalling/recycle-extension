@@ -1272,5 +1272,12 @@
     "unusable metal": [
         "paint tin",
         "oil tin"
+    ],
+    "waste":[
+        "unusable metal",
+        "unusable glass",
+        "unusable plastic",
+        "unusable paper",
+        "electrical waste"
     ]
 }

@@ -2952,6 +2952,24 @@
                 "shredded paper"
             ]
         },
+        "Isle Of Anglesey": {
+            "Type": "County Council",
+            "bin-recyclable": [
+                "cardboard",
+                "glass",
+                "plastic bottle",
+                "plastic packaging",
+                "metal packaging",
+                "foil",
+                "electrical waste",
+                "batteries",
+                "paper",
+                "fabric"
+            ],
+            "non-bin-recyclable": [
+                "waste"
+            ]
+        },
         "Leeds": {
             "Type": "Metropolitan borough",
             "bin-recyclable": [
