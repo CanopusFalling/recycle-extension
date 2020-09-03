@@ -208,7 +208,10 @@
         "pipe wrench",
         "rivet",
         "welding rod",
-        "paddle"
+        "paddle",
+        "tin can",
+        "can",
+        "metal packaging"
     ],
     "pewter": [
         "tray",
@@ -242,6 +245,12 @@
         "cookware",
         "ornament"
     ],
+    "metal packaging":[
+        "Aerosol",
+        "drinks can",
+        "food tin",
+        "metal lid"
+    ],
     "cookware": [
         "pan",
         "pot",
@@ -268,7 +277,45 @@
         "laminated paper",
         "tissues",
         "kitchen towels",
-        "drink cartons"
+        "drink cartons",
+        "cartons"
+    ],
+    "tetrapack":[
+        "milk",
+        "protein shake",
+        "juice"
+    ],
+    "paper": [
+        "book",
+        "dictionary",
+        "thesaurus",
+        "hard-back book",
+        "printer paper",
+        "notepad",
+        "origami paper",
+        "writing pad",
+        "paper pad",
+        "flipchart",
+        "junk mail",
+        "magazines",
+        "newspaper",
+        "telephone directories",
+        "yellow pages",
+        "wrapping paper",
+        "paper sheet"
+    ],
+    "card": [
+        "catalogues",
+        "cereal boxes",
+        "Envelope",
+        "Food packaging sleeves",
+        "cardboard"
+    ],
+    "cardboard":[
+        "cardboard box",
+        "cardboard boxes",
+        "egg box",
+        "egg boxes"
     ],
     "plastic": [
         "pet",
@@ -288,6 +335,7 @@
         "polyethylene terephthalate",
         "pete",
         "bottled water",
+        "plastic bottle",
         "polyester",
         "polyethylene"
     ],
@@ -1106,33 +1154,6 @@
         "Meridian Peanut Butter Crunchy 100% Nuts",
         "Kp Crunchy Peanut Butter"
     ],
-    "paper": [
-        "book",
-        "dictionary",
-        "theasaurus",
-        "hard-back book",
-        "printer paper",
-        "notepad",
-        "origami paper",
-        "writing pad",
-        "paper pad",
-        "flipchart",
-        "junk mail",
-        "magazines",
-        "newspaper",
-        "telephone directories",
-        "yellow pages",
-        "wrapping paper",
-        "paper sheet"
-    ],
-    "card": [
-        "cardboard boxes",
-        "catalogues",
-        "cereal boxes",
-        "egg boxes",
-        "Envelope",
-        "Food packaging sleeves"
-    ],
     "cans": [
         "aerosol cans",
         "biscuit tins",
@@ -1147,27 +1168,30 @@
         "aluminium foil"
     ],
     "unusable plastic": [
-        "crisp packets",
+        "crisp packet",
         "food pouches",
+        "food pouch",
+        "pet food pouch",
         "pet food pouches",
         "soup pouches",
         "bubble wrap",
         "polystyrene",
-        "plastic toys",
-        "plastic bottle tops",
-        "bread bags",
-        "food bags",
+        "plastic toy",
+        "plastic bottle top",
+        "bread bag",
+        "food bag",
         "plastic film",
-        "tetrapacks",
+        "tetrapack",
         "plastic bottle cap",
-        "plant pots",
-        "paint cans",
+        "plant pot",
+        "paint can",
         "polystyrene",
         "cling film",
         "plastic packaging",
-        "garden plastics",
-        "paint pots",
-        "chemical container"
+        "garden plastic",
+        "paint pot",
+        "chemical container",
+        "nappies"
     ],
     "kitchen utensil": [
         "kitchen utensil",
