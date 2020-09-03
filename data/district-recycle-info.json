@@ -2940,7 +2940,7 @@
                 "foil"
             ],
             "non-bin-recyclable": [
-                "cartons",
+                "carton",
                 "tetrapack",
                 "crisp packet",
                 "food",
@@ -2967,6 +2967,24 @@
                 "fabric"
             ],
             "non-bin-recyclable": [
+                "waste"
+            ]
+        },
+        "Isles of Scilly": {
+            "Type": "Unitary authority",
+            "bin-recyclable": [
+                "cardboard",
+                "carton",
+                "tin can",
+                "cans",
+                "paper",
+                "shredded paper",
+                "plastic bottle",
+                "plastic"
+            ],
+            "non-bin-recyclable": [
+                "tetrapack",
+                "glass",
                 "waste"
             ]
         },
