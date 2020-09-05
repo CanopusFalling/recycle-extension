@@ -1,14 +1,6 @@
 // Script to work out the recyclability of a product 
 // based off the back end and the front end information.
-document.onload(function{
 
-
-    // Update when script starts.
-    updateProductInfo();
-    updateLocalInfo();
-    // Wait for the product analysis to be set.
-    setTimeout(setRecyclability, 1000);
-});
 "use strict";
 
 // ===== Global Analysis =====
@@ -22,11 +14,6 @@ function updateProductInfo() {
         console.log(data);
     });
 }
-
-
-
-
-
 
 // Update when product information changes.
 chrome.storage.onChanged.addListener(function (changes, namespace) {
@@ -194,8 +181,6 @@ function setPercentageWheel(score) {
     docRoot.style.setProperty('--percentage-guess', halfDegrees+'deg');
 }
 
-
-
 // ===== Listen for product info updates =====
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
@@ -206,3 +191,15 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
         }
     }
 });
+
+// ===== Script start point =====
+
+function startScript(){
+    // Update when script starts.
+    updateProductInfo();
+    updateLocalInfo();
+    // Wait for the product analysis to be set.
+    setTimeout(setRecyclability, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", startScript);

@@ -1,150 +1,20 @@
 {
     "wood": [
+        "chipboard",
+        "fiberboard",
+        "plywood",
+        "balsa",
+        "pine",
+        "beech",
+        "ash",
+        "maple",
+        "walnut",
+        "mahogany",
         "oak",
         "sycamore",
-        "pine",
         "teak",
-        "coffee table",
-        "rolling pin",
-        "wooden vase",
-        "balsa wood",
-        "desk",
-        "wardrobe",
-        "bamboo skewer",
-        "Bamboo Straws",
         "bamboo",
-        "BBQ Skewer",
-        "wooden spoon",
-        "wooden cube",
-        "wooden toilet seat",
-        "wooden toy",
-        "wooden tea box",
-        "wooden clothes peg",
-        "wooden watch",
-        "wooden letter",
-        "wooden peg doll",
-        "wooden shoe stretcher",
-        "wooden puzzle",
-        "wooden play food",
-        "bamboo hair comb",
-        "wooden brush",
-        "wooden jewellery box",
-        "wooden musical toy",
-        "wooden bamboo floral hoop",
-        "bamboo serving tray",
-        "wooden coat hanger",
-        "wooden kitchen utensils set",
-        "wooden fence post",
-        "wood ring",
-        "wooden cabinet knob",
-        "bamboo plant label",
-        "wood ipad holder",
-        "wooden chopping board",
-        "wooden serving bowl",
-        "wooden furniture leg",
-        "wooden hanging bird feeder",
-        "wooden music stand",
-        "storage wooden crate",
-        "wooden necklace",
-        "wooden spoon",
-        "wooden soap dish",
-        "wooden mallet",
-        "wood stud earrings",
-        "wood photo clip",
-        "wooden guitar rack",
-        "wooden pepper mill",
-        "bamboo wind chime",
-        "bamboo toothpick",
-        "wooden tray",
-        "wooden step stool",
-        "wooden doorstop",
-        "wooden magnetic knife rack",
-        "wooden button",
-        "bamboo food skewer",
-        "monitor wood stand",
-        "wooden chest",
-        "wooden paint palette",
-        "wooden cutlery",
-        "wooden fork",
-        "wooden keyring",
-        "wooden nail brush",
-        "woodens egg",
-        "bamboo toaster tong",
-        "wooden plant stand",
-        "wooden cup",
-        "wooden memory stick",
-        "wooden handle felt eraser",
-        "wooden curtain ring",
-        "bamboo note holder",
-        "wooden ruler",
-        "wooden hockey stick",
-        "wooden drum stick",
-        "wooden baseball bat",
-        "wooden spatula",
-        "wooden candle holder",
-        "wooden chopstick",
-        "wood slice",
-        "wooden chopping board",
-        "wooden wine box",
-        "wooden lollipop stick",
-        "wood sheet"
-    ],
-    "balsa wood": [
-        "wooden model airplane",
-        "wooden surfboard",
-        "wooden crankbait",
-        "wooden drumstick",
-        "wooden puzzle",
-        "wooden musical toy",
-        "wooden tea box",
-        "wooden cutlery",
-        "wooden wine box",
-        "wooden lollipop stick",
-        "wooden fork"
-    ],
-    "metal": [
-        "tin can",
-        "steel can",
-        "drill bit",
-        "air conditioner",
-        "tomato puree",
-        "deodorant",
-        "wok",
-        "metal colander",
-        "sauce pan",
-        "saucepan",
-        "pan",
-        "aluminium can",
-        "metal boat",
-        "bike",
-        "brass",
-        "stainless steel",
-        "bed frame",
-        "basketball hoop",
-        "carriage",
-        "paint can",
-        "golf club",
-        "metal file cabinet",
-        "metal kettle",
-        "metal drum",
-        "drum kit",
-        "necklace",
-        "ring",
-        "coin",
-        "tie pin",
-        "tie clip",
-        "bracelet",
-        "earrings",
-        "chisel",
-        "metal pipe",
-        "scaffolding",
-        "THNN Wire",
-        "Insulated Wire",
-        "Romex Wire",
-        "wood chisel",
-        "Wire Coat hangers",
-        "Metal coat hangers",
-        "Paint Tins"
+        "mdf"
     ],
     "chipboard": [
         "kitchen cabinet",
@@ -152,7 +22,245 @@
         "desk",
         "wardrobe"
     ],
-    "used paper":[
+    "fiberboard":[
+        "sound proofing",
+        "sound deadening",
+        "structural sheathing",
+        "low-slope roofing"
+    ],
+    "plywood": [
+        "desk",
+        "kitchen cabinet",
+        "shelf",
+        "wardrobe",
+        "bench",
+        "fence",
+        "flooring"
+    ],
+    "balsa": [
+        "model airplane",
+        "wooden surfboard",
+        "wooden crankbait",
+        "drumstick",
+        "wooden puzzle",
+        "wooden musical toy",
+        "wooden tea box",
+        "wooden cutlery",
+        "wooden wine box",
+        "wooden lollipop stick",
+        "wooden fork",
+        "table tennis bat",
+        "ping pong bat",
+        "dowel"
+    ],
+    "beech": [
+        "firewood",
+        "chopping board",
+        "chopping-board",
+        "wooden furniture"
+    ],
+    "ash":[
+        "hammer",
+        "firewood",
+        "baseball bat",
+        "electric guitar",
+        "veneer",
+        "bow"
+    ],
+    "maple":[
+        "baseball bat",
+        "bow"
+    ],
+    "walnut":[
+        "wooden furniture"
+    ],
+    "mahogany":[
+        "wooden furniture"
+    ],
+    "oak":[
+        "wooden furniture",
+        "chopping board"
+    ],
+    "sycamore":[
+        "chess set",
+        "chopping board"
+    ],
+    "teak":[
+        "wooden furniture",
+        "toilet seat"
+    ],
+    "bamboo":[
+        "plant support",
+        "toothbrush",
+        "plate",
+        "hairbrush"
+    ],
+    "mdf": [
+        "wooden furniture"
+    ],
+    "wooden furniture": [
+        "desk",
+        "kitchen cabinet",
+        "workbench",
+        "chair",
+        "stool",
+        "easel",
+        "shelf",
+        "cupboard",
+        "bench",
+        "shelf",
+        "bookcase"
+    ],
+    "fence": [
+        "fencing",
+        "screening",
+        "fence post"
+    ],
+    "metal": [
+        "Lead",
+        "copper",
+        "zinc",
+        "silver",
+        "gold",
+        "brass",
+        "bronze",
+        "aluminium",
+        "pewter",
+        "mild steel",
+        "alloy steel",
+        "stainless steel",
+        "nickel silver",
+        "wrought iron",
+        "cast iron"
+    ],
+    "copper": [
+        "water bottle",
+        "bracelet",
+        "ring",
+        "nail",
+        "kitchen utensils",
+        "copper foil tape"
+    ],
+    "zinc": [
+        "planter",
+        "pot",
+        "tub",
+        "lathe chuck",
+        "watering can",
+        "lock",
+        "padlock",
+        "grinder",
+        "chain",
+        "ice cream scoop"
+    ],
+    "silver": [
+        "earrings",
+        "bracelet",
+        "necklace",
+        "cufflinks"
+    ],
+    "gold": [
+        "earrings",
+        "necklace",
+        "ring"
+    ],
+    "brass": [
+        "sink tap",
+        "faucet",
+        "pen",
+        "hose tap connector",
+        "hose connector",
+        "hose fitting",
+        "hook",
+        "chain",
+        "screw",
+        "door knob",
+        "door bolt",
+        "lock"
+    ],
+    "bronze": [
+        "kitchen utensils",
+        "pen",
+        "ornament"
+    ],
+    "aluminium": [
+        "sheet metal",
+        "chute cover",
+        "baseball bat",
+        "saw blade",
+        "air vent",
+        "u channel",
+        "tripod",
+        "cookware",
+        "case",
+        "ladder",
+        "foil trays",
+        "Aluminium foil",
+        "mouse mat",
+        "monopod",
+        "chair",
+        "table",
+        "ducting",
+        "fan",
+        "laptop stand",
+        "water bottle",
+        "white board",
+        "pipe wrench",
+        "rivet",
+        "welding rod",
+        "paddle"
+    ],
+    "pewter": [
+        "tray",
+        "tankard",
+        "hip flask",
+        "bracelet",
+        "casting metal ladle",
+        "figurine",
+        "ornament",
+        "keyring",
+        "handle",
+        "holdback",
+        "badge"
+    ],
+    "stainless steel": [
+        "cookware",
+        "kitchen utensils",
+        "thermos",
+        "bathroom shelf",
+        "barbecue",
+        "grill",
+        "cup",
+        "skewers",
+        "worktop",
+        "microwave",
+        "pen",
+        "screw"
+    ],
+    "cast iron":[
+        "radiator",
+        "cookware",
+        "ornament"
+    ],
+    "cookware": [
+        "pan",
+        "pot",
+        "wok",
+        "skillet",
+        "frying pan",
+        "oven rack",
+        "oven tray",
+        "griddle"
+    ],
+    "kitchen utensils": [
+        "spatula",
+        "knife",
+        "knives",
+        "spoon",
+        "fork",
+        "straw"
+    ],
+    "used paper": [
         "padded envelopes",
         "jiffy bags",
         "paper towels",
@@ -162,39 +270,67 @@
         "kitchen towels",
         "drink cartons"
     ],
-    
-   
-    
-    "plastic":[
-        "takeaway food containers",
-        "margarine tubs",
-        "yoghurt pots",
-        "shower gel",
-        "shampoo bottles",
-        "plastic pots",
-        "plastic tubs",
-        "plastic food trays",
-        "plastic jar"  ,
-        "plastic milk bottle",
-        "laundry bottles",
-        "moulded plastic packaging",
-        "washing detergent",
-        "bucket",
-        "fan cover",
-        "waste water pipe",
-        "lunch box",
-        "water bottle"
+    "plastic": [
+        "pet",
+        "ldpe",
+        "hdpe",
+        "pvc",
+        "pp",
+        "ps",
+        "pla",
+        "pc",
+        "pmma",
+        "pom",
+        "pa",
+        "abs"
     ],
-    "mdf": [
-        "kitchen cabinet",
-        "desk"
+    "pet": [
+        "polyethylene terephthalate",
+        "pete",
+        "bottled water",
+        "polyester",
+        "polyethylene"
     ],
-    "plywood": [
-        "desk",
-        "kitchen cabinet",
-        "shelf",
-        "wardrobe",
-        "bench"
+    "ldpe": [
+        "low density polyethylene",
+        "plastic bag"
+    ],
+    "hdpe": [
+        "detergent",
+        "bleach"
+    ],
+    "pvc": [
+        "polyvinyl chloride",
+        "pipe",
+        "fitting"
+    ],
+    "pp": [
+        "polypropylene",
+        "shampoo",
+        "body wash",
+        "soap"
+    ],
+    "ps": [
+        "polystyrene"
+    ],
+    "pla": [
+        "polylactic acid"
+    ],
+    "pc": [
+        "polycarbonate"
+    ],
+    "pmma": [
+        "acrylic"
+    ],
+    "pom": [
+        "acetal",
+        "polyoxymethylene"
+    ],
+    "pa": [
+        "nylon"
+    ],
+    "abs": [
+        "acrylonitrile butadiene styrene"
     ],
     "glass": [
         "whisky",
@@ -217,7 +353,7 @@
         "glass ornament"
     ],
     "whisky": [
-         "The Famous Grouse Scotch ",
+        "The Famous Grouse Scotch ",
         "Lagavulin Malt Whisky",
         "The Glenlivet 12 Year Old Malt ",
         "Glenfiddich 15 Year Old Single Malt Scotch ",
@@ -997,7 +1133,7 @@
         "Envelope",
         "Food packaging sleeves"
     ],
-    "cans":[
+    "cans": [
         "aerosol cans",
         "biscuit tins",
         "drinks cans",
@@ -1006,11 +1142,11 @@
         "sweet chocolate tins",
         "air freshener cartridges"
     ],
-    "foil":[
+    "foil": [
         "tin foil",
         "aluminium foil"
     ],
-    "unusable plastic":[
+    "unusable plastic": [
         "crisp packets",
         "food pouches",
         "pet food pouches",
@@ -1032,9 +1168,8 @@
         "garden plastics",
         "paint pots",
         "chemical container"
-
     ],
-    "kitchen utensil":[
+    "kitchen utensil": [
         "kitchen utensil",
         "Saucepan",
         "gas canisters",
@@ -1044,16 +1179,16 @@
         "pan",
         "crockery"
     ],
-    "unusable paper":[
+    "unusable paper": [
         "shredded paper",
         "photographs"
     ],
-    "ceramic":[
+    "ceramic": [
         "bathroom tiles",
         "bathroom ceramics",
         "ceramics"
     ],
-    "rubber":[
+    "rubber": [
         "bicycle",
         "car",
         "buggy",
@@ -1068,7 +1203,7 @@
         "unicycle",
         "segway"
     ],
-    "fabric":[
+    "fabric": [
         "carpet",
         "clothes",
         "T-Shirt",
@@ -1088,30 +1223,29 @@
         "trainers",
         "hat"
     ],
-    "unusable glass":[
-    
-    "kitchen glassware",
-    "drinking glasses",
-    "pyrex",
-    "glass vases",
-    "microwave proof glass",
-    "milk bottles",
-    "oven proof glass",
-    "paperweight",
-    "window glass",
-    "spectacles",
-    "lightbulbs",
-    "flourescent tubes",
-    "LED Lightbulbs",
-    "low energy lightbulbs"
+    "unusable glass": [
+        "kitchen glassware",
+        "drinking glasses",
+        "pyrex",
+        "glass vases",
+        "microwave proof glass",
+        "milk bottles",
+        "oven proof glass",
+        "paperweight",
+        "window glass",
+        "spectacles",
+        "lightbulbs",
+        "flourescent tubes",
+        "LED Lightbulbs",
+        "low energy lightbulbs"
     ],
-    "electrical waste":[
+    "electrical waste": [
         "batteries",
         "electrical items",
-        "cables",                                        
+        "cables",
         "printer cartridges"
     ],
-    "unusable metal":[
+    "unusable metal": [
         "paint tin",
         "oil tin"
     ]
