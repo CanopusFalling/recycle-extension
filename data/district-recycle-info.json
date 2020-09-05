@@ -1075,6 +1075,31 @@
                 "Rubber"
             ]
         },
+        "Cambridge City": {
+            "Type": "District Council",
+            "bin-recyclable": [
+                "metal",
+                "woods",
+                "cardboard",
+                "paper",
+                "card",
+                "cans",
+                "plastic",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
         "Cambridge": {
             "Type": "District Council",
             "bin-recyclable": [
@@ -3160,172 +3185,9 @@
                 "knife"
             ]
         },
-        "Manchester": {
-            "Title": "City",
-            "Type": "Metropolitan borough",
-            "bin-recyclable": [
-                "paper",
-                "cardboard",
-                "aerosol",
-                "bottle",
-                "foil"
-            ],
-            "non-bin-recyclable": [
-                "plastic film",
-                "bubble wrap",
-                "cloth",
-                "shoe",
-                "polystyrene",
-                "plant pot",
-                "battery",
-                "soil",
-                "bin bag"
-            ]
-        },
-        "Rotherham": {
-            "Type": "Metropolitan borough",
-            "bin-recyclable": [
-                "paper",
-                "cardboard",
-                "leaflet",
-                "magazine"
-            ],
-            "non-bin-recyclable": [
-                "crockery",
-                "bulb",
-                "pyrex",
-                "tin"
-            ]
-        },
-        "Sheffield": {
-            "Title": "City",
-            "Type": "Metropolitan borough",
-            "bin-recyclable": [
-                "metal",
-                "wood",
-                "cardboard",
-                "paper",
-                "card",
-                "cans",
-                "plastic",
-                "foil",
-                "aerosol",
-                "foil",
-                "can",
-                "cardboard",
-                "paper",
-                "magazine",
-                "glass",
-                "tin",
-                "plastic bottle"
-            ],
-            "non-bin-recyclable": [
-                "chipboard",
-                "MDF",
-                "plywood",
-                "used paper",
-                "ceramic",
-                "gas canister",
-                "garden tool",
-                "chemicals",
-                "Explosives",
-                "yoghurt pot",
-                "carrier bag",
-                "napkin",
-                "paint",
-                "tetrapack",
-                "textile",
-                "battery",
-                "bubble wrap",
-                "CD",
-                "DVD",
-                "electrical equipment",
-                "light bulb",
-                "paper towel",
-                "electrical cable",
-                "video tape",
-                "audio tape",
-                "tea bag"
-            ]
-        },
-        "York": {
-            "Title": "City",
-            "Type": "Metropolitan borough",
-            "bin-recyclable": [
-                "glass botle",
-                "glass jar",
-                "can",
-                "paper",
-                "magazine",
-                "newspaper",
-                "junk mail",
-                "catalogue",
-                "wrapping paper",
-                "Envelope",
-                "Cardboard",
-                "egg box",
-                "Toilet roll",
-                "Plastic bottle",
-                "plastic food container",
-                "hairspray",
-                "deodrant",
-                "wine",
-                "beer",
-                "spirit",
-                "juice",
-                "perfume",
-                "vinegar"
-            ],
-            "non-bin-recyclable": [
-                "window glass",
-                "drinking glass",
-                "cookware",
-                "Pyrex",
-                "light bulb",
-                "mirror glass",
-                "carton",
-                "Tetra Pak",
-                "cup",
-                "book",
-                "aluminium foil",
-                "foil tray",
-                "baking tray",
-                "metal utensil",
-                "coat hanger",
-                "cutlery",
-                "paint tin",
-                "food tray",
-                "margarine tub",
-                "yogurt pot",
-                "plastic toy",
-                "plastic food wrapping"
-            ]
-        },
-        "Cambridge City": {
-            "Type": "District Council",
-            "bin-recyclable": [
-                "metal",
-                "woods",
-                "cardboard",
-                "paper",
-                "card",
-                "cans",
-                "plastic",
-                "foil"
-            ],
-            "non-bin-recyclable": [
-                "chipboard",
-                "MDF",
-                "plywood",
-                "used paper",
-                "ceramic",
-                "gas canister",
-                "garden tool",
-                "chemicals",
-                "Explosives",
-                "Rubber"
-            ]
-        },
+        
+
+        
         "Maidstone": {
             "Type": "Borough Council",
             "bin-recyclable": [
@@ -3397,6 +3259,28 @@
                 "chemicals",
                 "Explosives",
                 "Rubber"
+            ]
+        },
+        "Manchester": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "aerosol",
+                "bottle",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "plastic film",
+                "bubble wrap",
+                "cloth",
+                "shoe",
+                "polystyrene",
+                "plant pot",
+                "battery",
+                "soil",
+                "bin bag"
             ]
         },
         "Mansfield": {
@@ -4630,6 +4514,143 @@
                 "Explosives",
                 "Rubber"
             ]
-        }
+        },
+
+
+
+
+
+        "Rotherham": {
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "leaflet",
+                "magazine"
+            ],
+            "non-bin-recyclable": [
+                "crockery",
+                "bulb",
+                "pyrex",
+                "tin"
+            ]
+        },
+        "Sheffield": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "metal",
+                "wood",
+                "cardboard",
+                "paper",
+                "card",
+                "cans",
+                "plastic",
+                "foil",
+                "aerosol",
+                "foil",
+                "can",
+                "cardboard",
+                "paper",
+                "magazine",
+                "glass",
+                "tin",
+                "plastic bottle"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "yoghurt pot",
+                "carrier bag",
+                "napkin",
+                "paint",
+                "tetrapack",
+                "textile",
+                "battery",
+                "bubble wrap",
+                "CD",
+                "DVD",
+                "electrical equipment",
+                "light bulb",
+                "paper towel",
+                "electrical cable",
+                "video tape",
+                "audio tape",
+                "tea bag"
+            ]
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+        "York": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "glass botle",
+                "glass jar",
+                "can",
+                "paper",
+                "magazine",
+                "newspaper",
+                "junk mail",
+                "catalogue",
+                "wrapping paper",
+                "Envelope",
+                "Cardboard",
+                "egg box",
+                "Toilet roll",
+                "Plastic bottle",
+                "plastic food container",
+                "hairspray",
+                "deodrant",
+                "wine",
+                "beer",
+                "spirit",
+                "juice",
+                "perfume",
+                "vinegar"
+            ],
+            "non-bin-recyclable": [
+                "window glass",
+                "drinking glass",
+                "cookware",
+                "Pyrex",
+                "light bulb",
+                "mirror glass",
+                "carton",
+                "Tetra Pak",
+                "cup",
+                "book",
+                "aluminium foil",
+                "foil tray",
+                "baking tray",
+                "metal utensil",
+                "coat hanger",
+                "cutlery",
+                "paint tin",
+                "food tray",
+                "margarine tub",
+                "yogurt pot",
+                "plastic toy",
+                "plastic food wrapping"
+            ]
+        },
     }
 }
