@@ -190,7 +190,7 @@ function itterateOverJSONChildren(result, object, callback, callbackObject, fact
         let category = object[categoryName];
         for (let itemPosition in category) {
             let item = category[itemPosition];
-            console.log(item);
+            //console.log(item);
             result = callback(callbackObject, item, result, factor, categoryName);
         }
     }
