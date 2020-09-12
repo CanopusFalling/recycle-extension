@@ -83,8 +83,6 @@ function keywordAjust(productBreakdown, productInfo) {
     let title = productInfo['title'];
     let description = productInfo['description'];
     
-
-    
     for (let productName in productBreakdown) {
         let product = productBreakdown[productName];
         let keywords = product['keywords'];
@@ -119,7 +117,7 @@ function determineKeywords(products) {
     let lastResult = result;
 
     // Get the materials information.
-    let materials = JSON_OBJECTS[1];
+    let materials = JSON_OBJECTS[0];
 
     // Loop round until there are no more layers.
     while (true) {
@@ -172,7 +170,7 @@ function incrementKeywordCount(object, name, factor) {
 // Get a range of products with confidence values.
 function determineProductList(productInformation) {
     // Get the materials object.
-    let materials = JSON_OBJECTS[1];
+    let materials = JSON_OBJECTS[0];
 
     // Get the product information.
     let title = productInformation['title'];
@@ -192,6 +190,7 @@ function itterateOverJSONChildren(result, object, callback, callbackObject, fact
         let category = object[categoryName];
         for (let itemPosition in category) {
             let item = category[itemPosition];
+            console.log(item);
             result = callback(callbackObject, item, result, factor, categoryName);
         }
     }
@@ -200,6 +199,7 @@ function itterateOverJSONChildren(result, object, callback, callbackObject, fact
 }
 
 function productMatch(text, product, object, factor) {
+    //console.log(product);
     let isContained;
     let lowerText = text.toLowerCase();
 
@@ -221,6 +221,8 @@ function productMatch(text, product, object, factor) {
     let regMatch = "[^a-z]" + product + "[^a-z]";
     let regexMatcher = new RegExp(regMatch);
     isContained = regexMatcher.test(lowerText);
+
+    //console.log(product + " : " + isContained)
 
     if (isContained) {
         return incrementObjectCount(object, product, factor);
