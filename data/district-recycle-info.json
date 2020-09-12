@@ -2622,7 +2622,6 @@
                 "knife"
             ]
         },
-
         "Guildford": {
             "Type": "District Council",
             "bin-recyclable": [
@@ -3111,6 +3110,29 @@
                 "waste"
             ]
         },
+        "Isle of Wight": {
+            "Type": "Unitary authority",
+            "bin-recyclable": [
+                "paper",
+                "cardboard",
+                "textiles",
+                "plastic bottles",
+                "plastic packaging",
+                "cardboard",
+                "glass",
+                "metal packaging",
+                "foil",
+                "food waste",
+                "aerosol",
+                "tetrapack"
+            ],
+            "non-bin-recyclable": [
+                "waste",
+                "cling film",
+                "crisp packet",
+                "polystyrene"
+            ]
+        },
         "Leeds": {
             "Type": "Metropolitan borough",
             "bin-recyclable": [
@@ -3283,9 +3305,6 @@
                 "knife"
             ]
         },
-        
-
-        
         "Maidstone": {
             "Type": "Borough Council",
             "bin-recyclable": [
@@ -4827,7 +4846,6 @@
                 "knife"
             ]
         },
-        
         "Redditch Borough Council": {
             "Title": "Council",
             "Type": "District Council",
@@ -6201,11 +6219,6 @@
                 "knife"
             ]
         },
-
-
-
-
-
         "Sheffield": {
             "Title": "City",
             "Type": "Metropolitan borough",
@@ -6257,19 +6270,6 @@
                 "tea bag"
             ]
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
         "York": {
             "Title": "City",
             "Type": "Metropolitan borough",
