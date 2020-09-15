@@ -3133,6 +3133,192 @@
                 "polystyrene"
             ]
         },
+        "Kent": {
+            "Type": "County Council",
+            "bin-recyclable": [
+                "metal",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Kettering": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "King's Lynn and West Norfolk": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Kingston upon Hull": {
+            "Type": "City Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Kirklees": {
+            "Type": "Metropolitan Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "cardboard",
+                "paper",
+                "plastic bottle"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Knowsley": {
+            "Type": "Metropolitan Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Lancashire": {
+            "Type": "County Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Lancaster": {
+            "Type": "City Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
         "Leeds": {
             "Type": "Metropolitan borough",
             "bin-recyclable": [
@@ -3163,54 +3349,6 @@
                 "food",
                 "polystyrene",
                 "shredded paper"
-            ]
-        },
-        "Liverpool": {
-            "Title": "City",
-            "Type": "Metropolitan borough",
-            "bin-recyclable": [
-                "glass",
-                "can",
-                "paper",
-                "magazine",
-                "newspaper",
-                "junk mail",
-                "catalogue",
-                "phone directory",
-                "wrapping paper",
-                "Envelope",
-                "plastic window",
-                "Cardboard",
-                "egg carton",
-                "Cereal",
-                "Toilet roll",
-                "Plastic bottle",
-                "Plastic shampoo",
-                "cleaning bottle"
-            ],
-            "non-bin-recyclable": [
-                "Black bag",
-                "Plastic bag",
-                "cling film",
-                "plastic padding",
-                "Metal",
-                "shredded paper",
-                "polystyrene",
-                "Juice carton",
-                "Tetrapak",
-                "Food",
-                "liquid",
-                "Yoghurt pot",
-                "plastic tub",
-                "food tray",
-                "foil container",
-                "Textile",
-                "cloth",
-                "shoe",
-                "Paint tin",
-                "Electrical item",
-                "Syringes",
-                "Wood"
             ]
         },
         "Leicester": {
@@ -3303,6 +3441,852 @@
                 "straightener",
                 "cigarette",
                 "knife"
+            ]
+        },
+        "Leicestershire": {
+            "Type": "County Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Lewes": {
+            "Type": "District Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Lichfield": {
+            "Type": "District Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Lincolnshire": {
+            "Type": "County Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Liverpool": {
+            "Title": "City",
+            "Type": "Metropolitan borough",
+            "bin-recyclable": [
+                "glass",
+                "can",
+                "paper",
+                "magazine",
+                "newspaper",
+                "junk mail",
+                "catalogue",
+                "phone directory",
+                "wrapping paper",
+                "Envelope",
+                "plastic window",
+                "Cardboard",
+                "egg carton",
+                "Cereal",
+                "Toilet roll",
+                "Plastic bottle",
+                "Plastic shampoo",
+                "cleaning bottle"
+            ],
+            "non-bin-recyclable": [
+                "Black bag",
+                "Plastic bag",
+                "cling film",
+                "plastic padding",
+                "Metal",
+                "shredded paper",
+                "polystyrene",
+                "Juice carton",
+                "Tetrapak",
+                "Food",
+                "liquid",
+                "Yoghurt pot",
+                "plastic tub",
+                "food tray",
+                "foil container",
+                "Textile",
+                "cloth",
+                "shoe",
+                "Paint tin",
+                "Electrical item",
+                "Syringes",
+                "Wood"
+            ]
+        },
+        "London (Barking and Dagenham)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "cardboard",
+                "paper",
+                "plastic bottle"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Barnet)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Bexley)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Brent)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Bromley)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Camden)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Croydon)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Ealing)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Enfield)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Hackney)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Hammersmith and Fulham)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Haringey)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Harrow)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Havering)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "electrical"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Hillingdon)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Hounslow)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Islington)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Lambeth)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Lewisham)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Merton)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Newham)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "cardboard",
+                "paper",
+                "plastic bottle"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Redbridge)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Richmond upon Thames)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Southwark)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Sutton)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Tower Hamlets)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Waltham Forest)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "plastic bottle",
+                "plastic packaging",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "London (Wandsworth)": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
+            ]
+        },
+        "Luton": {
+            "Type": "Borough Council",
+            "bin-recyclable": [
+                "metal",
+                "glass",
+                "cardboard",
+                "paper",
+                "textile",
+                "plastic bottle",
+                "plastic packaging",
+                "electrical",
+                "foil"
+            ],
+            "non-bin-recyclable": [
+                "chipboard",
+                "MDF",
+                "plywood",
+                "used paper",
+                "ceramic",
+                "gas canister",
+                "garden tool",
+                "chemicals",
+                "Explosives",
+                "Rubber"
             ]
         },
         "Maidstone": {
