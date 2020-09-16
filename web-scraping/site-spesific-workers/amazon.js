@@ -1,10 +1,15 @@
-// Script to grab the product info from an amazon page.
+// Worker script to extract product details from amazon pages.
 
-"use strict";
+// ===== Listen For Message =====
+self.addEventListener('message', function(msg){
+    return getProductInfo(msg.data);
+});
 
 // ===== Scraping Functions =====
 // Gets all the product information and returns it as an object.
-function getProductInfo() {
+function getProductInfo(page) {
+    let pageElement = document.createElement('div');
+    pageElement.innerHTML = page.innerHTML;
 
     let ASIN = "";
     let title = "";
@@ -12,10 +17,11 @@ function getProductInfo() {
     let price = "";
 
     // Get all the product information.
-    ASIN = getASINAmazon();
+    ASIN = getIdentification();
     title = getTitleAmazon();
     description = getDescAmazon();
     price = getPriceAmazon();
+
     // Return empty object if all the information is empty.
     if (ASIN == "" && title == "" && description == "" && price == "") {
         // Return a blank object if there is no product.
@@ -25,9 +31,9 @@ function getProductInfo() {
         return {
             "product-information":
             {
-                "ASIN": ASIN,
+                "ID": ASIN,
                 "title": title,
-                "description": description,
+                "descripti on": description,
                 "price": price
             }
         };
@@ -35,7 +41,7 @@ function getProductInfo() {
 }
 
 // Checks for the ASIN on the Amazon page.
-function getASINAmazon() {
+function getIdentification() {
     let tableRows = document.getElementsByTagName("td");
     let ASIN = "";
 
@@ -69,17 +75,17 @@ function getASINAmazon() {
     return salted_identity;
 }
 
-function getTitleAmazon() {
+function getTitle() {
     let title = document.getElementById("productTitle");
     return getCleanText(title);
 }
 
-function getDescAmazon() {
+function getDesc() {
     let description = document.getElementById("productDescription");
     return getCleanText(description);
 }
 
-function getPriceAmazon(){
+function getPrice(){
     let price = document.getElementById("priceblock_ourprice");
     return getCleanText(price).substring(1);
 }
@@ -105,24 +111,4 @@ function getHTMLObjectText(object) {
         }
         return "";
     }
-}
-
-
-// ===== Store Product Information ====
-let productInfo = getProductInfo();
-
-// Check if the product information can actually be found.
-if (productInfo != {}) {
-    // Store the products information in the extension storage.
-    chrome.storage.sync.set(productInfo, function () {
-        console.log('Amazon product information saved');
-
-        // Testing to see if the information is saved.
-        chrome.storage.sync.get(["product-information"], function (data) {
-            console.log(data);
-        })
-    });
-    
-} else {
-    console.log('Not Saved.');
 }

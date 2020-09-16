@@ -5,47 +5,51 @@
 // ===== Scraping Functions =====
 // Gets all the product information and returns it as an object.
 function getProductInfo() {
-    // Get hostname
-    let url = window.location.href;
-    //console.log(url);
 
     let ASIN = "";
     let title = "";
     let description = "";
+    let price = "";
 
-    if (url.includes("tesco")){
-        // Get all the product information.
-        ASIN = getASINTesco();
-        title = getTitleTesco();
-        description = getDescTesco();
+    // Get all the product information.
+    ASIN = getASINTesco();
+    title = getTitleTesco();
+    description = getDescTesco();
+    price = getPriceTesco();
 
-        // Return empty object if all the information is empty.
-        if (ASIN == "" && title == "" && description == "") {
-            // Return a blank object if there is no product.
-            return {};
-        } else {
-            // Return all the data as a JSON object.
-            return {
-                "product-information":
-                {
-                    "ASIN": ASIN,
-                    "title": title,
-                    "description": description
-                }
-            };
-        }
+    // Return empty object if all the information is empty.
+    if (ASIN == "" && title == "" && description == "" && price == "") {
+        // Return a blank object if there is no product.
+        return {};
+    } else {
+        // Return all the data as a JSON object.
+        return {
+            "product-information":
+            {
+                "ASIN": ASIN,
+                "title": title,
+                "description": description,
+                "price": price
+            }
+        };
     }
 }
 
 // Checks for the data on the Tesco page.
 function getASINTesco() {
-    return "T35C0";
+    let url = window.location.href;
+    let paths = url.split('/');
+    let identity = paths[paths.length-1];
+    let salt = "tesco-";
+    let salted_identity = salt.concat(identity);
+    //console.log(identity);
+    return salted_identity;
 }
 
 function getTitleTesco() {
     let title = document.getElementsByClassName("product-details-tile__title");
     title = title[0].innerText;
-    console.log(title);
+    //console.log(title);
     return title;
 }
 
@@ -53,6 +57,11 @@ function getDescTesco() {
     let description = document.getElementsByClassName("product-info-block product-info-block--product-marketing ");
     description = description[0].innerText;
     return description;
+}
+
+function getPriceTesco() {
+    let price = document.querySelectorAll('[data-auto="price-value"]');
+    return getCleanText(price[0]);
 }
 
 // ===== Text Manipulation Functions =====
