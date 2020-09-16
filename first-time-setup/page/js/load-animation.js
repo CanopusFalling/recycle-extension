@@ -5,7 +5,7 @@
 // ===== Constants =====
 const HANG_TIME = 1000;
 
-const TITLE_SCREEN_SIZE = 80;
+const TITLE_SCREEN_SIZE = 90;
 const FINAL_SCREEN_SIZE = 40;
 
 const OVERLAY_START_OPACITY = 1;
@@ -32,12 +32,13 @@ function runAnimation(logo, overlay) {
     let frameInterval = setInterval(function () { frame(logo, overlay) }, FRAME_INTERVAL);
 
     // Kill the animation after time is up.
-    setTimeout(function () { killAnimation(frameInterval) }, ANIMATION_TIME);
+    setTimeout(function () { killAnimation(frameInterval, overlay) }, ANIMATION_TIME);
 }
 
 // ===== Kill Animation =====
-function killAnimation(frameInterval) {
+function killAnimation(frameInterval, overlay) {
     clearInterval(frameInterval);
+    overlay.style.display = "none";
 }
 
 // ===== Frame Handler =====
