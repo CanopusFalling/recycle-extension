@@ -4,7 +4,7 @@
 let currentScreen = 0;
 
 // ===== Set up Screens =====
-function screenSetup(){
+function screenSetup() {
     showScreen(currentScreen);
 
     addListeners("previous-screen-button", -1);
@@ -12,13 +12,13 @@ function screenSetup(){
 }
 
 // ===== Adding Listeners to Buttons =====
-function addListeners(className, advancement){
+function addListeners(className, advancement) {
     let buttons = document.getElementsByClassName(className);
 
-    for(let i = 0; i < buttons.length; i++){
+    for (let i = 0; i < buttons.length; i++) {
         let button = buttons[i];
 
-        button.addEventListener("click", function(){
+        button.addEventListener("click", function () {
             currentScreen += advancement;
             showScreen(currentScreen);
         });
@@ -26,10 +26,10 @@ function addListeners(className, advancement){
 }
 
 // ===== Show Specific Screen =====
-function showScreen(screenNumber){
+function showScreen(screenNumber) {
     // Hide all screens.
     let screens = document.getElementsByTagName("main");
-    for(let i = 0; i < screens.length; i++){
+    for (let i = 0; i < screens.length; i++) {
         let screen = screens[i];
         screen.style.display = "none";
     }
