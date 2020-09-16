@@ -1,0 +1,24 @@
+form.details-form{
+    /* Shape and position the form. */
+    margin: auto auto;
+    padding: 10px 20px;
+
+    max-width: 800px;
+
+    border-radius: 20px;
+
+    /* Form appearance */
+    background-color: rgba(0, 200, 0, 0.6);
+}
+
+form.details-form label{
+    color: white;
+}
+
+form.details-form label.input-label{
+
+}
+
+form.details-form label.input-description{
+    
+}

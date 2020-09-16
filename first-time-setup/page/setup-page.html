@@ -2,15 +2,39 @@
 <html>
 
 <head>
-  <!-- Javascript files -->
-  <script src=""></script>
+    <!-- Javascript files -->
+    <script src="js/form-handler.js"></script>
 
-  <!-- CSS files -->
-  <link rel="stylesheet" href="/">
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/general-styles.css">
+    <link rel="stylesheet" href="css/form-styles.css">
 
-  <!-- Meta Information. -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Information. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<body>
+    <header>
+        <img class="logo" src="/images/logo-text.svg">
+    </header>
+    <main>
+        <form class="details-form">
+            <label class="input-label">Location: </label>
+            <select id="location-dropdown" class="long-dropdown" name="location"></select>
+            <label class="input-description">Your location is required to understand what is or isn't recyclable in your
+                area, this location is stored
+                locally and is never sent to us. If you don't know which councils jurisdiction you are in
+                <a href="https://www.gov.uk/find-local-council">use this tool.</a>
+                Finally if your location isn't listed then it may be that we haven't yet added your location to the
+                extension yet, send us a message if you would like to see your location
+                <a href="https://theecogaurd.co.uk">here</label>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
 
 </html>

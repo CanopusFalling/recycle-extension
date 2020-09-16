@@ -1,0 +1,21 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+    background-image: url(/images/background-image.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header img.logo{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 30%;
+
+    background-color: rgba(255, 255, 255, 0.6);
+
+    border-radius: 20px;
+}
