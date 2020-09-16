@@ -73,5 +73,4 @@ function delayAnimation() {
 }
 
 // ===== OnLoad Start Script =====
-
 document.addEventListener("DOMContentLoaded", delayAnimation);

@@ -23,3 +23,13 @@ header img.logo{
 
     border-radius: 20px;
 }
+
+main{
+    margin: auto auto;
+    padding: 20px 10px;
+
+    max-width: 800px;
+
+    border: 5px solid black;
+    border-radius: 20px;
+}

@@ -5,6 +5,7 @@
     <!-- Javascript files -->
     <script src="js/form-handler.js"></script>
     <script src="js/load-animation.js"></script>
+    <script src="js/screen-manager.js"></script>
 
     <!-- CSS files -->
     <link rel="stylesheet" href="css/general-styles.css">
@@ -20,7 +21,14 @@
     <header>
         <img class="logo" id="main-page-logo" src="/images/logo-text.svg">
     </header>
-    <main>
+    <div id="advancement-buttons">
+        <button class="previous-screen-button advancement-button">previous</button>
+        <button class="next-screen-button advancement-button">next</button>
+    </div>
+    <main id="main-section-0">
+
+    </main>
+    <main id="main-section-1">
         <form class="details-form">
             <label class="input-label">Location: </label>
             <select id="location-dropdown" class="long-dropdown" name="location"></select>
