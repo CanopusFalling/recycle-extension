@@ -4,10 +4,12 @@
 <head>
     <!-- Javascript files -->
     <script src="js/form-handler.js"></script>
+    <script src="js/load-animation.js"></script>
 
     <!-- CSS files -->
     <link rel="stylesheet" href="css/general-styles.css">
     <link rel="stylesheet" href="css/form-styles.css">
+    <link rel="stylesheet" href="css/animation.css">
 
     <!-- Meta Information. -->
     <meta charset="UTF-8" />
@@ -16,7 +18,7 @@
 
 <body>
     <header>
-        <img class="logo" src="/images/logo-text.svg">
+        <img class="logo" id="main-page-logo" src="/images/logo-text.svg">
     </header>
     <main>
         <form class="details-form">
@@ -28,7 +30,7 @@
                 <a href="https://www.gov.uk/find-local-council">use this tool.</a>
                 Finally if your location isn't listed then it may be that we haven't yet added your location to the
                 extension yet, send us a message if you would like to see your location
-                <a href="https://theecogaurd.co.uk">here</label>
+                <a href="https://theecogaurd.co.uk">here</a></label>
         </form>
     </main>
 
@@ -36,5 +38,7 @@
 
     </footer>
 </body>
+
+<div id="white-overlay"></div>
 
 </html>
