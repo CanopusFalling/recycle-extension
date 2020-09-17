@@ -5,6 +5,7 @@ form.details-form{
 }
 
 form.details-form label{
+    display: block;
     color: black;
 }
 
@@ -14,4 +15,8 @@ form.details-form label.input-label{
 
 form.details-form label.input-description{
     
+}
+
+form.details-form select.long-dropdown{
+    width: 50%;
 }
