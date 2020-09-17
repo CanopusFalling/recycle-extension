@@ -11,10 +11,10 @@ const FINAL_SCREEN_SIZE = 40;
 const OVERLAY_START_OPACITY = 1;
 const OVERLAY_FINAL_OPACITY = 0;
 
-const FRAME_RATE = 30;
+const FRAME_RATE = 45;
 const FRAME_INTERVAL = 1000 / FRAME_RATE;
 
-const ANIMATION_TIME = 2000;
+const ANIMATION_TIME = 1000;
 
 // ===== Setup Animation =====
 function animationSetup(logo, overlay) {

@@ -34,10 +34,15 @@ function showScreen(screenNumber) {
         screen.style.display = "none";
     }
 
-    // Show the 1 selected screen.
-    let currentScreenID = "main-section-" + screenNumber;
-    let currentScreen = document.getElementById(currentScreenID);
-    currentScreen.style.display = "block";
+    // Close the tab if the screen is out of range.
+    if (screenNumber < 0 || screenNumber > screens.length - 1) {
+        window.close();
+    } else {
+        // Show the 1 selected screen.
+        let currentScreenID = "main-section-" + screenNumber;
+        let currentScreen = document.getElementById(currentScreenID);
+        currentScreen.style.display = "block";
+    }
 }
 
 // ===== OnLoad Start Script =====
