@@ -5,8 +5,8 @@
 
 // ===== Constants =====
 const FILES = {
-    districtInfo: {location: "data/district-recycle-info.json"},
-    materialInfo: {location: "data/material-info.json"}
+    districtInfo: { location: "data/district-recycle-info.json" },
+    materialInfo: { location: "data/material-info.json" }
 };
 
 const STORAGE_KEY = "file-data";
@@ -25,13 +25,13 @@ function readTextFile(file, callback) {
 }
 
 // ===== Get Data As JSON Object =====
-function getJSONInformation(callback){
+function getJSONInformation(callback) {
     let fileInfo = FILES;
 
     for (let fileName in fileInfo) {
         let file = fileInfo[fileName];
 
-        readTextFile(file.location, function(fileText){
+        readTextFile(file.location, function (fileText) {
             file.contents = JSON.parse(fileText);
 
             finishedDataReading(fileInfo, callback);
@@ -39,7 +39,7 @@ function getJSONInformation(callback){
     }
 }
 
-function finishedDataReading(fileInfo, callback){
+function finishedDataReading(fileInfo, callback) {
     //console.log(fileInfo);
 
     // Check if all the files have been read into the script.
@@ -47,23 +47,23 @@ function finishedDataReading(fileInfo, callback){
     for (let fileName in fileInfo) {
         let file = fileInfo[fileName];
 
-        if(typeof file.contents == "undefined"){
+        if (typeof file.contents == "undefined") {
             isFinished = false;
         }
     }
 
-    if(isFinished){
+    if (isFinished) {
         callback(fileInfo);
     }
 }
 
 // ===== Save Data =====
 
-function saveData(data){
+function saveData(data) {
     // Save data to chrome extension storage.
     let saveObject = {};
     saveObject[STORAGE_KEY] = data;
-    chrome.storage.local.set(saveObject, function(){
+    chrome.storage.local.set(saveObject, function () {
         console.log("External file data saved to storage location: \"" + STORAGE_KEY + "\"");
     });
 }
