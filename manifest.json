@@ -8,7 +8,8 @@
     "background": {
         "scripts": [
             "background.js",
-            "background/helper-scripts/data-file-ingest.js"
+            "background/helper-scripts/data-file-ingest.js",
+            "background/product-engine/product-detection.js"
         ],
         "persistent": false
     },

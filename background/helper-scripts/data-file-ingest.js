@@ -6,10 +6,11 @@
 // ===== Constants =====
 const FILES = {
     districtInfo: { location: "data/district-recycle-info.json" },
-    materialInfo: { location: "data/material-info.json" }
+    materialInfo: { location: "data/material-info.json" },
+    settings: { location: "settings.json" }
 };
 
-const STORAGE_KEY = "file-data";
+const FILE_DATA_STORAGE_KEY = "file-data";
 
 // ===== File Reader =====
 function readTextFile(file, callback) {
@@ -58,14 +59,22 @@ function finishedDataReading(fileInfo, callback) {
 }
 
 // ===== Save Data =====
-
 function saveData(data) {
+    // Clear data first.
+    writeData({}, function () {
+        console.log("location \"" + FILE_DATA_STORAGE_KEY + "\" cleared.");
+    });
+    // Write in correct data.
+    writeData(data, function(){
+        console.log("External file data saved to storage location: \"" + FILE_DATA_STORAGE_KEY + "\"");
+    })
+}
+
+function writeData(data, callback) {
     // Save data to chrome extension storage.
     let saveObject = {};
-    saveObject[STORAGE_KEY] = data;
-    chrome.storage.local.set(saveObject, function () {
-        console.log("External file data saved to storage location: \"" + STORAGE_KEY + "\"");
-    });
+    saveObject[FILE_DATA_STORAGE_KEY] = data;
+    chrome.storage.local.set(saveObject, callback);
 }
 
 // ===== Script Start =====

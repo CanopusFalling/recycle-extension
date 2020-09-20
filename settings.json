@@ -1,0 +1,16 @@
+{
+    "product-detection":{
+        "partial-word-detection": false,
+        "weights":{
+            "title": 5,
+            "description": 1
+        }
+    },
+    "keyword-detection":{
+        "partial-word-detection": false,
+        "weights":{
+            "title": 2,
+            "description": 1
+        }
+    }
+}
