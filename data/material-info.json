@@ -20,7 +20,71 @@
         "kitchen cabinet",
         "shelf",
         "desk",
+        "wardrobe"
+        
+    ],
+    "fiberboard":[
+        "sound proofing",
+        "sound deadening",
+        "structural sheathing",
+        "low-slope roofing"
+    ],
+    "plywood": [
+        "desk",
+        "kitchen cabinet",
+        "shelf",
         "wardrobe",
+        "bench",
+        "fence",
+        "flooring"
+    ],
+    "balsa": [
+        "model airplane",
+        "wooden surfboard",
+        "wooden crankbait",
+        "drumstick",
+        "wooden puzzle",
+        "wooden musical toy",
+        "wooden tea box",
+        "wooden cutlery",
+        "wooden wine box",
+        "wooden lollipop stick",
+        "wooden fork",
+        "table tennis bat",
+        "ping pong bat",
+        "dowel"
+    ],
+    "beech": [
+        "firewood",
+        "chopping board",
+        "chopping-board",
+        "wooden furniture"
+    ],
+    "ash":[
+        "hammer",
+        "firewood",
+        "baseball bat",
+        "electric guitar",
+        "veneer",
+        "bow"
+    ],
+    "maple":[
+        "baseball bat",
+        "bow"
+    ],
+    "walnut":[
+        "wooden furniture"
+    ],
+    "mahogany":[
+        "wooden furniture"
+    ],
+    "oak":[
+        "wooden furniture",
+        "chopping board"
+    ],
+    "sycamore":[
+        "chess set",
+        "chopping board",
         "wooden cubes",
         "wooden toilet seats",
         "wooden toy",
@@ -89,69 +153,6 @@
         "wooden candle holder",
         "wooden chopstick",
         "wood slices"
-    ],
-    "fiberboard":[
-        "sound proofing",
-        "sound deadening",
-        "structural sheathing",
-        "low-slope roofing"
-    ],
-    "plywood": [
-        "desk",
-        "kitchen cabinet",
-        "shelf",
-        "wardrobe",
-        "bench",
-        "fence",
-        "flooring"
-    ],
-    "balsa": [
-        "model airplane",
-        "wooden surfboard",
-        "wooden crankbait",
-        "drumstick",
-        "wooden puzzle",
-        "wooden musical toy",
-        "wooden tea box",
-        "wooden cutlery",
-        "wooden wine box",
-        "wooden lollipop stick",
-        "wooden fork",
-        "table tennis bat",
-        "ping pong bat",
-        "dowel"
-    ],
-    "beech": [
-        "firewood",
-        "chopping board",
-        "chopping-board",
-        "wooden furniture"
-    ],
-    "ash":[
-        "hammer",
-        "firewood",
-        "baseball bat",
-        "electric guitar",
-        "veneer",
-        "bow"
-    ],
-    "maple":[
-        "baseball bat",
-        "bow"
-    ],
-    "walnut":[
-        "wooden furniture"
-    ],
-    "mahogany":[
-        "wooden furniture"
-    ],
-    "oak":[
-        "wooden furniture",
-        "chopping board"
-    ],
-    "sycamore":[
-        "chess set",
-        "chopping board"
     ],
     "teak":[
         "wooden furniture",
