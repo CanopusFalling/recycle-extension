@@ -53,13 +53,43 @@ function analyzeProduct(productInfo) {
     // Eliminate products that are parents of other products which therefor 
     // must be materials or less specific product names.
     let eliminated = eliminateMaterials(products);
+
+    console.log(eliminated);
 }
 
 // ===== Material Removal =====
-function eliminateMaterials(products){
-    for(let productName in products){
-        
+function eliminateMaterials(materials){
+    let eliminated = {};
+
+    for(let materialName in materials){
+        // Get the information about the material if it is in the file.
+        let materialInfo = {};
+        let materialInfoSection = materialInformation[materialName];
+        if(typeof materialInfoSection != "undefined"){
+            materialInfo = materialInfoSection;
+        }
+
+        // Detect if there is a child of this material already detected.
+        if(hasChildProduct(materials, materialInfo)){
+            eliminated[materialName] = materials[materialName];
+            delete materials[materialName];
+        }
     }
+
+    return eliminated;
+}
+
+function hasChildProduct(materials, children){
+    for(let childIndex in children){
+        let child = children[childIndex];
+
+        for(let material in materials){
+            if(child == material){
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 // ===== Get Product Matches =====
