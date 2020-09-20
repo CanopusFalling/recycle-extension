@@ -1,0 +1,95 @@
+body {
+    /* Shape the extension. */
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    /* Set background to black. */
+    background-color: rgb(235, 235, 235);
+    /* Set the colour of all the text to white. */
+    color: rgb(0, 0, 30);
+    /* Set all font to ubuntu. */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+}
+
+/* Noselect for text */
+
+.no-select {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.notbold {
+    font-weight: 100;
+}​
+
+/* supposed to remove styling from 'a' tag */
+
+.infopage a {
+    color: rgb(0, 0, 30);
+    text-decoration: none; 
+} 
+
+/* for nav buttons */
+
+.material-icons {
+    filter: brightness(0);
+    position: relative;
+    top: -8px;
+}
+
+.material-icons:hover {
+    filter: brightness(5);
+}
+
+/* social media icons */
+
+.fa {
+  padding: 22px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  filter: brightness(0);
+  font-weight: 50;
+}
+
+.social-media {
+    font-size: 25px;
+}
+
+/* unvisited link */
+a {
+  color: rgb(0, 0, 30);
+}
+
+/* Scrollbar Styles */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8);
+}

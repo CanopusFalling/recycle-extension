@@ -1,0 +1,64 @@
+{
+    "name": "Eco Guard",
+    "version": "0.1.0",
+    "description": "Your Chrome extension informing your online retail purchases of more recyclable products for your local area",
+    "icons": {
+        "128": "images/webcycleLogo.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js",
+            "first-time-setup/setup.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "tabs",
+        "geolocation",
+        "alarms",
+        "https://*/*"
+    ],
+    "browser_action": {
+        "default_icon": "images/webcycleLogo.png",
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.amazon.*/*"
+            ],
+            "js": [
+                "page-event-scripts/amazon.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.ebay.*/*"
+            ],
+            "js": [
+                "page-event-scripts/ebay.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://*.tesco.*/*"
+            ],
+            "js": [
+                "page-event-scripts/tesco.js"
+            ]
+        }
+    ],
+    "options_page": "options/options.html",
+    "manifest_version": 2
+}
