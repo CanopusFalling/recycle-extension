@@ -1,0 +1,22 @@
+form.details-form{
+    /* Shape and position the form. */
+    margin: 0px;
+    padding: 10px 20px;
+}
+
+form.details-form label{
+    display: block;
+    color: black;
+}
+
+form.details-form label.input-label{
+
+}
+
+form.details-form label.input-description{
+    
+}
+
+form.details-form select.long-dropdown{
+    width: 50%;
+}
