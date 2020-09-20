@@ -1,13 +1,13 @@
 {
-    "product-detection":{
-        "partial-word-detection": false,
+    "productDetection":{
+        "partialWordDetection": false,
         "weights":{
             "title": 5,
             "description": 1
         }
     },
-    "keyword-detection":{
-        "partial-word-detection": false,
+    "keywordDetection":{
+        "partialWordDetection": false,
         "weights":{
             "title": 2,
             "description": 1

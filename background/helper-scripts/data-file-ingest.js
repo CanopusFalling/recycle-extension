@@ -10,7 +10,7 @@ const FILES = {
     settings: { location: "settings.json" }
 };
 
-const FILE_DATA_STORAGE_KEY = "file-data";
+const STORAGE_KEY = "file-data";
 
 // ===== File Reader =====
 function readTextFile(file, callback) {
@@ -62,18 +62,18 @@ function finishedDataReading(fileInfo, callback) {
 function saveData(data) {
     // Clear data first.
     writeData({}, function () {
-        console.log("location \"" + FILE_DATA_STORAGE_KEY + "\" cleared.");
+        console.log("location \"" + STORAGE_KEY + "\" cleared.");
     });
     // Write in correct data.
     writeData(data, function(){
-        console.log("External file data saved to storage location: \"" + FILE_DATA_STORAGE_KEY + "\"");
+        console.log("External file data saved to storage location: \"" + STORAGE_KEY + "\"");
     })
 }
 
 function writeData(data, callback) {
     // Save data to chrome extension storage.
     let saveObject = {};
-    saveObject[FILE_DATA_STORAGE_KEY] = data;
+    saveObject[STORAGE_KEY] = data;
     chrome.storage.local.set(saveObject, callback);
 }
 
