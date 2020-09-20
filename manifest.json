@@ -1,6 +1,6 @@
 {
-    "name": "EcoGuard",
-    "version": "0.1",
+    "name": "Eco Guard",
+    "version": "0.1.0",
     "description": "Your Chrome extension informing your online retail purchases of more recyclable products for your local area",
     "icons": {
         "128": "images/webcycleLogo.png"
