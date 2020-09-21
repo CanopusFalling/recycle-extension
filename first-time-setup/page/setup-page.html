@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Javascript files -->
+    <script src="js/form-handler.js"></script>
+    <script src="js/load-animation.js"></script>
+    <script src="js/screen-manager.js"></script>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/general-styles.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- Meta Information. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <img class="logo" id="main-page-logo" src="/images/logo-text.svg">
+    </header>
+    <!--<div id="advancement-buttons">
+        <button class="previous-screen-button advancement-button">previous</button>
+        <button class="next-screen-button advancement-button">next</button>
+    </div>-->
+    <main id="main-section-0">
+        <h1>
+            Welcome!
+        </h1>
+        <p>
+            Thanks for installing our extension!
+        </p>
+        <p>
+            Please click NEXT in order to set up the extension.
+        </p>
+        <button class="next-screen-button advancement-button">next</button>
+    </main>
+    <main id="main-section-1">
+        <h1>We recommend pinning the extension.</h1>
+        <p>
+            Currently the extension isn't automatic so when you want to check a product you will need to click our icon, pinning the extension makes this a whole lot easier.
+            <a href="https://www.howtogeek.com/683099/how-to-pin-and-unpin-extensions-from-the-chrome-toolbar/">(How to pin extensions)</a>
+        </p>
+        <button class="previous-screen-button advancement-button">previous</button>
+        <button class="next-screen-button advancement-button">next</button>
+    </main>
+    <main id="main-section-2">
+        <form id="location-input-form" class="details-form">
+            <label class="input-label">Location: </label>
+            <select id="location-dropdown" class="long-dropdown" name="location"></select>
+            <label class="input-description">Your location is required to understand what is or isn't recyclable in your
+                area, this location is stored
+                locally and is never sent to us. If you don't know which councils jurisdiction you are in
+                <a href="https://www.gov.uk/find-local-council">use this tool.</a>
+                Finally if your location isn't listed then it may be that we haven't yet added your location to the
+                extension yet, send us a message if you would like to see your location
+                <a href="https://theecogaurd.co.uk">here.</a></label>
+        </form>
+        <button class="previous-screen-button advancement-button">previous</button>
+        <button id="submit-location-info" class="next-screen-button advancement-button">next</button>
+    </main>
+    <main id="main-section-3">
+        <h1>
+            You're All Good To Go!
+        </h1>
+        <p>
+            That's all the information we need for the moment, best of luck shopping!
+        </p>
+        <button class="next-screen-button advancement-button">close</button>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+<div id="white-overlay"></div>
+
+</html>
