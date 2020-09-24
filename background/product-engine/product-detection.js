@@ -34,7 +34,12 @@ function newInfoUpdate() {
         // Check if the key is the one we want.
         let productData = changes[PRODUCT_DATA_STORAGE_KEY];
         if (typeof productData != "undefined") {
-            analyzeProduct(productData.newValue);
+            // Check if the product title is valid.
+            if(productData['newValue']['title'] == ""){
+                console.log("No product title found by scraper.");
+            }else{
+                analyzeProduct(productData.newValue);
+            }
         }
     });
 }
