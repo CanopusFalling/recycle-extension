@@ -63,14 +63,10 @@ function eliminateMaterials(materials){
 
     for(let materialName in materials){
         // Get the information about the material if it is in the file.
-        let materialInfo = {};
-        let materialInfoSection = materialInformation[materialName];
-        if(typeof materialInfoSection != "undefined"){
-            materialInfo = materialInfoSection;
-        }
+        let materialChildren = getAllMaterialChildren(materialName);
 
         // Detect if there is a child of this material already detected.
-        if(hasChildProduct(materials, materialInfo)){
+        if(hasChildProduct(materials, materialChildren)){
             eliminated[materialName] = materials[materialName];
             delete materials[materialName];
         }
@@ -79,6 +75,51 @@ function eliminateMaterials(materials){
     return eliminated;
 }
 
+// Gets all the children of a material.
+function getAllMaterialChildren(materialName){
+    let children = [];
+    let isFinished = false;
+    let childrenCount = 0
+
+    // Get the first set of children.
+    getMaterialChildren(materialName, children);
+    childrenCount = children.length;
+
+    // repeatedly get all the children till the array is exhausted.
+    while(!isFinished){
+        for (let i = 0; i < children.length; i++) {
+            const element = children[i];
+            
+            getMaterialChildren(element, children);
+        }
+
+        // Checks if no new elements were added.
+        isFinished = childrenCount == children.length;
+        childrenCount = children.length;
+    }
+
+    return children;
+}
+
+// Gets children of
+function getMaterialChildren(parent, children){
+    let currentChildren = materialInformation[parent];
+    // Check that the item has children.
+    if(typeof currentChildren == "undefined"){
+        currentChildren = [];
+    }
+
+    // Add all the new children.
+    currentChildren.forEach(element => {
+        if(!children.includes(element)){
+            children.push(element);
+        }
+    });
+    
+    return children;
+}
+
+// Checks if the product has a child in the materials.
 function hasChildProduct(materials, children){
     for(let childIndex in children){
         let child = children[childIndex];
