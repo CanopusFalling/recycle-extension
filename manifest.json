@@ -7,6 +7,7 @@
     },
     "background": {
         "scripts": [
+            "background/global-scope-variables.js",
             "background.js",
             "background/helper-scripts/data-file-ingest.js",
             "background/product-engine/product-detection.js",

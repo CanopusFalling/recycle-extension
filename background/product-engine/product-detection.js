@@ -2,20 +2,12 @@
 
 "use strict";
 
-// ===== Constants =====
-const FILE_DATA_STORAGE_KEY = "file-data";
-const PRODUCT_DATA_STORAGE_KEY = "product-information";
-
-// ===== Globals =====
-var detectionSettings = {};
-var materialInformation = {};
-
 // ===== Get Detection Settings =====
 function getFilesNeeded(callback) {
     // Wait for storage to update.
     chrome.storage.onChanged.addListener(function (changes, namespace) {
         // Check if the key is the one we want and that it was empty.
-        let fileData = changes[STORAGE_KEY];
+        let fileData = changes[FILE_DATA_STORAGE_KEY];
         if (typeof fileData != "undefined") {
             // Make sure it's only used when not empty.
             if (JSON.stringify(fileData.oldValue) == "{}") {
@@ -44,6 +36,12 @@ function newInfoUpdate() {
     });
 }
 
+// ===== Store Results =====
+
+function storeResults(){
+
+}
+
 // ===== Determine Current Product =====
 function analyzeProduct(productInfo) {
     // Find the hits for all the products.
@@ -52,13 +50,14 @@ function analyzeProduct(productInfo) {
     getProducts(products, productInfo.title, productWeights.title);
     getProducts(products, productInfo.description, productWeights.description);
 
-    console.log("Product engine found the following products: ")
+    console.log("Product engine found the following products: ");
     console.log(products);
 
     // Eliminate products that are parents of other products which therefor 
     // must be materials or less specific product names.
     let eliminated = eliminateMaterials(products);
 
+    console.log("Product engine eliminated these elements: ");
     console.log(eliminated);
 }
 
