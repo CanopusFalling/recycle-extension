@@ -17,7 +17,7 @@ function listenForProductUpdate(callback) {
 }
 
 // ===== Translation =====
-function saveToOld(newFormat){
+function saveToOld(newFormat) {
     console.log(newFormat);
     let oldFormat = {};
     oldFormat[OLD_ENGINE_KEY] = {};
@@ -28,7 +28,7 @@ function saveToOld(newFormat){
     // Analysis format.
     let oldAnalysis = newFormat['info-guess'];
 
-    for(let productName in oldAnalysis){
+    for (let productName in oldAnalysis) {
         let product = oldAnalysis[productName];
 
         product['keywords'] = product['materials'];
@@ -37,7 +37,7 @@ function saveToOld(newFormat){
 
     oldFormat[OLD_ENGINE_KEY]['product-breakdown'] = oldAnalysis;
 
-    chrome.storage.sync.set(oldFormat, function(){
+    chrome.storage.sync.set(oldFormat, function () {
         console.log(oldFormat);
     })
 }

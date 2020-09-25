@@ -44,7 +44,7 @@ function assignMaterials(productInfo) {
         let materials = getMaterials(productName);
 
         let materialHits = getMaterialHits(materials, productInfo['raw-product-info']);
-        
+
         products[productName]['materials'] = materialHits;
         //console.log(product);
     }

@@ -22,7 +22,10 @@ const PRODUCT_DATA_STORAGE_KEY = "product-information";
 const PRODUCT_GUESS_STORAGE_KEY = "product-guess";
 const MATERIAL_GUESS_STORAGE_KEY = "material-guess";
 const OLD_ENGINE_KEY = "product-analysis";
+const LOCATION_STORAGE_KEY = "user-location";
+const LOCAL_INFO_STORAGE_KEY = "local-info";
 
 // ===== Globals =====
 var detectionSettings = {};
 var materialInformation = {};
+var councilInformation = {};
