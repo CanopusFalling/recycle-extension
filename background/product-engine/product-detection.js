@@ -42,7 +42,7 @@ function storeResults(productInfo, productGuesses) {
     let storeObject = {}
     storeObject[PRODUCT_GUESS_STORAGE_KEY] = {
         'raw-product-info': productInfo,
-        'product-guess': productGuesses
+        'info-guess': productGuesses
     };
 
     // Store the information.
