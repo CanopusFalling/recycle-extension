@@ -37,7 +37,7 @@ function newInfoUpdate() {
 }
 
 // ===== Store Results =====
-function storeResults(productInfo, productGuesses) {
+function storeProductResults(productInfo, productGuesses) {
     // Set the storage object.
     let storeObject = {}
     storeObject[PRODUCT_GUESS_STORAGE_KEY] = {
@@ -48,6 +48,7 @@ function storeResults(productInfo, productGuesses) {
     // Store the information.
     chrome.storage.sync.set(storeObject, function () {
         console.log("Stored product guesses.");
+        console.log(storeObject);
     })
 }
 
@@ -59,18 +60,18 @@ function analyzeProduct(productInfo) {
     getProducts(products, productInfo.title, productWeights.title);
     getProducts(products, productInfo.description, productWeights.description);
 
-    console.log("Product engine found the following products: ");
-    console.log(products);
+    //console.log("Product engine found the following products: ");
+    //console.log(products);
 
     // Eliminate products that are parents of other products which therefor 
     // must be materials or less specific product names.
     let eliminated = eliminateMaterials(products);
 
-    console.log("Product engine eliminated these elements: ");
-    console.log(eliminated);
+    //console.log("Product engine eliminated these elements: ");
+    //console.log(eliminated);
 
     // Store the guesses.
-    storeResults(productInfo, products);
+    storeProductResults(productInfo, products);
 }
 
 // ===== Material Removal =====

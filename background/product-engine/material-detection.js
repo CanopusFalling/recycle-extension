@@ -23,6 +23,18 @@ function listenForProductUpdate(callback) {
     });
 }
 
+// ===== Store Result =====
+function storeMaterialResults(productInfo) {
+    // Set the storage object.
+    let storeObject = {};
+    storeObject[MATERIAL_GUESS_STORAGE_KEY] = productInfo;
+
+    // Store the information.
+    chrome.storage.sync.set(storeObject, function () {
+        console.log("Stored material guesses.");
+    })
+}
+
 // ===== Get Materials For Each Product =====
 function assignMaterials(productInfo) {
     let products = productInfo['info-guess'];
@@ -38,6 +50,7 @@ function assignMaterials(productInfo) {
     }
 
     console.log(productInfo);
+    storeMaterialResults(productInfo);
 }
 
 // Get hits for each material.

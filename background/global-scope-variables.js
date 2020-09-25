@@ -21,6 +21,7 @@ const FILE_DATA_STORAGE_KEY = "file-data";
 const PRODUCT_DATA_STORAGE_KEY = "product-information";
 const PRODUCT_GUESS_STORAGE_KEY = "product-guess";
 const MATERIAL_GUESS_STORAGE_KEY = "material-guess";
+const OLD_ENGINE_KEY = "product-analysis";
 
 // ===== Globals =====
 var detectionSettings = {};
