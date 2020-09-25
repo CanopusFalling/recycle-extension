@@ -28,12 +28,58 @@ function assignMaterials(productInfo) {
     let products = productInfo['info-guess'];
 
     for (let productName in products) {
+        // Get the materials that the product is made from.
         let materials = getMaterials(productName);
+
+        let materialHits = getMaterialHits(materials, productInfo['raw-product-info']);
         console.log(productName + " is made/a sub-product of: ");
         console.log(materials);
+        console.log(materialHits);
     }
 }
 
+// Get hits for each material.
+function getMaterialHits(materials, productScrape) {
+    // Get the settings needed.
+    let weights = detectionSettings.keywordDetection.weights;
+
+    // Set up hits object.
+    let materialHits = {};
+
+    materials.forEach(element => {
+        materialHits[element] = {};
+        materialHits[element]['hits'] = 0;
+        // Run for the title and description.
+        console.log(materialHits);
+        weightMaterial(
+            element,
+            productScrape.title,
+            weights.title,
+            materialHits
+        );
+        console.log(materialHits);
+        weightMaterial(
+            element,
+            productScrape.description,
+            weights.description,
+            materialHits
+        );
+    });
+
+    //Return hits.
+    return materialHits;
+}
+
+function weightMaterial(material, text, factor, hitsObj) {
+    //console.log(hitsObj);
+    //console.log(text + " : " + material);
+    if (wordSearch(material, text)) {
+        hitsObj[material]['hits'] += factor;
+        console.log(hitsObj);
+    }
+}
+
+// Get the raw list of products associated with a product.
 function getMaterials(productName) {
     let materials = [];
     let currentSearchItems = [productName];

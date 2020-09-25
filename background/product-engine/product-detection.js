@@ -176,6 +176,9 @@ function wordSearch(word, text) {
 
     // Generate matching strings.
     let matchingStrings = [];
+    matchingStrings.push(word + "[^a-z]");
+    matchingStrings.push(word + "s" + "[^a-z]");
+    matchingStrings.push(word + "es" + "[^a-z]");
     matchingStrings.push("[^a-z]" + word + "[^a-z]");
     matchingStrings.push("[^a-z]" + word + "s" + "[^a-z]");
     matchingStrings.push("[^a-z]" + word + "es" + "[^a-z]");
