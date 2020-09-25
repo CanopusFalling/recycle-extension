@@ -33,6 +33,17 @@ function saveToOld(newFormat) {
 
         product['keywords'] = product['materials'];
         delete product['materials'];
+
+        // Adjust hits.
+        let keywords = product['keywords'];
+        for(let keywordName in keywords){
+            let keyword = keywords[keywordName];
+
+            let hits = keyword['hits'];
+            delete keywords[keywordName];
+            keywords[keywordName] = hits;
+        }
+        console.log(keywords);
     }
 
     oldFormat[OLD_ENGINE_KEY]['product-breakdown'] = oldAnalysis;
