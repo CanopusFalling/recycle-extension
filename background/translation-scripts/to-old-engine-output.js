@@ -10,7 +10,7 @@ function listenForProductUpdate(callback) {
         // Check if the key is the one we want.
         let materialGuess = changes[MATERIAL_GUESS_STORAGE_KEY];
         if (typeof materialGuess != "undefined") {
-            console.log(materialGuess);
+            //console.log(materialGuess);
             callback(materialGuess.newValue);
         }
     });
@@ -18,7 +18,6 @@ function listenForProductUpdate(callback) {
 
 // ===== Translation =====
 function saveToOld(newFormat) {
-    console.log(newFormat);
     let oldFormat = {};
     oldFormat[OLD_ENGINE_KEY] = {};
 
@@ -43,13 +42,12 @@ function saveToOld(newFormat) {
             delete keywords[keywordName];
             keywords[keywordName] = hits;
         }
-        console.log(keywords);
     }
 
     oldFormat[OLD_ENGINE_KEY]['product-breakdown'] = oldAnalysis;
 
     chrome.storage.sync.set(oldFormat, function () {
-        console.log(oldFormat);
+        //console.log(oldFormat);
     })
 }
 
