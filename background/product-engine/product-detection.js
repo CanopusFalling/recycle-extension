@@ -46,7 +46,7 @@ function storeResults(productInfo, productGuesses) {
     };
 
     // Store the information.
-    chrome.storage.sync.set(storeObject, function(){
+    chrome.storage.sync.set(storeObject, function () {
         console.log("Stored product guesses.");
     })
 }
@@ -70,7 +70,7 @@ function analyzeProduct(productInfo) {
     console.log(eliminated);
 
     // Store the guesses.
-    storeResults(productInfo, products)
+    storeResults(productInfo, products);
 }
 
 // ===== Material Removal =====
