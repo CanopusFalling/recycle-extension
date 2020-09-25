@@ -32,10 +32,12 @@ function assignMaterials(productInfo) {
         let materials = getMaterials(productName);
 
         let materialHits = getMaterialHits(materials, productInfo['raw-product-info']);
-        console.log(productName + " is made/a sub-product of: ");
-        console.log(materials);
-        console.log(materialHits);
+        
+        products[productName]['materials'] = materialHits;
+        //console.log(product);
     }
+
+    console.log(productInfo);
 }
 
 // Get hits for each material.
@@ -50,14 +52,12 @@ function getMaterialHits(materials, productScrape) {
         materialHits[element] = {};
         materialHits[element]['hits'] = 0;
         // Run for the title and description.
-        console.log(materialHits);
         weightMaterial(
             element,
             productScrape.title,
             weights.title,
             materialHits
         );
-        console.log(materialHits);
         weightMaterial(
             element,
             productScrape.description,
@@ -71,11 +71,10 @@ function getMaterialHits(materials, productScrape) {
 }
 
 function weightMaterial(material, text, factor, hitsObj) {
-    //console.log(hitsObj);
-    //console.log(text + " : " + material);
     if (wordSearch(material, text)) {
-        hitsObj[material]['hits'] += factor;
-        console.log(hitsObj);
+        // Don't use += here, for some reason yet to be determined it 
+        // causes the hitsObj to be undefined.
+        hitsObj[material]['hits'] = factor + hitsObj[material]['hits'];
     }
 }
 
