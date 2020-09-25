@@ -19,7 +19,8 @@ const FILES = {
 // Storage Key locations.
 const FILE_DATA_STORAGE_KEY = "file-data";
 const PRODUCT_DATA_STORAGE_KEY = "product-information";
-const PRODUCT_GUESS_STORAGE_KEY = "product-guesses";
+const PRODUCT_GUESS_STORAGE_KEY = "product-guess";
+const MATERIAL_GUESS_STORAGE_KEY = "material-guess";
 
 // ===== Globals =====
 var detectionSettings = {};

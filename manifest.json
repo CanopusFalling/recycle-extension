@@ -11,6 +11,7 @@
             "background.js",
             "background/helper-scripts/data-file-ingest.js",
             "background/product-engine/product-detection.js",
+            "background/product-engine/material-detection.js",
             "first-time-setup/setup.js"
         ],
         "persistent": false
