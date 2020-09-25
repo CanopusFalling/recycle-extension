@@ -27,9 +27,9 @@ function newInfoUpdate() {
         let productData = changes[PRODUCT_DATA_STORAGE_KEY];
         if (typeof productData != "undefined") {
             // Check if the product title is valid.
-            if(productData['newValue']['title'] == ""){
+            if (productData['newValue']['title'] == "") {
                 console.log("No product title found by scraper.");
-            }else{
+            } else {
                 analyzeProduct(productData.newValue);
             }
         }
@@ -37,9 +37,18 @@ function newInfoUpdate() {
 }
 
 // ===== Store Results =====
+function storeResults(productInfo, productGuesses) {
+    // Set the storage object.
+    let storeObject = {}
+    storeObject[PRODUCT_GUESS_STORAGE_KEY] = {
+        'raw-product-info': productInfo,
+        'product-guess': productGuesses
+    };
 
-function storeResults(){
-
+    // Store the information.
+    chrome.storage.sync.set(storeObject, function(){
+        console.log("Stored product guesses.");
+    })
 }
 
 // ===== Determine Current Product =====
@@ -59,18 +68,21 @@ function analyzeProduct(productInfo) {
 
     console.log("Product engine eliminated these elements: ");
     console.log(eliminated);
+
+    // Store the guesses.
+    storeResults(productInfo, products)
 }
 
 // ===== Material Removal =====
-function eliminateMaterials(materials){
+function eliminateMaterials(materials) {
     let eliminated = {};
 
-    for(let materialName in materials){
+    for (let materialName in materials) {
         // Get the information about the material if it is in the file.
         let materialChildren = getAllMaterialChildren(materialName);
 
         // Detect if there is a child of this material already detected.
-        if(hasChildProduct(materials, materialChildren)){
+        if (hasChildProduct(materials, materialChildren)) {
             eliminated[materialName] = materials[materialName];
             delete materials[materialName];
         }
@@ -80,7 +92,7 @@ function eliminateMaterials(materials){
 }
 
 // Gets all the children of a material.
-function getAllMaterialChildren(materialName){
+function getAllMaterialChildren(materialName) {
     let children = [];
     let isFinished = false;
     let childrenCount = 0
@@ -90,10 +102,10 @@ function getAllMaterialChildren(materialName){
     childrenCount = children.length;
 
     // repeatedly get all the children till the array is exhausted.
-    while(!isFinished){
+    while (!isFinished) {
         for (let i = 0; i < children.length; i++) {
             const element = children[i];
-            
+
             getMaterialChildren(element, children);
         }
 
@@ -106,30 +118,30 @@ function getAllMaterialChildren(materialName){
 }
 
 // Gets children of
-function getMaterialChildren(parent, children){
+function getMaterialChildren(parent, children) {
     let currentChildren = materialInformation[parent];
     // Check that the item has children.
-    if(typeof currentChildren == "undefined"){
+    if (typeof currentChildren == "undefined") {
         currentChildren = [];
     }
 
     // Add all the new children.
     currentChildren.forEach(element => {
-        if(!children.includes(element)){
+        if (!children.includes(element)) {
             children.push(element);
         }
     });
-    
+
     return children;
 }
 
 // Checks if the product has a child in the materials.
-function hasChildProduct(materials, children){
-    for(let childIndex in children){
+function hasChildProduct(materials, children) {
+    for (let childIndex in children) {
         let child = children[childIndex];
 
-        for(let material in materials){
-            if(child == material){
+        for (let material in materials) {
+            if (child == material) {
                 return true;
             }
         }
