@@ -1,5 +1,6 @@
 /**
- * Script to modify the SiteScraper class so that it goes to the correct places for Amazon.
+ * Script to modify the SiteScraper class so that it goes to the 
+ * correct places for Amazon.
 */
 
 "use strict";

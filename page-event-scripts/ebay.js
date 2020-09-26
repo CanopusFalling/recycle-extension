@@ -1,6 +1,6 @@
 /**
- * Script with the Ebay class to have all the functions specific 
- * to the Ebay page.
+ * Script to modify the SiteScraper class so that it goes to the 
+ * correct places for Ebay.
 */
 
 "use strict";

@@ -9,6 +9,7 @@
 // Testing class.
 class SiteScraper{
     getProductDetails(){
+        // Object to be returned at the end of the function.
         let detailsObject = {
             title: "",
             description: "",
@@ -35,6 +36,16 @@ class SiteScraper{
 
         return detailsObject;
     }
+
+    saveProductDetails(){
+        let product = this.getProductDetails();
+        let storeObj = {'raw-scraper-output': product};
+
+        chrome.storage.sync.set(storeObj, function(){
+            console.log("stored the following object: ");
+            console.log(storeObj);
+        });
+    }
 }
 
 // ===== Site Class Information =====
@@ -55,4 +66,4 @@ for(let siteName in siteFunctions){
     }
 }
 
-console.log(testScrape.getProductDetails());
+testScrape.saveProductDetails();
