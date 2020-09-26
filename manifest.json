@@ -27,35 +27,15 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*/*"
-            ],
-            "include_globs": [
-                "*://*.amazon.*/*"
-            ],
-            "js": [
-                "page-event-scripts/amazon.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "include_globs": [
-                "*://*.ebay.*/*"
+                "*://*.amazon.co.uk/*",
+                "*://*.amazon.com/*",
+                "*://*.ebay.co.uk/*",
+                "*://*.ebay.com/*"
             ],
             "js": [
-                "page-event-scripts/ebay.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "include_globs": [
-                "*://*.tesco.*/*"
-            ],
-            "js": [
-                "page-event-scripts/tesco.js"
+                "page-event-scripts/amazon.js",
+                "page-event-scripts/ebay.js",
+                "page-event-scripts/scraper.js"
             ]
         }
     ],
