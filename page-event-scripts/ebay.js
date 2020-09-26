@@ -19,6 +19,9 @@ function setEbayFunction(){
     }
 
     SiteScraper.prototype.getID = function(){
-        return "ebay-ID"
+        let identity = getCleanText(document.getElementById("descItemNumber"));
+        let salt = "ebay-";
+        let salted_identity = salt.concat(identity);
+        return salted_identity;
     }
 }
