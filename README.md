@@ -1,7 +1,6 @@
-# recycle-extension
-Chrome extension to allow users to determine if a product is recyclable or not.
+# Eco Guard's Recycle Extension
+## Version 0.1.0
 
-## TODO List
-1. ~~Get A decent popup looking ok.~~
-2. ~~Retrive amazon links/product code when on the amazon page and push them up to the backend API.~~
-3. Automatically pop up when on an amazon product with the recycle info from the back end.
+### Information
+This extension is for determining how recyclable a product is on a site like Amazon, Ebay or Tesco. To learn more about the ideas and the team behind this or to contact us visit [our site](http://theecogaurd.co.uk).
+This should also be available on the chrome web store and we will post a link to it when it becomes available if you do not wish to use developer mode to install the extension.

@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+    /*
+    background-image: url(/images/background-image.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    */
+}
+
+header img.logo{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 30%;
+
+    position: relative;
+
+    background-color: rgba(255, 255, 255, 0.6);
+
+    border-radius: 20px;
+}
+
+main{
+    margin: auto auto;
+    padding: 1px 20px 10px 20px;
+
+    max-width: 800px;
+
+    /*border: 5px solid rgba(0, 0, 0, 0.2);*/
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    font-size: 1.4em;
+}
