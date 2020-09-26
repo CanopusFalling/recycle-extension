@@ -33,6 +33,7 @@
                 "*://*.ebay.com/*"
             ],
             "js": [
+                "page-event-scripts/helper-functions.js",
                 "page-event-scripts/amazon.js",
                 "page-event-scripts/ebay.js",
                 "page-event-scripts/scraper.js"
