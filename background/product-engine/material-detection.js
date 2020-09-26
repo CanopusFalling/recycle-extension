@@ -63,7 +63,7 @@ function getMaterialHits(materials, productScrape) {
 
     materials.forEach(element => {
         materialHits[element] = {};
-        materialHits[element]['hits'] = 0;
+        materialHits[element]['hits'] = 1;
         // Run for the title and description.
         weightMaterial(
             element,
