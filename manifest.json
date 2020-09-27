@@ -13,10 +13,8 @@
         "persistent": false
     },
     "permissions": [
-        "declarativeContent",
         "storage",
         "tabs",
-        "geolocation",
         "alarms",
         "https://*/*"
     ],

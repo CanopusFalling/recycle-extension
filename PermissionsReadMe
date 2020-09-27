@@ -1,0 +1,19 @@
+##Eco-Guards Permissions
+
+
+Declarative Content: Required to be able to open a new tab with alternative recommendations
+
+
+Storage: Allows us to store data to the users browser for local recall
+
+
+Tabs: I think that we may not need declarative content with tabs enabled so I have disabled declarative content
+
+
+Geolocation: Not needed any longer
+
+
+Alarms: Needed to periodically scan in the background
+
+
+https:://*//*: Needed to open new tabs to the following tab
