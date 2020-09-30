@@ -18,6 +18,7 @@ const FILES = {
 
 // Storage Key locations.
 const FILE_DATA_STORAGE_KEY = "file-data";
+const RAW_PRODUCT_DATA_STORAGE_KEY = "raw-scraper-output";
 const PRODUCT_DATA_STORAGE_KEY = "product-information";
 const PRODUCT_GUESS_STORAGE_KEY = "product-guess";
 const MATERIAL_GUESS_STORAGE_KEY = "material-guess";
