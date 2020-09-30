@@ -7,21 +7,14 @@ This should also be available on the chrome web store and we will post a link to
 
 ### Permission Justifications
 
-#### ``` Declarative Content ```
-Required to be able to open a new tab with alternative recommendations
-
 #### ``` Storage ```
-Allows us to store data to the users browser for local recall
+Used to store information between the different background processes and the front end popup.
 
 #### ``` Tabs ```
-I think that we may not need declarative content with tabs enabled so I have disabled declarative content
-
-#### ``` Geolocation ```
-Not needed any longer
+Allows the popup to open links as new tabs.
 
 #### ``` Alarms ```
-Needed to periodically scan in the background
-
+For creating listeners for different events like a storage update.
 
 #### ``` https:://*//* ```
-Needed to open new tabs to the following tab
+For injecting the scraper code into the vendor sites.
