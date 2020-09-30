@@ -38,11 +38,11 @@
                 "*://*.tesco.com/*"
             ],
             "js": [
-                "page-event-scripts/helper-functions.js",
-                "page-event-scripts/amazon.js",
-                "page-event-scripts/ebay.js",
-                "page-event-scripts/tesco.js",
-                "page-event-scripts/scraper.js"
+                "product-scrape/helper-functions.js",
+                "product-scrape/site-functions/amazon.js",
+                "product-scrape/site-functions/ebay.js",
+                "product-scrape/site-functions/tesco.js",
+                "product-scrape/scraper.js"
             ]
         }
     ],
