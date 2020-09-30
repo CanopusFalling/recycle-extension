@@ -52,6 +52,7 @@ class SiteScraper{
 let siteFunctions = {};
 siteFunctions['amazon'] = setAmazonFunction;
 siteFunctions['ebay'] = setEbayFunction;
+siteFunctions['tesco'] = setTescoFunction;
 
 let testScrape = new SiteScraper();
 

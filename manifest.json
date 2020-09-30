@@ -33,12 +33,15 @@
                 "*://*.amazon.co.uk/*",
                 "*://*.amazon.com/*",
                 "*://*.ebay.co.uk/*",
-                "*://*.ebay.com/*"
+                "*://*.ebay.com/*",
+                "*://*.tesco.co.uk/*",
+                "*://*.tesco.com/*"
             ],
             "js": [
                 "page-event-scripts/helper-functions.js",
                 "page-event-scripts/amazon.js",
                 "page-event-scripts/ebay.js",
+                "page-event-scripts/tesco.js",
                 "page-event-scripts/scraper.js"
             ]
         }
