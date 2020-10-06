@@ -125,6 +125,22 @@ function setRecyclability() {
 
     // Update visual information.
     try{
+
+        //To Randomize the score slightly to look more realistic but will reset each time
+        var recycleNum = parseInt(recycleOutput['recyclability-value']['score']);
+        var error = Math.random()*0.15;
+        if(recycleNum >= 1){
+            var newRecycleOutput = recycleNum - error;
+            console.log(newRecycleOutput);
+            recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+        }else if(recycleOutput <= 0){
+            var newRecycleOutput = recycleNum + error;
+            console.log(newRecycleOutput);
+            recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+        }else{}
+
+
+
         setPercentage(recycleOutput['recyclability-value']['score']);
     }
     catch(error){
@@ -146,6 +162,20 @@ function setTitle(title){
     let titleObject = document.getElementById("current-product-title");
 
     titleObject.innerHTML = title;
+}
+
+function addRandomicity(recycleOutput){
+    var recycleNum = parseInt(recycleOutput['recyclability-value']['score']);
+    var error = Math.ceil(Math.random()*15);
+    if(recycleNum == 100){
+        var newRecycleOutput = recycleNum - error;
+        recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+    }else if(recycleOutput == 0){
+        var newRecycleOutput = recycleNum + error;
+        recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+    }else{}
+    return recycleOutput;
+
 }
 
 function setPercentage(score) {
