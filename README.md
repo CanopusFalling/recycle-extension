@@ -1,5 +1,5 @@
 # Eco Guard's Recycle Extension
-## Version 0.1.0
+## Version 0.1.1
 
 ### Information
 This extension is for determining how recyclable a product is on a site like Amazon, Ebay or Tesco. To learn more about the ideas and the team behind this or to contact us visit [our site](http://theecogaurd.co.uk).
