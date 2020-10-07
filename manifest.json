@@ -1,6 +1,6 @@
 {
     "name": "Eco Guard",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Your Chrome extension informing your online retail purchases of more recyclable products for your local area",
     "icons": {
         "128": "images/webcycleLogo.png"
@@ -8,6 +8,7 @@
     "background": {
         "scripts": [
             "background/global-scope-variables.js",
+            "background/sanitisation.js",
             "background/helper-scripts/data-file-ingest.js",
             "background/helper-scripts/location-information-handler.js",
             "background/product-engine/product-detection.js",
@@ -30,35 +31,19 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*/*"
-            ],
-            "include_globs": [
-                "*://*.amazon.*/*"
-            ],
-            "js": [
-                "page-event-scripts/amazon.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "include_globs": [
-                "*://*.ebay.*/*"
+                "*://*.amazon.co.uk/*",
+                "*://*.amazon.com/*",
+                "*://*.ebay.co.uk/*",
+                "*://*.ebay.com/*",
+                "*://*.tesco.co.uk/*",
+                "*://*.tesco.com/*"
             ],
             "js": [
-                "page-event-scripts/ebay.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "include_globs": [
-                "*://*.tesco.*/*"
-            ],
-            "js": [
-                "page-event-scripts/tesco.js"
+                "product-scrape/helper-functions.js",
+                "product-scrape/site-functions/amazon.js",
+                "product-scrape/site-functions/ebay.js",
+                "product-scrape/site-functions/tesco.js",
+                "product-scrape/scraper.js"
             ]
         }
     ],
