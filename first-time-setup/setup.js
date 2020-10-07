@@ -6,17 +6,27 @@
 const SETUP_STORAGE_KEY = "extension_setup_status";
 const SETUP_SITE_LOCATION = "first-time-setup/page/setup-page.html"
 
+// Setup info. 
+// This constant will determine if the extension redoes the setup.
+const setupInfo = 
+{
+    lastSetupChange: "0.1.0"
+};
+
 // ===== Setup Script =====
 function setupExtension() {
     chrome.tabs.create({ "url": SETUP_SITE_LOCATION });
 }
 
-// ===== Check If Setup Needed =====
-chrome.storage.sync.get([SETUP_STORAGE_KEY], function (setup) {
-    // Check if setup is set to true.
-    console.log(setup);
-    if (setup != true) {
+// ===== Version Checker =====
+// Check whether new version is installed.
+chrome.runtime.onInstalled.addListener(function(details){
+    if(details.reason == "install"){
         setupExtension();
-        chrome.storage.sync.set({ SETUP_STORAGE_KEY: true });
+    }else if(details.reason == "update"){
+        // Check if the current version needs the setup running again.
+        if(details.previousVersion <= setupInfo.lastSetupChange){
+            setupExtension();
+        }
     }
 });
