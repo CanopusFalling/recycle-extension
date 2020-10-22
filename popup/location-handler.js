@@ -58,6 +58,12 @@ function addLocation(locationName){
 function addOptionListener(){
     let updateButton = document.getElementById("update-location-button");
 
+    chrome.storage.sync.get("user-location", function (obj) {
+        console.log(obj);
+        let messageDiv = document.getElementById("location-confirmer");
+        messageDiv.innerHTML = "You're in " + obj['user-location'];
+    });
+
     updateButton.addEventListener('click', onSelectionUpdate);
     console.log("Added.");
 
@@ -74,9 +80,9 @@ function onSelectionUpdate(){
         document.getElementById("dot").style.visibility = "visible";
     });
 
-    let messageDiv = document.getElementById("location-selector-message");
+    let messageDiv = document.getElementById("location-confirmer");
 
-    //messageDiv.innerHTML = "Updated Location to " + selection;
+    messageDiv.innerHTML = "You're in " + selection;
 
     setTimeout(updateLocalInfo, 1000);
     setTimeout(setRecyclability, 2000);
