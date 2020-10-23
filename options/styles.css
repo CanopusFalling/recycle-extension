@@ -1,0 +1,33 @@
+/*
+ * Styles for the options page.
+ */
+
+body{
+    font-size: 100%;
+}
+
+header{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+header h1{
+    margin: auto 10px;
+    font-size: 100px;
+}
+
+header img{
+    height: 200px;
+}
+
+.not-bold{
+    font-weight: 100;
+}
+
+main{
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
