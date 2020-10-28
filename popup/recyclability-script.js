@@ -29,9 +29,9 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             }
         }
         else{
-            document.getElementById("current-product-title").innerHTML = "Cannot Identify Product, Please Refresh.";
-            document.getElementById("percentage-card-error").innerHTML = "<span>If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
-
+            document.getElementById("current-product-title").innerHTML = "<span>No product identified, please refresh. Alternatively, please wait for the page to load completely and then reopen EcoGuard.</span>";
+            document.getElementById("percentage-card-error").remove();
+            document.getElementById("circle-wrap-id").remove();
         }
     }
 });
@@ -131,8 +131,7 @@ function setRecyclability() {
         setPercentage(recycleOutput['recyclability-value']['score']);
     }
     catch(error){
-        document.getElementById("current-product-title").textContent = "Experiencing issues with this product, please search for another.";
-        document.getElementById("percentage-card-error").innerHTML = "<span>If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
+        setError();
 
         console.log(error);
     }
@@ -143,6 +142,7 @@ function setRecyclability() {
     }
     catch(error){
         console.log(error);
+        setTitleError();
     }
     
 }
@@ -151,10 +151,19 @@ function setTitle(title){
     let titleObject = document.getElementById("current-product-title");
 
     titleObject.innerHTML = title;
-    console.log(document.getElementById("eco-Rating-Percentage"));
-    if (!document.getElementById("eco-Rating-Percentage").includes("N/A")){
-        document.getElementById("percentage-card-error").innerHTML = "";
-    }
+    // console.log(document.getElementById("eco-Rating-Percentage"));
+    // if (!document.getElementById("eco-Rating-Percentage").includes("N/A")){
+    //     document.getElementById("percentage-card-error").remove();
+    // }
+}
+
+function setTitleError(){
+    document.getElementById("current-product-title").textContent = "No product detected.";
+}
+
+function setError(){
+    document.getElementById("percentage-card-error").innerHTML = "<span>Unable to determine the recyclability of the product. If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
+    document.getElementById("circle-wrap-id").remove();
 }
 
 function setPercentage(score) {
@@ -178,8 +187,7 @@ function setPercentage(score) {
         setPercentageWheel(0);
 
         // Set the error message for the user.
-        let errorDiv = document.getElementById("percentage-card-error");
-        errorDiv.innerHTML = "<span> Unable to determine the recyclability of the product. If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
+        setError();
     }
 }
 

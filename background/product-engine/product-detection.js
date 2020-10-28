@@ -30,7 +30,7 @@ function newInfoUpdate() {
             if (productData['newValue']['title'] == "") {
                 console.log("No product title found by scraper.");
                 document.getElementById("current-product-title").textContent = "No product detected.";
-                document.getElementById("percentage-card-error").innerHTML = "<span>If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
+                //document.getElementById("percentage-card-error").innerHTML = "<span>If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
 
             } else {
                 analyzeProduct(productData.newValue);
