@@ -144,8 +144,9 @@ function setRecyclability() {
 
 function setTitle(title){
     let titleObject = document.getElementById("current-product-title");
+    let shortTitle = title.replace(/(([^\s]+\s\s*){8})(.*)/,"$1…");
 
-    titleObject.innerHTML = title;
+    titleObject.innerHTML = shortTitle;
 }
 
 function setPercentage(score) {
