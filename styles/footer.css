@@ -8,6 +8,10 @@ footer{
     /**/
     font-size: 3em;
     color: rgb(0, 0, 30);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 footer input.search-bar{
@@ -22,7 +26,14 @@ footer button {
     border: 2px rgba(255, 255, 255, 0.8);
     border-radius: 50px;
     padding: 4px 10px;
+    margin: 3px;
     align-items: center;
+}
+
+footer div{
+    font-size: 0.4em;
+    width: fit-content;
+    margin: 4px auto;
 }
 
 #update-location-button:hover {

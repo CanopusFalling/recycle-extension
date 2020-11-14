@@ -4,35 +4,39 @@
 
 
 
-window.onload = function(){ 
+window.onload = function () {
     var explore = document.getElementById('explore-alts');
     var infoButton = document.getElementById('info');
     var back = document.getElementById('back');
     document.getElementById('explore-alts').style.display = "none";
     document.getElementById('info-section').style.display = "none";
-    explore.addEventListener('click', exploreOptions); 
-    back.addEventListener('click',returnHome);
+    explore.addEventListener('click', exploreOptions);
+    back.addEventListener('click', returnHome);
     infoButton.addEventListener('click', loadInfoPage);
-    }
+
+    document.getElementById("update-location-button").addEventListener("click", function () {
+        openPage("options/options.html");
+    });
+}
 
 
 
 // Reads the product information and materials results.
-let exploreOptions = function(){
+let exploreOptions = function () {
     openPage("explore-products-page/home.html")
 }
-let returnHome = function(){
+let returnHome = function () {
     document.getElementById('info-section').style.display = "none";
     document.getElementById('current-product-rating').style.display = "block";
 }
-let loadInfoPage = function(){
-    
+let loadInfoPage = function () {
+
     document.getElementById('info-section').style.display = "block";
     document.getElementById('current-product-rating').style.display = "none";
-    
+
 }
 function openPage(page) {
-    chrome.tabs.create({url:page});
+    chrome.tabs.create({ url: page });
 }
 
 

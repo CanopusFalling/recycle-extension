@@ -5,7 +5,7 @@
   <!-- Javascript files -->
   <script src="navigation.js"></script>
   <script src="recyclability-script.js "></script>
-  <script src="location-handler.js"></script>
+  <script src="location-updater.js"></script>
   <!-- CSS files -->
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/header.css">
@@ -85,11 +85,8 @@
 
   <footer>
     <!-- <input type="text" placeholder="Search Locations.." class="search-bar" id="location-search"> -->
+    <div id="current-location"></div>
     <button id="update-location-button">Update Location</button>
-    <select id="location-dropdown" name="location">
-    </select>
-    <span id="dot" style="visibility: hidden;"></span>
-    <!-- <div class="message" id="location-selector-message"></div> -->
     <div class="feedback"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link" target="_blank">Report an issue</a></div>
   </footer>
 </body>
