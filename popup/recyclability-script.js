@@ -149,8 +149,9 @@ function setRecyclability() {
 
 function setTitle(title){
     let titleObject = document.getElementById("current-product-title");
+    let shortTitle = title.replace(/(([^\s]+\s\s*){8})(.*)/,"$1…");
 
-    titleObject.innerHTML = title;
+    titleObject.innerHTML = shortTitle;
     // console.log(document.getElementById("eco-Rating-Percentage"));
     // if (!document.getElementById("eco-Rating-Percentage").includes("N/A")){
     //     document.getElementById("percentage-card-error").remove();
