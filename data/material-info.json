@@ -195,7 +195,9 @@
         "case",
         "ladder",
         "foil tray",
-        "aluminium foil",
+        "foil",
+        "Aluminium foil",
+        "cans",
         "mouse mat",
         "monopod",
         "chair",
@@ -238,7 +240,8 @@
         "worktop",
         "microwave",
         "pen",
-        "screw"
+        "screw",
+        "cans"
     ],
     "cast iron": [
         "radiator",
@@ -269,6 +272,8 @@
     ],
     "used paper": [
         "padded envelope",
+        "brown envelope",
+        
         "jiffy bag",
         "paper towel",
         "waxy paper",
@@ -296,6 +301,7 @@
         "flipchart",
         "junk mail",
         "magazine",
+        "window envelope",
         "newspaper",
         "telephone directory",
         "yellow page",
@@ -311,7 +317,14 @@
     ],
     "cardboard": [
         "cardboard box",
-        "egg box"
+        "cardboard boxes",
+        "egg box",
+        "egg boxes",
+        "cardboard packaging",
+        "cardboard sleeve",
+        "punnet",
+        "drinks carton",
+        "toilet roll"
     ],
     "plastic": [
         "pet",
@@ -676,7 +689,6 @@
         "Kp Crunchy Peanut Butter"
     ],
     "cans": [
-        "aerosol can",
         "biscuit tin",
         "drink can",
         "food can",
