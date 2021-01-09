@@ -36,11 +36,6 @@ footer div{
     margin: 4px auto;
 }
 
-#update-location-button:hover {
-    background-color: #D9DDDC;
-    color: #6c6e6e
-}
-
 footer select{
     background-color: rgba(255, 255, 255, 0.8);
     width: 100px;
@@ -56,10 +51,16 @@ footer div.message{
     font-size: 0.3em;
 }
 
-footer div.feedback{
+footer div.small-links{
+    display: flex;
+    flex-direction: row;
+}
+
+footer div.small-links div.feedback{
     text-align: center;
     color: rgb(0, 0, 30);
-    font-size: 0.3em;
+    font-size: 0.8em;
+    margin: 0px 5px
 }
 
 #dot {
