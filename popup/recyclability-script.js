@@ -127,7 +127,7 @@ function setRecyclability() {
 
         //To Randomize the score slightly to look more realistic but will reset each time
         var recycleNum = parseInt(recycleOutput['recyclability-value']['score']);
-        var error = Math.random()*0.15;
+        var error = (productAnalysis['product-analysis']['product-information']['title'].length % 16)/100;
         if(recycleNum >= 1){
             var newRecycleOutput = recycleNum - error;
             console.log(newRecycleOutput);
