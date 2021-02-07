@@ -24,6 +24,7 @@
         "alarms",
         "https://*/*"
     ],
+    "content_security_policy": "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; object-src 'self'",
     "browser_action": {
         "default_icon": "images/webcycleLogo.png",
         "default_popup": "popup/popup.html"
