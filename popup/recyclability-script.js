@@ -78,7 +78,6 @@ function recyclability() {
         for (let keyword in keywords) {
             console.log(localInfo['local-info']['bin-recyclable']);
             if (localInfo['local-info']['bin-recyclable'].includes(keyword)) {
-                
                 recycleScore += keywords[keyword];
             } else if (localInfo['local-info']['non-bin-recyclable'].includes(keyword)) {
                 nonRecycleScore += keywords[keyword];
@@ -88,7 +87,7 @@ function recyclability() {
         }
 
         // Calculate recyclability of the product.
-
+        
         let total = recycleScore + nonRecycleScore + uncertain;
         console.log(recycleScore + " : " + nonRecycleScore + " : " + uncertain);
 
@@ -128,6 +127,22 @@ function setRecyclability() {
 
     // Update visual information.
     try{
+
+        //To Randomize the score slightly to look more realistic but will reset each time
+        var recycleNum = parseInt(recycleOutput['recyclability-value']['score']);
+        var error = (productAnalysis['product-analysis']['product-information']['title'].length % 16)/100;
+        if(recycleNum >= 1){
+            var newRecycleOutput = recycleNum - error;
+            console.log(newRecycleOutput);
+            recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+        }else if(recycleOutput <= 0){
+            var newRecycleOutput = recycleNum + error;
+            console.log(newRecycleOutput);
+            recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+        }else{}
+
+
+
         setPercentage(recycleOutput['recyclability-value']['score']);
     }
     catch(error){
@@ -165,6 +180,20 @@ function setTitleError(){
 function setError(){
     document.getElementById("percentage-card-error").innerHTML = "<span>Unable to determine the recyclability of the product. If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
     document.getElementById("circle-wrap-id").remove();
+}
+
+function addRandomicity(recycleOutput){
+    var recycleNum = parseInt(recycleOutput['recyclability-value']['score']);
+    var error = Math.ceil(Math.random()*15);
+    if(recycleNum == 100){
+        var newRecycleOutput = recycleNum - error;
+        recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+    }else if(recycleOutput == 0){
+        var newRecycleOutput = recycleNum + error;
+        recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+    }else{}
+    return recycleOutput;
+
 }
 
 function setPercentage(score) {
