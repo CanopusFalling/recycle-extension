@@ -26,6 +26,7 @@ chrome.runtime.onInstalled.addListener(function(details){
     }else if(details.reason == "update"){
         // Check if the current version needs the setup running again.
         if(details.previousVersion <= setupInfo.lastSetupChange){
+            console.log(details)
             setupExtension();
         }
     }
