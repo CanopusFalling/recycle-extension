@@ -1,0 +1,44 @@
+/*
+ * Styles for the options page.
+ */
+
+body{
+    font-size: 100%;
+}
+
+header{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+header h1{
+    margin: auto 10px;
+    font-size: 100px;
+}
+
+header img{
+    height: 200px;
+}
+
+main{
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+main section label{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+main section select{
+    font-size: 1.2em;
+    font-weight: 600;
+
+    border: none;
+    background-color: rgba(0, 255, 0, 0.1);
+
+    margin: auto 8px;
+}

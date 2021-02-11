@@ -37,6 +37,8 @@ function updateLocalInformation(location) {
     chrome.storage.sync.set(storageObject, function () {
         console.log("location set to: " + location);
         console.log(storageObject);
+        let messageDiv = document.getElementById("location-confirmer");
+        messageDiv.innerHTML = "You're in " + location;
     });
 }
 

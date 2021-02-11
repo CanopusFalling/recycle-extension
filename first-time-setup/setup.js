@@ -10,7 +10,7 @@ const SETUP_SITE_LOCATION = "first-time-setup/page/setup-page.html"
 // This constant will determine if the extension redoes the setup.
 const setupInfo = 
 {
-    lastSetupChange: "0.1.0"
+    lastSetupChange: "0.1.1"
 };
 
 // ===== Setup Script =====
@@ -26,6 +26,7 @@ chrome.runtime.onInstalled.addListener(function(details){
     }else if(details.reason == "update"){
         // Check if the current version needs the setup running again.
         if(details.previousVersion <= setupInfo.lastSetupChange){
+            console.log(details)
             setupExtension();
         }
     }

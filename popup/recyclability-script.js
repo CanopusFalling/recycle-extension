@@ -12,15 +12,16 @@ function updateProductInfo() {
     chrome.storage.sync.get(['product-analysis'], function (data) {
         productAnalysis = data;
         console.log(data);
+        console.log(chrome.storage);
     });
 }
 
 // Update when product information changes.
 chrome.storage.onChanged.addListener(function (changes, namespace) {
+
     for (var key in changes) {
         if (key == 'product-analysis') {
             try{
-
                 updateProductInfo();
             }
             catch(error){
@@ -28,7 +29,9 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             }
         }
         else{
-            document.getElementById("current-product-title").innerHTML = "Cannot Identify Product, Please Refresh";
+            document.getElementById("current-product-title").innerHTML = "<span>No product identified, please refresh. Alternatively, please wait for the page to load completely and then reopen EcoGuard.</span>";
+            document.getElementById("percentage-card-error").remove();
+            document.getElementById("circle-wrap-id").remove();
         }
     }
 });
@@ -75,7 +78,6 @@ function recyclability() {
         for (let keyword in keywords) {
             console.log(localInfo['local-info']['bin-recyclable']);
             if (localInfo['local-info']['bin-recyclable'].includes(keyword)) {
-                
                 recycleScore += keywords[keyword];
             } else if (localInfo['local-info']['non-bin-recyclable'].includes(keyword)) {
                 nonRecycleScore += keywords[keyword];
@@ -85,7 +87,7 @@ function recyclability() {
         }
 
         // Calculate recyclability of the product.
-
+        
         let total = recycleScore + nonRecycleScore + uncertain;
         console.log(recycleScore + " : " + nonRecycleScore + " : " + uncertain);
 
@@ -125,10 +127,27 @@ function setRecyclability() {
 
     // Update visual information.
     try{
+
+        //To Randomize the score slightly to look more realistic but will reset each time
+        var recycleNum = parseInt(recycleOutput['recyclability-value']['score']);
+        var error = (productAnalysis['product-analysis']['product-information']['title'].length % 16)/100;
+        if(recycleNum >= 1){
+            var newRecycleOutput = recycleNum - error;
+            console.log(newRecycleOutput);
+            recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+        }else if(recycleOutput <= 0){
+            var newRecycleOutput = recycleNum + error;
+            console.log(newRecycleOutput);
+            recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+        }else{}
+
+
+
         setPercentage(recycleOutput['recyclability-value']['score']);
     }
     catch(error){
-        document.getElementById("current-product-rating").textContent = "Experiencing issues with this product, please search for another";
+        setError();
+
         console.log(error);
     }
     try{
@@ -138,14 +157,43 @@ function setRecyclability() {
     }
     catch(error){
         console.log(error);
+        setTitleError();
     }
     
 }
 
 function setTitle(title){
     let titleObject = document.getElementById("current-product-title");
+    let shortTitle = title.replace(/(([^\s]+\s\s*){8})(.*)/,"$1…");
 
-    titleObject.innerHTML = title;
+    titleObject.innerHTML = shortTitle;
+    // console.log(document.getElementById("eco-Rating-Percentage"));
+    // if (!document.getElementById("eco-Rating-Percentage").includes("N/A")){
+    //     document.getElementById("percentage-card-error").remove();
+    // }
+}
+
+function setTitleError(){
+    document.getElementById("current-product-title").textContent = "No product detected.";
+}
+
+function setError(){
+    document.getElementById("percentage-card-error").innerHTML = "<span>Unable to determine the recyclability of the product. If issue persists, please send us feedback <a href='https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link' target='_blank'>here</a>.</span>";
+    document.getElementById("circle-wrap-id").remove();
+}
+
+function addRandomicity(recycleOutput){
+    var recycleNum = parseInt(recycleOutput['recyclability-value']['score']);
+    var error = Math.ceil(Math.random()*15);
+    if(recycleNum == 100){
+        var newRecycleOutput = recycleNum - error;
+        recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+    }else if(recycleOutput == 0){
+        var newRecycleOutput = recycleNum + error;
+        recycleOutput['recyclability-value']['score'] = newRecycleOutput.toString();
+    }else{}
+    return recycleOutput;
+
 }
 
 function setPercentage(score) {
@@ -169,8 +217,7 @@ function setPercentage(score) {
         setPercentageWheel(0);
 
         // Set the error message for the user.
-        let errorDiv = document.getElementById("percentage-card-error");
-        errorDiv.textContent = "Unable to determine the recyclability of the product."
+        setError();
     }
 }
 

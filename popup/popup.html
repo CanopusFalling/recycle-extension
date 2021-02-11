@@ -2,10 +2,13 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-189011223-1"></script>
+  <script src="google-analytics.js"></script>
   <!-- Javascript files -->
   <script src="navigation.js"></script>
   <script src="recyclability-script.js "></script>
-  <script src="location-handler.js"></script>
+  <script src="location-updater.js"></script>
   <!-- CSS files -->
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/header.css">
@@ -26,7 +29,7 @@
 <body>
   <header>
 
-    <h1>Eco<span class = "notbold">Guard</span></h1>
+    <h1>Eco<span class="notbold">Guard</span></h1>
   </header>
 
   <main>
@@ -34,10 +37,10 @@
     <section class="rating" id="current-product-rating">
       <div class="Eco-rating">
         <h1>Eco-Rating</h1>
-      <button class="infobutton" id="info"><i class="material-icons">info</i></button>
+        <button class="infobutton" id="info"><i class="material-icons">info</i></button>
       </div>
-      <h2><span id="current-product-title" class = "notbold">Product title</span></h2>
-      <div class="circle-wrap">
+      <h2><span id="current-product-title" class="notbold">Product title</span></h2>
+      <div class="circle-wrap" id="circle-wrap-id">
         <div class="circle">
           <div class="mask full">
             <div class="fill"></div>
@@ -49,8 +52,10 @@
           <div class="inside-circle"> <span id="eco-Rating-Percentage"></span></div>
         </div>
       </div>
-      <button id="explore-alts" >Explore</button>
-      <div id="percentage-card-error"></div>
+      <button id="explore-alts">Explore</button>
+      <center>
+        <div id="percentage-card-error"></div>
+      </center>
     </section>
 
 
@@ -63,18 +68,20 @@
         <h1>About us</h1>
         <p>Here at Eco-Guard, we wanted to help people be more eco-friendly.</p>
         <p>But we realized how difficult it is to be eco-friendly, especially when shopping online.</p>
-        <p>We wondered, what if we could make it simple for people to choose better products, at similar prices, and with
+        <p>We wondered, what if we could make it simple for people to choose better products, at similar prices, and
+          with
           lesser environmental impact?</p>
         <p>And what if we helped people protect the environment before recycling a product even becomes an issue?</p>
         <p>Thus and thus, Eco-Guard, your eco-advisor was born.</p>
 
-        <h1>Our Eco<span class = "notbold">Rating</span></h1>
+        <h1>Our Eco<span class="notbold">Rating</span></h1>
         <p>The Eco-Rating is our algorithm for calculating the environmental impact of a product.</p>
         <p>As our product develops, so does our algorithm.</p>
-        <p>We believe that to be effective, this needs to be as transparent as possible. Head over to our <a href="mailto:ecoguardcontact@gmail.com" target="_blank">website</a> to find out more.</p>
+        <p>We believe that to be effective, this needs to be as transparent as possible. Head over to our <a
+            href="mailto:ecoguardcontact@gmail.com" target="_blank">website</a> to find out more.</p>
         <p>If you have any queries, suggestions, or ideas, we would love to hear them!</p>
       </section>
-      <div class = "social-media">
+      <div class="social-media">
         <a href="https://www.instagram.com/webcycling/" class="fa fa-instagram" target="_blank"></a>
         <a href="https://www.facebook.com/WebCycling-108520440920369" class="fa fa-facebook" target="_blank"></a>
         <a href="https://twitter.com/WebCycling" class="fa fa-twitter" target="_blank"></a>
@@ -85,12 +92,13 @@
 
   <footer>
     <!-- <input type="text" placeholder="Search Locations.." class="search-bar" id="location-search"> -->
-    <button id="update-location-button">Update Location</button>
-    <select id="location-dropdown" name="location">
-    </select>
-    <span id="dot" style="visibility: hidden;"></span>
-    <!-- <div class="message" id="location-selector-message"></div> -->
-    <div class="feedback"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link" target="_blank">Report an issue</a></div>
+    <div id="current-location"></div>
+    <div class="small-links">
+      <div class="feedback" id="update-location-button"><a href="options/options.html">Update Location</a></div>
+      <div class="feedback"><a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfIW5ofBhHUmM2B3BOj8Q0WQb--N4FWHpJLAw-T1R_5jWj-6w/viewform?usp=sf_link"
+          target="_blank">Report an issue</a></div>
+    </div>
   </footer>
 </body>
 

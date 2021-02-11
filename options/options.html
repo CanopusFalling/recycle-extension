@@ -2,11 +2,35 @@
 <html>
 
 <head>
+    <!-- CSS Scripts -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- JS Scripts -->
     <script src="options.js"></script>
+    <script src="./option-scripts/location.js"></script>
+
+    <title>Settings</title>
 </head>
 
 <body>
+    <header>
+        <img src="../images/webcycle.png">
+        <h1>Settings</h1>
+    </header>
 
+    <main>
+        <section id="location-settings">
+            <label>Current Location: </label>
+            <select id="location-dropdown" name="location"></select>
+            <span id="location-message-box"></span>
+            <div class="description">
+                Your location is stored only on your computer, it is <b>never</b> sent to us, and is used to improve the results that we provide.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 
 </html>
